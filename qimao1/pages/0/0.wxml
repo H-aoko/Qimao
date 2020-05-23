@@ -1,0 +1,12 @@
+<view class="modal-mask">
+<image class='view-image' src="../images/qimaomain.jpg"></image>
+</view>
+  <view class="modal-dialog" >
+  <view class="iconbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" bindtap="start"><image src="../images/start.png" class="view-image2"></image> </button>
+      </view>
+    </view>
+   </view>
+</view>
