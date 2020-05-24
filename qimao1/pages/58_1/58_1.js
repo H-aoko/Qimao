@@ -28,6 +28,9 @@ Page({
     this.setData({
       showModal: false
     });
+    this.setData({
+      showHint: false
+    });
   },
   toMenu: function(){ 
     wx.redirectTo({ url: '../1/1', })
@@ -43,6 +46,14 @@ Page({
     this.setData({
       showModal: false
     });
+    this.setData({
+      showHint: false
+    });
+    wx.showToast({
+      title:'右滑翻页',
+      icon:'sucess',
+      duration:1000
+    });
   },
   onLoad: function (options) {
     var index = 1;
@@ -51,7 +62,7 @@ Page({
     var timer = setInterval(function () {
 
       index = index + 1;   
-      if (index == 3) {
+      if (index == 2) {
         clearInterval(timer);
 
       };
@@ -67,11 +78,9 @@ Page({
     }, 2000);
   },
   hintShow: function () {
-    wx.showToast({
-      title:'向右滑点房子',
-      icon:'loading',
-      duration:2000
-    })
+    this.setData({
+      showHint: true
+    });
   },
   audioPause: function () {
     this.audioCtx.pause()

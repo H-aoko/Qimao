@@ -37,16 +37,26 @@ page{
 }
 .workbench .items image.service-icon2{
   width: 180rpx;
-  height: 100rpx;
+  height: 90rpx;
 }
 .workbench .items image.service-icon3{
   width: 190rpx;
   height: 90rpx;
 }
-button[plain]
-{ border:0;
-  width: 100px;
+.btn{
+  border:0;
+  width: 150px;
 }
+.iconbtn{
+  border:0;
+  width: 70px;
+  margin: 0vh 5vw;
+}
+button[plain]
+{ 
+border:0;
+}
+
 .scroll-box{
   white-space: nowrap;
   height: 130vh;
@@ -72,10 +82,18 @@ button[plain]
   height: 100%;
   position: fixed;
   top: 8%;
-  left: 2%;
+  left: 4%;
   opacity: 0.85;
 }
- 
+.modal-dialog4 {
+  overflow: visible;
+  position: fixed;
+  top: 43%;
+  left: 14%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
 .modal-dialog {
   overflow: visible;
   position: fixed;
@@ -96,7 +114,7 @@ button[plain]
   overflow: visible;
   position: fixed;
   top: 80%;
-  left: 58%;
+  left: 50%;
   margin: 0rpx 0rpx;
   border-radius: 0%;
 }
@@ -134,7 +152,7 @@ button[plain]
 .view-image2{
   width: 90rpx;
   height: 90rpx;
-  margin: 0rpx 0rpx;
+  margin: 5rpx 5rpx;
 }
 
 .view-image{
@@ -147,9 +165,13 @@ button[plain]
   height: 110rpx;
   flex:1;
 }
-
+.view-image5{
+  width: 550rpx;
+  height: 300rpx;
+  margin: 0rpx 0rpx;
+}
 .view-image4{
-  width: 180rpx;
+  width: 240rpx;
   height: 90rpx;
   margin: 0rpx 0rpx;
 }

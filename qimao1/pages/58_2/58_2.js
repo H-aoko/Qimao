@@ -69,6 +69,6 @@ Page({
         toView: `card_${that.currentView}`
       });
 
-    }, 2000);
+    }, 1500);
   },
 })

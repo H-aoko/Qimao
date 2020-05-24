@@ -38,15 +38,26 @@ page{
 }
 .workbench .items image.service-icon2{
   width: 190rpx;
-  height: 100rpx;
+  height: 90rpx;
 }
 .workbench .items image.service-icon3{
   width: 480rpx;
   height: 100rpx;
 }
 button[plain]
-{ border:0;
-  width: 160px;
+{ 
+  border:0;
+}
+.housebtn{
+  border:0;
+  width: 150px;
+}
+.iconbtn{
+  border:0;
+  width: 70px;
+  height: 70px;
+  margin: 0rpx 0rpx;
+
 }
 .scroll-box{
   white-space: nowrap;
@@ -73,7 +84,7 @@ button[plain]
   height: 100%;
   position: fixed;
   top: 8%;
-  left: 11%;
+  left: 0%;
   opacity: 0.85;
 }
  
@@ -93,6 +104,15 @@ button[plain]
   left: 2%;
   margin: 0rpx 5rpx;
   border-radius: 0%;
+}
+.modal-dialog3 {
+  overflow: visible;
+  position: fixed;
+  top: 43%;
+  left: 14%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
 }
 .iconbench{
   padding-bottom: 0rpx;
@@ -115,13 +135,18 @@ button[plain]
   flex:1;
 }
 .view-image2{
-  width: 100rpx;
-  height: 100rpx;
+  width:90rpx;
+  height: 90rpx;
   margin: 10rpx 10rpx;
 }
 .view-image4{
   width: 210rpx;
   height: 350rpx;
+  margin: 0rpx 0rpx;
+}
+.view-image5{
+  width: 550rpx;
+  height: 300rpx;
   margin: 0rpx 0rpx;
 }
 .view-image{

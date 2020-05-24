@@ -17,21 +17,23 @@ Page({
     var timer = setInterval(function () {
 
       index = index + 1;   
-      if (index == 10) {
+      if (that.currentView>=8) {
         clearInterval(timer);
         that.setData({
           showJump: false
-        });
+        });     
         that.setData({
           showButton: true
         });
+        
+      
       };
       that.currentView=that.currentView+1;
       that.setData({
         toView: `card_${that.currentView}`
       });
 
-    }, 2300);
+    }, 2500);
   },
 
   changeYL: function () {
@@ -45,6 +47,12 @@ Page({
   hideModal: function () {
     this.setData({
       showModal: false
+    });
+    this.setData({
+      showHint2: false
+    });
+    this.setData({
+      showHint1: false
     });
   },
   toMenu: function(){ 
@@ -64,10 +72,16 @@ Page({
     this.setData({
       showButton: false
     });
+    this.setData({
+      showHint2: false
+    });
+    this.setData({
+      showHint1: false
+    });
     wx.showToast({
       title: '可向右滑动',
-      icon:'loading',
-      duration:500
+      icon:'nothing',
+      duration:1500
     });    
   },
   pointWrong: function(){ 
@@ -90,19 +104,24 @@ Page({
     this.setData({
       showModal: false
     });
-  },
-  nextPage: function(){ 
-    this.currentView=this.currentView+1;
     this.setData({
-      toView: `card_${this.currentView}`
+      showHint1: false
+    });
+    this.setData({
+      showHint2: false
     });
   },
+
   hintShow: function () {
-    wx.showToast({
-      title:'向右滑看剧情',
-      icon:'loading',
-      duration:2000
-    })
+    if(this.currentView>=8){
+      this.setData({
+        showHint2: true
+      });
+    } else{
+      this.setData({
+        showHint1: true
+      });
+    }
   },
   audioPause: function () {
     this.audioCtx.pause()

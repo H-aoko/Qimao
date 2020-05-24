@@ -28,7 +28,7 @@ Page({
         toView: `card_${that.currentView}`
       });
 
-    }, 2000);
+    }, 1500);
   },
   touchStart(e) {
     this.startPageX = e.changedTouches[0].pageX;

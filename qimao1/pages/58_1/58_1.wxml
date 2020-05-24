@@ -9,7 +9,7 @@
          <button plain="true" ><image src="../images/nothing.jpg" class="service-icon3"></image></button>
       </view>
        <view class="items">
-         <button plain="true" ><image src="../images/blank.jpg" class="service-icon3"></image></button>
+         <button plain="true" ><image src="../images/nothing.jpg" class="service-icon3"></image></button>
       </view>
 
     </view>
@@ -25,13 +25,13 @@
     <view class="iconbench">
     <view class="list">
       <view class="items2">
-      <button plain="true" bindtap="wrongHouse"><image class='view-image4' src="../images/house1.jpg"></image></button>
+      <button plain="true" class='housebtn' bindtap="wrongHouse"><image class='view-image4' src="../images/house1.jpg"></image></button>
       </view>
       <view class="items2">
-      <button plain="true" bindtap="wrongHouse"><image class='view-image4' src="../images/house2.jpg"></image></button>
+      <button plain="true" class='housebtn' bindtap="wrongHouse"><image class='view-image4' src="../images/house2.jpg"></image></button>
       </view>
         <view class="items2">
-      <button plain="true" bindtap="correctHouse"><image class='view-image4' src="../images/house3.jpg"></image></button>
+      <button plain="true" class='housebtn' bindtap="correctHouse"><image class='view-image4' src="../images/house3.jpg"></image></button>
       </view>
       </view>
     </view>
@@ -49,34 +49,28 @@
     <view class="iconbench">
     <view class="list">
       <view class="items">
-      <button plain="true" bindtap="toMenu"><image class='view-image2' src="../images/mainpageicon.png"></image></button>
+      <button plain="true" class='iconbtn' bindtap="toMenu"><image class='view-image2' src="../images/mainpageicon.png"></image></button>
       </view>
       <view class="items">
-      <button plain="true" bindtap="again"><image class='view-image2' src="../images/again.png"></image></button>
+      <button plain="true" class='iconbtn' bindtap="again"><image class='view-image2' src="../images/again.png"></image></button>
       </view>
       </view>
     </view>
     <view class="iconbench">
        <view class="list">
       <view class="items">
-      <button plain="true" bindtap="hintShow"><image class='view-image2' src="../images/hinticon.png"></image></button>
+      <button plain="true" class='iconbtn' bindtap="hintShow"><image class='view-image2' src="../images/hinticon.png"></image></button>
          </view>
           <view class="items">
-      <button plain="true" bindtap="audioPause"><image class='view-image2' src="../images/mute.png"></image></button>
+      <button plain="true" class='iconbtn' bindtap="audioPause"><image class='view-image2' src="../images/mute.png"></image></button>
          </view>
       </view>
     </view>
   </view>
-    <view class="modal-dialog2" wx:if="{{showButton}}">
-    <view class="iconbench2">
-
-      <view class="items2">
-      <button plain="true" bindtap="pointCorrect"><image class='view-image4' src="../images/jiujiu.png"></image></button>
+  <view class="modal-dialog3" wx:if="{{showHint}}">
+      <view class="items3">
+      <image class='view-image5' src="../images/hint58_2.jpg"></image>
       </view>
-      <view class="items2">
-      <button plain="true" bindtap="pointWrong"><image class='view-image4' src="../images/bapian.png"></image></button>
-      </view>
-      </view>
-  </view>
+  </view> 
 </scroll-view>
 
