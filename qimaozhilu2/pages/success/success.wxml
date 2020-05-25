@@ -1,0 +1,6 @@
+<!--pages/success/success.wxml-->
+<view class="yinru" >
+<image src='/images/success.jpg' class="image1"></image>
+</view>
+<image src='/images/mainpageicon.png' class="zhuye" bindtap="zhuye"></image>
+<image src='/images/next.png' class="next" bindtap="next"></image>

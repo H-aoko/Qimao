@@ -1,0 +1,18 @@
+{
+  "pages":[
+    
+    "pages/tiaoliao1/tiaoliao1",
+    "pages/tiaoliao7/tiaoliao7",
+    "pages/success/success",
+    "pages/fail/fail"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "调料",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
