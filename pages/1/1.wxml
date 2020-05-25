@@ -1,0 +1,87 @@
+<!--pages/menu/menu.wxml-->
+<view class="modal-mask">
+<image class='view-image' src="../images/qimao.jpg"></image>
+</view>
+  <view class="modal-dialog" >
+  <view class="iconbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" bindtap="toOne"><image src="../images/1.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toTwo"><image src="../images/2.png" class="view-image2"></image></button>
+      </view>
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/3.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toOther"><image src="../images/4.png" class="view-image2"></image></button>
+      </view>
+    </view>
+   </view>
+     <view class="iconbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/5.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toOther"><image src="../images/6.png" class="view-image2"></image></button>
+      </view>
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/7.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toOther"><image src="../images/8.png" class="view-image2"></image></button>
+      </view>
+    </view>
+   </view>
+     <view class="iconbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/9.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toOther"><image src="../images/10.png" class="view-image2"></image></button>
+      </view>
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/11.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toOther"><image src="../images/12.png" class="view-image2"></image></button>
+      </view>
+    </view>
+   </view>
+   <view class="iconbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/13.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toOther"><image src="../images/14.png" class="view-image2"></image></button>
+      </view>
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/15.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toOther"><image src="../images/16.png" class="view-image2"></image></button>
+      </view>
+    </view>
+   </view>
+    <view class="iconbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/17.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toOther"><image src="../images/18.png" class="view-image2"></image></button>
+      </view>
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/19.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toLast"><image src="../images/58.png" class="view-image2"></image></button>
+      </view>
+    </view>
+   </view>
+</view>
+
