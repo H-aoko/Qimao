@@ -1,0 +1,54 @@
+<view class="gameview">
+  <view class="topview">
+    <button class="menu" style="width:180rpx" hover-class="none" bindtap="openmenu">
+      <image src="../migong/images/菜单.png" class="menuimage"></image>
+    </button>
+    <view class="clock">
+      <image src="../try/images/计时.png" class="clockimage"></image>
+    </view>
+  </view>
+  <view class="mgview">
+    <image class="mgimage" mode="widthFix" src="../migong/images/迷宫墙png_副本.png"></image>
+    <image class="qmimage" src="../try/images/迷宫中七毛正面.png" style="margin-left:{{mleft}};margin-top:{{mtop}}"></image>
+  </view>
+  <view class="btnview">
+    <button class="up_btn" bindtap="qmup" hover-class="none">
+      <image class="btnimage" src="../try/images/方向键上.png"></image>  
+    </button>
+    <view class="btnview1">
+      <button class="left_btn" style="width:200rpx" bindtap="qmleft" hover-class="none">
+        <image class="btnimage" src="../try/images/方向键左.png"></image>  
+      </button>
+      <button class="down_btn"  style="width:200rpx" bindtap="qmdown" hover-class="none">
+        <image class="btnimage" src="../try/images/方向键下.png"></image>
+      </button>
+      <button class="right_btn" style="width:200rpx" bindtap="qmright" hover-class="none">
+        <image class="btnimage" src="../try/images/方向键右.png"></image>  
+      </button>
+    </view>
+  </view>
+    <view class="menucontent" wx:if="{{show}}">
+    <image class="blank" src="../migong/images/blank.png"></image>
+    <button class="home" style="width:120rpx" hover-class="none" bindtap="home">
+      <image class="menubtnimage" src="../migong/images/mainpageicon.png"></image>
+    </button>
+    <button class="again" style="width:120rpx" hover-class="none" bindtap="again">
+      <image class="menubtnimage" src="../migong/images/again.png"></image>
+    </button>
+    <button class="hint" style="width:120rpx" hover-class="none" bindtap="hint">
+      <image class="menubtnimage" src="../migong/images/hinticon.png"></image>
+    </button>
+    <button class="mute" style="width:120rpx" hover-class="none">
+      <image class="menubtnimage" src="../migong/images/mute.png"></image>
+    </button>
+  </view>
+  <view class="hintcontent" wx:if="{{hintshow}}">
+    <image class="hintcontentimage" src="../migong/images/hintcontent.png" ></image>
+  </view>
+</view>
+
+<!--
+hover-class="none"
+margin-left:{{mleft}} margin-top:{{mtop}}
+left:{{mleft}} top:{{mtop}}
+-->
