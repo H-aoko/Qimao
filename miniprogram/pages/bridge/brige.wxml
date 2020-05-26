@@ -1,5 +1,5 @@
-<view class="container">
- <view class="home-wrap">
+<view class="container" bindtap="hideHint">
+ <view class="home-wrap" bindtap="hideHint">
   <view class="workbench">
     <view class="list">
       <view class="items">
@@ -8,6 +8,10 @@
     </view>
   </view>
  </view>
+ <view class="hint_time" hidden="{{show_time}}">{{count}}</view>
+  <view class="hint" catchtap="hintShow">
+   <image src="../../images/bridge/hint.png" hidden="{{hint}}"></image>
+  </view>
  <view class="walk" animation="{{walk}}" bindtap="hideModal">
   <image wx:if="{{show_img==1}}"class="person" mode='aspectFill' 
   src="{{person}}" hidden='{{per_hide}}'></image>
@@ -32,7 +36,7 @@
     <view class="iconbench">
        <view class="list">
       <view class="items">
-      <button plain="true" bindtap="hintShow"><image class='view-image2' src="../../images/hinticon.png"></image></button>
+      <button plain="true" bindtap="hintShow"><image  class='view-image2' src="../../images/hinticon.png" catchtap="hintShow"></image></button>
          </view>
           <view class="items">
       <button plain="true" bindtap="audioPause"><image class='view-image2' src="../../images/mute.png"></image></button>

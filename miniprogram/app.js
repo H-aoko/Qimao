@@ -1,5 +1,8 @@
 //app.js
 App({
+  data: {
+    hasClick: false
+  },
   onLaunch: function () {
     
     if (!wx.cloud) {
@@ -16,5 +19,6 @@ App({
     }
 
     this.globalData = {}
-  }
+  },
+
 })

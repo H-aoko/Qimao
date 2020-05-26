@@ -80,3 +80,18 @@ page{
     height: 90rpx;
     margin: 0rpx 0rpx;
   }
+
+.hint image{
+  position: absolute;
+  margin-top: 300rpx;
+  margin-left: -250rpx;
+  height: 350rpx;
+  width: 500rpx;
+  z-index:5;
+}
+.hint_time{
+  position: absolute;
+  right: 0;
+  margin-right: 50rpx;
+  margin-top: 10rpx;
+}

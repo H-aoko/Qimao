@@ -1,0 +1,4 @@
+<view class="container">
+<image class="ending"  wx:if="{{judge}}" src="{{fail}}"></image>
+<image class="ending"  wx:else="{{judge==false}}" src="{{success}}"></image>
+</view>

@@ -12,7 +12,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var app = getApp();
+    app.data.hasClick = false;
   },
 
   /**
@@ -36,19 +37,38 @@ Page({
       this.setData({
         auto:false
       });
-      setTimeout(function(){
-        getCurrentPages().pop();
-        wx.navigateTo({
-          url: '/pages/bridge/brige',
-        })
-      },2000);
+      var app = getApp();
+      //console.log(app.data.hasClick);
+      if(!app.data.hasClick){
+        setTimeout(function(){
+          app.data.hasClick = true;
+          getCurrentPages().pop();
+          wx.navigateTo({
+            url: '/pages/bridge/brige',
+          });
+        },1000);
+      }  
     }     
   },
   //跳过剧情
   skipto:function(){
-    wx.redirectTo({
-      url: '/pages/bridge/brige',
-    })  
+    this.setData({
+      auto:false
+    });
+    var app = getApp();
+    console.log(app.data.hasClick);
+    if(!app.data.hasClick){
+      console.log("here");
+      app.data.hasClick = true;
+      getCurrentPages().pop();
+      wx.navigateTo({
+        url: '/pages/bridge/brige',
+      });
+      // wx.redirectTo({
+      //   url: '/pages/bridge/brige',
+      // });
+    }
+    
   },
   /**
    * 生命周期函数--监听页面隐藏

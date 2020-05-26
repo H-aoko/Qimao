@@ -6,33 +6,17 @@ Page({
       success:"../../images/bridge/ye.png",
       per_hide:false,
       show_img:1,
-      showModal:false
+      showModal:false,
+      hint:true,
+      count:7,
+      show_time:true,
+      timer:"",
+      fail:false
     },
     onLoad: function(options) {
         // 页面创建时执行
-       
-      },
-      sendCode: function(e) {
-        var that = this;
-        var time = 0;
-        var interval_time = 1000;
-        // var i = setInterval(function() {
-        //     time +=  interval_time/1000;
-        //      if(time <= 12){
-        //       if (that.data.left_hide == false && that.data.right_hide == true) {
-        //         that.setData({
-        //           left_hide:true,
-        //           right_hide:false
-        //         });
-        //    } else {
-        //       if(that.data.left_hide == true && that.data.right_hide == false)
-        //         that.setData({
-        //           left_hide:false,
-        //           right_hide:true
-        //         });
-        //    }
-        //   } else clearInterval(i); 
-        // }, interval_time)      
+         var app = getApp();
+         app.data.hasClick = false;
       },
       onShow: function() {
         // 页面出现在前台时执行
@@ -41,6 +25,7 @@ Page({
         //延迟2s开始动画,给用户准备时间
         setTimeout(function(){
           var start_time = Date.now();
+          that.timeCount();
           var limit = 2000;
           var animation = wx.createAnimation({
             duration: limit,
@@ -50,21 +35,30 @@ Page({
            });
            var edit = 0;
            wx.onAccelerometerChange(function(res) {
+             console.log(that.data.count);
              //计算手机左右倾斜的角度
             var roll = 90 - Math.acos(res.x)*180/Math.PI;
             //计算手机上下倾斜的角度
             var up = Math.acos(-res.z)*180/Math.PI;
             //console.log(roll);
             console.log(up);
-            console.log( Math.acos(res.z));
             if(res.x != 0)edit++;
              //抬起，停止前进 
-             if( up > 30){
+             if( up > 30 && Date.now()-start_time <= 4*limit){
+              that.setData({
+                fail:true
+             });
               return;
             }
-            if(up < -30){
+            //加速，失败
+            if(up < -30 && Date.now()-start_time <= 4*limit){
               that.setData({
-                show_img:3
+                show_img:2,
+                fail:true
+             });
+             getCurrentPages().pop();
+             wx.navigateTo({
+               url: '/pages/bridge/fail?judge=true',
              });
              wx.offAccelerometerChange();
              return;
@@ -81,7 +75,12 @@ Page({
                      walk: animation.export()
                     });
                     that.setData({
-                       show_img:3
+                       show_img:3,
+                       fail:true
+                    });
+                    getCurrentPages().pop();
+                    wx.navigateTo({
+                      url: '/pages/bridge/fail?judge=true',
                     });
                     wx.offAccelerometerChange();
                     return;
@@ -92,7 +91,12 @@ Page({
                        walk: animation.export()
                       });
                       that.setData({
-                         show_img:2
+                         show_img:2,
+                         fail:true
+                      });
+                      getCurrentPages().pop();
+                      wx.navigateTo({
+                        url: '/pages/bridge/fail?judge=true',
                       });
                       wx.offAccelerometerChange();
                       return;
@@ -115,7 +119,12 @@ Page({
                         walk: animation.export()
                       });
                       that.setData({
-                         show_img:3
+                         show_img:3,
+                         fail:true
+                      });
+                      getCurrentPages().pop();
+                      wx.navigateTo({
+                        url: '/pages/bridge/fail?judge=true',
                       });
                       wx.offAccelerometerChange();
                       return;
@@ -126,7 +135,12 @@ Page({
                         walk: animation.export()
                       });
                       that.setData({
-                        show_img:2
+                        show_img:2,
+                        fail:true
+                      });
+                      getCurrentPages().pop();
+                      wx.navigateTo({
+                        url: '/pages/bridge/fail?judge=true',
                       });
                       wx.offAccelerometerChange();
                       return;
@@ -150,7 +164,12 @@ Page({
                    walk: animation.export()
                   });
                   that.setData({
-                     show_img:3
+                     show_img:3,
+                     fail:true
+                  });
+                  getCurrentPages().pop();
+                  wx.navigateTo({
+                    url: '/pages/bridge/fail?judge=true',
                   });
                   wx.offAccelerometerChange();
                   return;
@@ -162,7 +181,12 @@ Page({
                      walk: animation.export()
                     });
                     that.setData({
-                       show_img:2
+                       show_img:2,
+                       fail:true
+                    });
+                    getCurrentPages().pop();
+                    wx.navigateTo({
+                      url: '/pages/bridge/fail?judge=true',
                     });
                     wx.offAccelerometerChange();
                     return;
@@ -186,7 +210,12 @@ Page({
                    walk: animation.export()
                   });
                   that.setData({
-                     show_img:3
+                     show_img:3,
+                     fail:true
+                  });
+                  getCurrentPages().pop();
+                  wx.navigateTo({
+                    url: '/pages/bridge/fail?judge=true',
                   });
                   wx.offAccelerometerChange();
                   return;
@@ -198,7 +227,12 @@ Page({
                      walk: animation.export()
                     });
                     that.setData({
-                       show_img:2
+                       show_img:2,
+                       fail:true
+                    });
+                    getCurrentPages().pop();
+                    wx.navigateTo({
+                      url: '/pages/bridge/fail?judge=true',
                     });
                     wx.offAccelerometerChange();
                     return;
@@ -211,10 +245,32 @@ Page({
                 }
               }
            }}
-            if(Date.now()-start_time > 4*limit)         wx.offAccelerometerChange();
-                });
-           //that.sendCode();
-        },2000);
+            if(Date.now()-start_time > 4*limit){
+              //超时未完成
+              console.log(that.data.count);
+              console.log(that.data.fail);
+              if(that.data.count==0 &&that.data.fail==true){
+               getCurrentPages().pop();
+               wx.navigateTo({
+                 url: '/pages/bridge/fail?judge=true',
+               });
+               wx.offAccelerometerChange();
+               return;
+              }else{
+                 //成功
+                  console.log(that.data.fail);
+                  that.setData({
+                    show_img:4
+                  });
+                  getCurrentPages().pop();
+                  wx.navigateTo({
+                    url: '/pages/bridge/fail?judge=false',
+                  });
+                wx.offAccelerometerChange();
+                return;
+              }
+             };   
+     })},2000);
       },
       onReady: function() {
         // 页面首次渲染完毕时执行
@@ -268,10 +324,78 @@ Page({
       },
       jumpPage: function(){ 
       },
-      hintShow: function () {  
+      hintShow: function () { 
+        let that = this;
+        console.log("here");
+        that.setData({
+          hint:false
+        });
+        that.hideModal(); 
+        that.setData({
+          show_time:false
+        });
+       that.timeCount();
+      },
+      hideHint:function(){
+        if(!this.data.hint){
+          this.setData({
+            hint:true
+          });
+        }
       },
       audioPause: function () {
-        this.audioCtx.pause()
+        //this.audioCtx.pause()
       },
+      timeCount:function(){
+        let that = this;
+        let count = that.data.count;
+        that.setData({
+          timer: setInterval(function () {
+            count--;
+            that.setData({
+              count: count
+            })
+            if (count == 0 || that.data.show_img!=1) {
+              clearInterval(that.data.timer);
+            }
+          }, 1000)
+      })},
+      
+  onHide: function () {
+    this.setData({
+      person:"../../images/bridge/person.gif",
+      falling_left:"../../images/bridge/falling_left.png",
+      falling_right:"../../images/bridge/falling_right.png",
+      success:"../../images/bridge/ye.png",
+      per_hide:false,
+      show_img:1,
+      showModal:false,
+      hint:true,
+      count:7,
+      show_time:true,
+      timer:"",
+      fail:false
+    })
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+      this.setData({
+        person:"../../images/bridge/person.gif",
+        falling_left:"../../images/bridge/falling_left.png",
+        falling_right:"../../images/bridge/falling_right.png",
+        success:"../../images/bridge/ye.png",
+        per_hide:false,
+        show_img:1,
+        showModal:false,
+        hint:true,
+        count:7,
+        show_time:true,
+        timer:"",
+        fail:false
+      })
+  },
     })
   
