@@ -7,7 +7,7 @@ Page({
   data: {
     fail:"../../images/bridge/bad.jpg",
     success:"../../images/bridge/good.jpg",
-    judge:false
+    judge:1
     
   },
 

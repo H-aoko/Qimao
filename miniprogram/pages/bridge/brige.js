@@ -24,8 +24,6 @@ Page({
         var fail = 10;
         //延迟2s开始动画,给用户准备时间
         setTimeout(function(){
-          var start_time = Date.now();
-          that.timeCount();
           var limit = 2000;
           var animation = wx.createAnimation({
             duration: limit,
@@ -34,8 +32,16 @@ Page({
             transformOrigin: '50% 50% 0'
            });
            var edit = 0;
+           var start_time = Date.now();
+           var last_time = start_time;
+           that.timeCount();
+           console.log(start_time);
            wx.onAccelerometerChange(function(res) {
+             var now = Date.now();
+             if( now - last_time < 200)return;
+             last_time = now;
              console.log(that.data.count);
+             console.log(Date.now());
              //计算手机左右倾斜的角度
             var roll = 90 - Math.acos(res.x)*180/Math.PI;
             //计算手机上下倾斜的角度
@@ -58,7 +64,7 @@ Page({
              });
              getCurrentPages().pop();
              wx.navigateTo({
-               url: '/pages/bridge/fail?judge=true',
+               url: '/pages/bridge/fail?judge=1',
              });
              wx.offAccelerometerChange();
              return;
@@ -80,7 +86,7 @@ Page({
                     });
                     getCurrentPages().pop();
                     wx.navigateTo({
-                      url: '/pages/bridge/fail?judge=true',
+                      url: '/pages/bridge/fail?judge=1',
                     });
                     wx.offAccelerometerChange();
                     return;
@@ -96,16 +102,22 @@ Page({
                       });
                       getCurrentPages().pop();
                       wx.navigateTo({
-                        url: '/pages/bridge/fail?judge=true',
+                        url: '/pages/bridge/fail?judge=1',
                       });
                       wx.offAccelerometerChange();
                       return;
                   }else{
+                    if(that.data.fail){
+                      animation.translate3d(-22, -35,0).rotate(roll).step();
+                      that.setData({
+                       walk: animation.export()
+                      });
+                    }else{
                     //正常画面
                     animation.translate3d(-29, -45,0).rotate(roll).step();
                     that.setData({
                      walk: animation.export()
-                    });
+                    });}
                   }
                 }
                  if(Date.now()-start_time == limit)edit = 0;
@@ -124,7 +136,7 @@ Page({
                       });
                       getCurrentPages().pop();
                       wx.navigateTo({
-                        url: '/pages/bridge/fail?judge=true',
+                        url: '/pages/bridge/fail?judge=1',
                       });
                       wx.offAccelerometerChange();
                       return;
@@ -140,16 +152,22 @@ Page({
                       });
                       getCurrentPages().pop();
                       wx.navigateTo({
-                        url: '/pages/bridge/fail?judge=true',
+                        url: '/pages/bridge/fail?judge=1',
                       });
                       wx.offAccelerometerChange();
                       return;
                     }else{
-                      //正常画面
-                        animation.translate3d(-70, -90,0).rotate(roll).step();
+                      if(that.data.fail){
+                        animation.translate3d(-54, -70,0).rotate(roll).step();
                         that.setData({
-                        walk: animation.export()
+                         walk: animation.export()
                         });
+                      }else{
+                      //正常画面
+                      animation.translate3d(-70, -90,0).rotate(roll).step();
+                      that.setData({
+                       walk: animation.export()
+                      });}
                         }
                       }
                        if(Date.now()-start_time == 2*limit)edit = 0;
@@ -169,7 +187,7 @@ Page({
                   });
                   getCurrentPages().pop();
                   wx.navigateTo({
-                    url: '/pages/bridge/fail?judge=true',
+                    url: '/pages/bridge/fail?judge=1',
                   });
                   wx.offAccelerometerChange();
                   return;
@@ -186,16 +204,22 @@ Page({
                     });
                     getCurrentPages().pop();
                     wx.navigateTo({
-                      url: '/pages/bridge/fail?judge=true',
+                      url: '/pages/bridge/fail?judge=1',
                     });
                     wx.offAccelerometerChange();
                     return;
                 }else{
+                  if(that.data.fail){
+                    animation.translate3d(-74, -100,0).rotate(roll).step();
+                    that.setData({
+                     walk: animation.export()
+                    });
+                  }else{
                   //正常画面
                   animation.translate3d(-100, -135,0).rotate(roll).step();
                   that.setData({
                    walk: animation.export()
-                  });
+                  });}
                 }
               }
                if(Date.now()-start_time == limit)edit = 0;
@@ -215,7 +239,7 @@ Page({
                   });
                   getCurrentPages().pop();
                   wx.navigateTo({
-                    url: '/pages/bridge/fail?judge=true',
+                    url: '/pages/bridge/fail?judge=1',
                   });
                   wx.offAccelerometerChange();
                   return;
@@ -232,16 +256,22 @@ Page({
                     });
                     getCurrentPages().pop();
                     wx.navigateTo({
-                      url: '/pages/bridge/fail?judge=true',
+                      url: '/pages/bridge/fail?judge=1',
                     });
                     wx.offAccelerometerChange();
                     return;
                 }else{
+                  if(that.data.fail){
+                    animation.translate3d(-106, -160,0).rotate(roll).step();
+                    that.setData({
+                     walk: animation.export()
+                    });
+                  }else{
                   //正常画面
                   animation.translate3d(-130, -195,0).rotate(roll).step();
                   that.setData({
                    walk: animation.export()
-                  });
+                  });}
                 }
               }
            }}
@@ -249,10 +279,10 @@ Page({
               //超时未完成
               console.log(that.data.count);
               console.log(that.data.fail);
-              if(that.data.count==0 &&that.data.fail==true){
+              if(that.data.fail==true){
                getCurrentPages().pop();
                wx.navigateTo({
-                 url: '/pages/bridge/fail?judge=true',
+                 url: '/pages/bridge/fail?judge=1',
                });
                wx.offAccelerometerChange();
                return;
@@ -264,7 +294,7 @@ Page({
                   });
                   getCurrentPages().pop();
                   wx.navigateTo({
-                    url: '/pages/bridge/fail?judge=false',
+                    url: '/pages/bridge/fail?judge=2',
                   });
                 wx.offAccelerometerChange();
                 return;
@@ -274,12 +304,6 @@ Page({
       },
       onReady: function() {
         // 页面首次渲染完毕时执行
-      },
-      onHide: function() {
-        // 页面从前台变为后台时执行
-      },
-      onUnload: function() {
-        // 页面销毁时执行
       },
       onPullDownRefresh: function() {
         // 触发下拉刷新时执行
@@ -346,6 +370,7 @@ Page({
       audioPause: function () {
         //this.audioCtx.pause()
       },
+      //计时器
       timeCount:function(){
         let that = this;
         let count = that.data.count;
@@ -355,7 +380,10 @@ Page({
             that.setData({
               count: count
             })
-            if (count == 0 || that.data.show_img!=1) {
+            if (count <= 0 || that.data.show_img!=1) {
+              that.setData({
+                count: 0
+              });
               clearInterval(that.data.timer);
             }
           }, 1000)

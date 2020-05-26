@@ -17,14 +17,14 @@
   src="{{person}}" hidden='{{per_hide}}'></image>
   <image wx:elif="{{show_img==2}}"class="person" mode='aspectFill' src="{{falling_left}}" ></image>
   <image wx:elif="{{show_img==3}}"class="person" mode='aspectFill' src="{{falling_right}}" ></image>
-  <image wx:else="{{show_img==4}}"class="person" mode='aspectFill' src="{{success}}" ></image>
+  <image wx:else class="person" mode='aspectFill' src="{{success}}" ></image>
  </view>
  <view class="modal-mask"  bindtap="hideModal" wx:if="{{showModal}}">
   <image class='view-image' src="../../images/blank.png"></image>
  </view>
  <view class="modal-dialog" wx:if="{{showModal}}">
     <view class="iconbench">
-    <view class="list">
+    <view class="list" >
       <view class="items">
       <button plain="true" bindtap="toMenu"><image class='view-image2' src="../../images/mainpageicon.png"></image></button>
       </view>
