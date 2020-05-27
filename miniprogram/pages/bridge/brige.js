@@ -345,6 +345,14 @@ Page({
         wx.redirectTo({ url: '../1/1', })
       },
       again: function () {
+        var app = getApp();
+        if(!app.data.hasClick){
+          app.data.hasClick = true;
+          getCurrentPages().pop();
+          wx.navigateTo({
+             url: '/pages/bridge/former',
+          });
+        }
       },
       jumpPage: function(){ 
       },

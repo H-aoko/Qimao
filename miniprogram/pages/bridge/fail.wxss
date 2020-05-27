@@ -2,3 +2,72 @@ page,.container,.ending{
   width: 100%;
   height: 100%;
 }
+.home-wrap{
+  height: 90rpx;
+  margin-left: -150px;
+  position: absolute;
+}
+.workbench .items image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.workbench .items image.service-icon2{
+  width: 100rpx;
+  height: 100rpx;
+}
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 9%;
+  left: 2%;
+  opacity: 0.85;
+
+} 
+.modal-dialog {
+  overflow: visible;
+  top: 11%;
+  left: 0%;
+  margin: 0rpx 5rpx;
+  border-radius: 10%;
+  position: fixed;
+}
+
+.iconbench{
+  padding-bottom: 0rpx;
+  margin-bottom:0rpx;
+  color: #333;
+}
+.iconbench .list{
+  display: flex;
+  flex-direction: row;
+  flex:1;
+}
+.iconbench .items{
+  width: 100rpx;
+  height: 100rpx;
+  flex:1;
+}
+.view-image{
+  width: 290rpx;
+  height: 290rpx;
+}
+.view-image2{
+  width: 90rpx;
+  height: 90rpx;
+  margin: 0rpx 0rpx;
+}
+
+.hint image{
+position: absolute;
+height: 350rpx;
+width: 500rpx;
+top:23%;
+left:14%;
+z-index:5;
+}
+button[plain]
+{ 
+  border:0;
+  width: 100px;
+}

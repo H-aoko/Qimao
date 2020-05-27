@@ -1,10 +1,9 @@
 {
   "pages": [
-    
+    "pages/cross_road/road",
+    "pages/bridge/fail",
     "pages/bridge/brige",
-    "pages/bridge/former",
-    "pages/bridge/fail"
-    
+    "pages/bridge/former"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

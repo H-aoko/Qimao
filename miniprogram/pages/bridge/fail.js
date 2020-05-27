@@ -7,8 +7,9 @@ Page({
   data: {
     fail:"../../images/bridge/bad.jpg",
     success:"../../images/bridge/good.jpg",
-    judge:1
-    
+    judge:1,
+    hint:true,
+    showModal:false
   },
 
   /**
@@ -67,5 +68,52 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  hintShow: function () { 
+    let that = this;
+    console.log(that.data.hint);
+    that.setData({
+      hint:false
+    });
+    console.log(that.data.hint);
+    that.hideModal(); 
+  },
+  hideHint:function(){
+    if(!this.data.hint){
+      this.setData({
+        hint:true
+      });
+    }
+  },
+  audioPause: function () {
+    //this.audioCtx.pause()
+  },
+  changeYL: function () {
+    if(this.data.showModal == false)
+    this.setData({
+      showModal: true
+    });
+    else  
+    this.setData({
+      showModal: false
+    });
+  },
+  hideModal: function () {
+    this.setData({
+      showModal: false
+    });
+  },
+  toMenu: function(){ 
+    wx.redirectTo({ url: '../1/1', })
+  },
+  again: function () {
+    var app = getApp();
+    if(!app.data.hasClick){
+      app.data.hasClick = true;
+      getCurrentPages().pop();
+      wx.navigateTo({
+         url: '/pages/bridge/former',
+      });
+    }
+  },
 })
