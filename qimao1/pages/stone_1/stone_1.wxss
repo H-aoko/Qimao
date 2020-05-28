@@ -1,1 +1,321 @@
 /* pages/stone_1/stone_1.wxss */
+.time {
+  position: fixed;
+  top: 0rem;
+  width:105%;
+  left: 98%;
+  font-size: 1.2rem;
+  color: #2d2b2b;
+  transform: translate(-50%, 0);
+  z-index: 15;
+  font-family:fantasy;
+}
+.score {
+  position: fixed;
+  width:100%;
+  top: 2rem;
+  left: 95%;
+  font-size: 1.2rem;
+  color: #282627;
+  transform: translate(-50%, 0);
+  z-index: 15;
+  font-family:fantasy;
+}
+.play-box {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0; 
+  background: url('../images/riverstonefrom.jpg');
+  background-size: cover;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: 21;
+}
+.block-line {
+  width: 100%;
+  overflow: hidden;        
+}
+.block {
+  width: 5rem;
+  height: 8rem;
+  float: left;
+  border: 0px solid #ef2424;
+  box-sizing: border-box;
+  z-index: 24;
+}
+.view-image{
+  width: 290rpx;
+  height: 290rpx;
+}
+
+@keyframes box-ani {
+  from {transform: rotate(0)}
+  to {transform: rotate(360deg)}
+}
+.view-image3{
+  width: 190rpx;
+  height: 190rpx;
+  margin: 0rpx 0rpx;
+  border-radius:50%;
+  z-index: 23;
+  position: relative;
+  /* margin-left: -30rpx; */
+  animation: box-ani 4s  infinite linear;
+}
+.view-image1{
+  width: 170rpx;
+  height: 170rpx;
+  margin: 0rpx 0rpx;
+  border-radius:10%;
+  z-index: 23;
+  position: relative;
+  opacity: 0;
+  /* margin-left: -30rpx; */
+  animation: box-ani 4s  infinite linear;
+}
+.home-wrap{
+  background: #f2f2f2;
+  height: 100rpx;
+  left:0;
+  z-index: 10;
+}
+.workbench{
+  font-size: 10rpx;
+  background: #fff;
+  padding-bottom: 0rpx;
+  margin-bottom:0rpx;
+  color: #333;
+  z-index: 10;
+}
+.workbench .list{
+  display: flex;
+  background: #fff;
+  flex-direction: row;
+  flex:1;
+  z-index: 10;
+}
+.workbench .items{
+  width: 400rpx;
+  background: #fff;
+  flex:1;
+  text-align: center;
+  z-index: 10;
+}
+.workbench image{
+  width: 900rpx;
+  height: 90rpx;
+}
+
+.workbench .items image.service-icon2{
+  width: 180rpx;
+  height: 90rpx;
+}
+.workbench .items image.service-icon3{
+  width: 300rpx;
+  height: 90rpx;
+}
+.iconbtn{
+  border:0;
+  width: 70px;
+  margin: 0vh 5vw;
+}
+button[plain]
+{ 
+  height:70px;
+  border:0;
+}
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 8%;
+  left: 4%;
+  opacity: 0.85;
+  z-index: 20;
+}
+.modal-dialog {
+  overflow: visible;
+  position: fixed;
+  top: 11%;
+  left: 0%;
+  margin: 0rpx 5rpx;
+  border-radius: 10%;
+  z-index: 25;
+}
+.iconbench{
+  padding-bottom: 0rpx;
+  margin-bottom:0rpx;
+  color: #333;
+}
+.iconbench .list{
+  display: flex;
+  flex-direction: row;
+  flex:1;
+}
+.iconbench .items{
+  width: 100rpx;
+  height: 100rpx;
+  flex:1;
+}
+.view-image2{
+  width: 90rpx;
+  height: 90rpx;
+  margin: 5rpx 5rpx;
+}
+.view-image8{
+  width: 500rpx;
+  height: 1000rpx;
+  margin: 0rpx 0rpx;
+  z-index: 15;
+}
+.modal-dialog3 {
+  overflow: visible;
+  position: fixed;
+  top: 35%;
+  left: 14%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.modal-dialog4 {
+  overflow: visible;
+  position: fixed;
+  top: 35%;
+  left: 14%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.modal-dialog5 {
+  overflow: visible;
+  position: fixed;
+  top: 35%;
+  left: 14%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.modal-dialog6 {
+  overflow: visible;
+  position: fixed;
+  top: 35%;
+  left: 14%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.modal-dialog7 {
+  overflow: visible;
+  position: fixed;
+  top: 35%;
+  left: 8%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.view-image5{
+  width: 550rpx;
+  height: 220rpx;
+  margin: 0rpx 0rpx;
+}
+.view-image7{
+  width: 650rpx;
+  height: 400rpx;
+  margin: 0rpx 0rpx;
+}
+.modal-dialog8 {
+  overflow: visible;
+  position: fixed;
+  top: 95%;
+  left: 4%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.modal-dialog9 {
+  overflow: visible;
+  position: fixed;
+  top: 95%;
+  left: 26%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.modal-dialog10 {
+  overflow: visible;
+  position: fixed;
+  top: 95%;
+  left: 46%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.modal-dialog11 {
+  overflow: visible;
+  position: fixed;
+  top: 95%;
+  left: 71%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.modal-dialog12 {
+  overflow: visible;
+  position: fixed;
+  top: 96%;
+  left: 38%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.view-image0{
+  width: 70rpx;
+  height: 70rpx;
+  margin: 0rpx 0rpx;
+}
+.view-image_0{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 0rpx 0rpx;
+}
+.modal-dialog-8 {
+  overflow: visible;
+  position: fixed;
+  top: 82%;
+  left: 0%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.modal-dialog-9 {
+  overflow: visible;
+  position: fixed;
+  top: 82%;
+  left: 20%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.modal-dialog-10 {
+  overflow: visible;
+  position: fixed;
+  top: 82%;
+  left: 40%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}
+.modal-dialog-11 {
+  overflow: visible;
+  position: fixed;
+  top: 82%;
+  left: 66%;
+  margin: 0rpx 5rpx;
+  opacity: 0.85;
+  border-radius: 30%;
+}

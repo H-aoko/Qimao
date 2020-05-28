@@ -1,0 +1,4 @@
+<!--pages/stone_2/stone_2.wxml-->
+<view class="current">本次分数：{{currentScore}}</view>
+<navigator url="{{backUrl}}" redirect class="go-again">再来一次</navigator>
+<navigator url="../index/index" redirect class="go-home">返回首页</navigator>
