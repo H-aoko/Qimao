@@ -9,14 +9,14 @@
          <button plain="true" ><image src="../images/nothing.jpg" class="service-icon3"></image></button>
       </view>
       <view class="items">
-         <button plain="true" bindtap="next" ><image src="../images/next2.png" class="service-icon2"></image></button>
+         <button plain="true" bindtap="next" ><image src="../images/jmnext.png" class="service-icon2"></image></button>
       </view>
     </view>
   </view>
   <view class="workbench">
     <view class="list">
       <view class="itemView">
-       <input type="number" class="input" name="Answer" placeholder="我在这！" bindinput="AnswerInput"/>
+       <input type="number" class="input" name="Answer" placeholder=" " bindinput="AnswerInput"/>
       </view>
    </view>
   </view>

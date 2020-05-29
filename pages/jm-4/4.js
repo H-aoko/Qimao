@@ -7,7 +7,7 @@ Page({
     showJump: true,
     showButton: false,
     toView: `card_${DEFAULT_PAGE}`,
-    list: ['../images/ztfail.jpg']
+    list: ['../images/jmfail.jpg']
   },
 
   changeYL: function () {

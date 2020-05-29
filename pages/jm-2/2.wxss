@@ -172,9 +172,9 @@ border:0;
   margin: 0rpx 0rpx;
 }
 .input{
-  padding-left: 430rpx;
-  padding-top: 460rpx;
-  height: 80rpx;
-  width: 120rpx;
+  padding-left: 440rpx;
+  padding-top: 740rpx;
+  height: 100rpx;
+  width: 180rpx;
   font-size: 3em;
 }

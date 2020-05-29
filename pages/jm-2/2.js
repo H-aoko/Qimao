@@ -8,7 +8,7 @@ Page({
     showButton: false,
     value:'',
     toView: `card_${DEFAULT_PAGE}`,
-    list: ['../images/zt6.jpg']
+    list: ['../images/jm5.jpg']
   },
   AnswerInput:function(e){
     this.setData({
