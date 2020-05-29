@@ -11,7 +11,7 @@ Page({
     list: ['../images/success.jpg']
   },
   next: function () {
-      wx.redirectTo({ url: '../jm-4/4', })
+      wx.redirectTo({ url: '../jm-1/1', })
   },
   changeYL: function () {
     this.setData({

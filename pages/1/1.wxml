@@ -15,7 +15,7 @@
         <button plain="true" bindtap="toThr"><image src="../images/3.png" class="view-image2"></image> </button>
       </view>
       <view class="items">
-         <button plain="true" bindtap="toOther"><image src="../images/4.png" class="view-image2"></image></button>
+        <button plain="true" bindtap="toFor"><image src="../images/4.png" class="view-image2"></image> </button>
       </view>
     </view>
    </view>

@@ -58,13 +58,7 @@
     </view>  
   <view class="modal-dialog4" wx:if="{{showHint1}}">
       <view class="items3">
-      <image class='view-image5' src="../images/hint1_1.png"></image>
-      </view>
-  </view> 
-
-    <view class="modal-dialog4" wx:if="{{showHint2}}">
-      <view class="items3">
-      <image class='view-image5' src="../images/hint1_2.png"></image>
+      <image class='view-image5' src="../images/zt-hint.png"></image>
       </view>
   </view> 
 </scroll-view>

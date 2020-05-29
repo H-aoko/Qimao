@@ -72,7 +72,6 @@ Page({
       if (moveX < 0) {
         if(this.currentView==maxPage){
           wx.showToast({
-            title:'请点击选择店家',
             icon:'loading',
             duration:1000
           })

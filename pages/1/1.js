@@ -16,6 +16,9 @@ Page({
   toThr: function(){ 
     wx.redirectTo({ url: '../zt-1/1', })
   },
+  toFor: function(){ 
+    wx.redirectTo({ url: '../jm-1/1', })
+  },
   toLast: function(){ 
     wx.redirectTo({ url: '../58_1/58_1', })
   },

@@ -1,66 +1,78 @@
-// pages/jm-1/1.js
+const DEFAULT_PAGE = 0;
+const app = getApp();
 Page({
-
-  /**
-   * 页面的初始数据
-   */
+  startPageX: 0,
+  currentView: DEFAULT_PAGE,
   data: {
-
+    showJump: true,
+    showButton: false,
+    toView: `card_${DEFAULT_PAGE}`,
+    list: ['../images/zt1.jpg','../images/zt2.jpg','../images/zt3.jpg','../images/zt4.jpg','../images/zt5.jpg']
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
+    var index = 1;
+    var that = this;
 
+    var timer = setInterval(function () {
+      that.currentView=that.currentView+1;
+      that.setData({
+        toView: `card_${that.currentView}`
+      });
+
+    }, 2500);
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  changeYL: function () {
+    this.setData({
+      showModal: true
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  toMenu: function(){ 
+    wx.redirectTo({ url: '../1/1', })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  again: function () {
+    wx.redirectTo({ url: '../jm-1/1', })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+ 
+  jumpPage: function(){ 
+    wx.redirectTo({ url: '../jm-2/2', })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  audioPause: function () {
+    this.audioCtx.pause()
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  touchStart(e) {
+    this.startPageX = e.changedTouches[0].pageX;
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  touchEnd(e) {
+    const moveX = e.changedTouches[0].pageX - this.startPageX;
+    const maxPage = this.data.list.length - 1;
+    if (Math.abs(moveX) >= 150){
+      if (moveX < 0) {
+        if(this.currentView==maxPage){
+          wx.showToast({
+            icon:'loading',
+            duration:1000
+          })
+        };
+        if(this.currentView==(maxPage-1)){
+          this.setData({
+            showJump: false
+          })
+          this.setData({
+            showButton: true
+          });
+        };
+        this.currentView = this.currentView !== maxPage ? this.currentView + 1 : maxPage;
+      } else{
+        wx.showToast({
+          title:'剧情不可回放',
+          icon:'loading',
+          duration:1000
+        })
+      }
+    }
+    this.setData({
+      toView: `card_${this.currentView}`
+    });
   }
 })
