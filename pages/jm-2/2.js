@@ -1,4 +1,4 @@
-// pages/menu/menu.js
+// pages/jm-2/2.js
 Page({
 
   /**
@@ -7,19 +7,7 @@ Page({
   data: {
 
   },
-  toOne: function(){ 
-    wx.redirectTo({ url: '../1_1/1_1', })
-  },
-  toTwo: function(){ 
-    wx.redirectTo({ url: '../key-1/1', })
-  },
-  toThr: function(){ 
-    wx.redirectTo({ url: '../zt-1/1', })
-  },
-  toLast: function(){ 
-    wx.redirectTo({ url: '../58_1/58_1', })
-  },
-  
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -38,15 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx.showToast({
-      title: '加载中',
-      icon:'loading',
-      duration:10000
-  })
-   setTimeout(function(){
-    wx.hideToast()
-    },2000)
- 
+
   },
 
   /**

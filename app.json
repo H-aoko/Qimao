@@ -7,13 +7,20 @@
     "pages/key-3/3",
     "pages/key-4/4",
     "pages/key-5/5",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/zt-1/1",
+    "pages/zt-2/2",
+    "pages/zt-3/3",
+    "pages/zt-4/4",
+    "pages/jm-1/1",
+    "pages/jm-2/2",
+    "pages/jm-3/3",
+    "pages/jm-4/4",
+    "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "第*关",
+    "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

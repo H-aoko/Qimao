@@ -1,5 +1,4 @@
 const DEFAULT_PAGE = 0;
-
 const app = getApp();
 Page({
   startPageX: 0,
@@ -7,39 +6,28 @@ Page({
   data: {
     showJump: true,
     showButton: false,
+    value:'',
     toView: `card_${DEFAULT_PAGE}`,
-    list: ['../images/0.jpg','../images/1.jpg','../images/2.jpg']
+    list: ['../images/zt6.jpg']
   },
-  onLoad: function (options) {
-    var index = 1;
-    var that = this;
-    var timer = setInterval(function () {
-      that.currentView=that.currentView+1;
-      that.setData({
-        toView: `card_${that.currentView}`
-      });
-
-    }, 2500);
+  AnswerInput:function(e){
+    this.setData({
+      value: e.detail.value
+      })
   },
+ next: function () {
+  if (this.data.value==1){
+    wx.redirectTo({ url: '../zt-3/3', })
+  }
+  else{
+    wx.redirectTo({ url: '../zt-4/4', })
+  }
+},
 
   changeYL: function () {
     this.setData({
       showModal: true
     })
-  },
-  /**
-   * 隐藏模态对话框
-   */
-  hideModal: function () {
-    this.setData({
-      showModal: false
-    });
-    this.setData({
-      showHint2: false
-    });
-    this.setData({
-      showHint1: false
-    });
   },
   toMenu: function(){ 
     wx.redirectTo({ url: '../1/1', })
@@ -69,10 +57,7 @@ Page({
       duration:1500
     });    
   },
- 
-  jumpPage: function(){ 
-    wx.redirectTo({ url: '../key-2/2', })
-  },
+
   audioPause: function () {
     this.audioCtx.pause()
   },
