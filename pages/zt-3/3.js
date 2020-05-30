@@ -22,29 +22,7 @@ Page({
     wx.redirectTo({ url: '../1/1', })
   },
   again: function () {
-    this.currentView=0;
-    this.setData({
-      toView: `card_${this.currentView}`
-    });
-    this.setData({
-      showJump: true
-    });
-    this.setData({
-      showModal: false
-    });
-    this.setData({
-      showButton: false
-    });
-    this.setData({
-      showHint2: false
-    });
-    this.setData({
-      showHint1: false
-    });
-    wx.showToast({
-      icon:'nothing',
-      duration:1500
-    });    
+    wx.redirectTo({ url: '../zt-2/2', })   
   },
 
   audioPause: function () {

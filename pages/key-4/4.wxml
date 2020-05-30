@@ -8,6 +8,9 @@
       <view class="items">
          <button plain="true" ><image src="../images/nothing.jpg" class="service-icon2"></image></button>
       </view>
+      <view class="items">
+         <button plain="true" bindtap="next" ><image src="../images/next.png" class="service-icon1"></image></button>
+      </view>
     </view>
   </view>
 </view>

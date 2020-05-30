@@ -10,6 +10,9 @@ Page({
     toView: `card_${DEFAULT_PAGE}`,
     list: ['../images/ball1.jpg','../images/ball3.jpg','../images/ball4.jpg','../images/ball5.jpg','../images/ball6.jpg']
   },
+  next: function () {
+    wx.redirectTo({ url: '../zt-1/1', })
+},
   onLoad: function (options) {
     var index = 1;
     var that = this;
