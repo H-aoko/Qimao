@@ -31,7 +31,7 @@ Page({
       that.setData({
         toView: `card_${that.currentView}`
       });
-    }, 2500);
+    }, 2800);
   },
 
   changeYL: function () {

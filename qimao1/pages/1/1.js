@@ -10,6 +10,9 @@ Page({
   toOne: function(){ 
     wx.redirectTo({ url: '../1_1/1_1', })
   },
+  toClickStone: function(){ 
+    wx.redirectTo({ url: '../stone_0/stone_0', })
+  },
   toLast: function(){ 
     wx.redirectTo({ url: '../58_1/58_1', })
   },

@@ -186,6 +186,7 @@ Page({
         this.setData({
           showResult0: true
         });
+
       }
       if(type==1){
         this.setData({
@@ -201,10 +202,22 @@ Page({
         shouldStop: true
       });
       setTimeout(function () {
-        wx.redirectTo({
-          url: '../stone_3/stone_3?type=time&score=' + score
-      });
-       }, 1500) //延迟时间 这里是1秒
+        if(type==1){
+          wx.redirectTo({
+            url: '../stone_3/stone_3?type=time&score=' + score
+        });
+        }
+        if(type==0){
+          wx.redirectTo({
+            url: '../stone_3/stone_3?type=time&score=' + score
+        });
+        }
+        if(type==2){
+          wx.redirectTo({
+            url: '../stone_4/stone_4?type=time&score=' + score
+        });
+        }
+       }, 1800) 
        
   },
   timeInterval: function(){

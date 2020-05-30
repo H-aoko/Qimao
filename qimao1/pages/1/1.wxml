@@ -23,7 +23,7 @@
      <view class="iconbench">
     <view class="list">
       <view class="items">
-        <button plain="true" bindtap="toOther"><image src="../images/5.png" class="view-image2"></image> </button>
+        <button plain="true" bindtap="toClickStone"><image src="../images/5.png" class="view-image2"></image> </button>
       </view>
       <view class="items">
          <button plain="true" bindtap="toOther"><image src="../images/6.png" class="view-image2"></image></button>

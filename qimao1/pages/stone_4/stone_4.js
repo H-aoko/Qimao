@@ -1,4 +1,4 @@
-// pages/stone_3/stone_3.js
+// pages/stone_4/stone_4.js
 const DEFAULT_PAGE = 0;
 const app = getApp();
 Page({
@@ -6,7 +6,7 @@ Page({
   currentView:0,
   data: {
     toView: `card_${0}`,
-    list: ['../images/clickstone6.jpg','../images/stonefail.jpg','../images/stonefail2.jpg']
+    list: ['../images/clickstone7.jpg','../images/stonefail.jpg','../images/stonefail2.jpg']
   },
   toHome: function(){ 
     wx.redirectTo({ url: '../1/1', })

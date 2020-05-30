@@ -1,17 +1,19 @@
 {
   "pages": [
-    "pages/stone_0/stone_0",
-    "pages/stone_3/stone_3",
+
     "pages/0/0",
     "pages/1/1",
     "pages/1_1/1_1",
     "pages/1_3/1_3",
     "pages/1_4/1_4",
+    "pages/stone_0/stone_0",
+    "pages/stone_1/stone_1",
+    "pages/stone_2/stone_2",
+    "pages/stone_3/stone_3",
+    "pages/stone_4/stone_4",
     "pages/58_1/58_1",
     "pages/58_2/58_2",
     "pages/58_3/58_3",
-    "pages/stone_1/stone_1",
-    "pages/stone_2/stone_2",
     "pages/index/index",
     "pages/logs/logs"
   ],
