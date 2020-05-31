@@ -1,6 +1,5 @@
 const DEFAULT_PAGE = 0;
-
-const app = getApp();
+var app = getApp();
 Page({
   startPageX: 0,
   currentView: DEFAULT_PAGE,
@@ -13,7 +12,18 @@ Page({
   onLoad: function (options) {
     var index = 1;
     var that = this;
-
+    if(app.data.musicon==true){
+      that.setData({
+        musicbtn: true,
+        musicbtn2:false
+      });
+    }
+    if(app.data.musicon==false){
+      that.setData({
+        musicbtn2: true,
+        musicbtn:false
+      });
+    }
     var timer = setInterval(function () {
 
       index = index + 1;   
@@ -33,7 +43,7 @@ Page({
         toView: `card_${that.currentView}`
       });
 
-    }, 2500);
+    }, 1800);
   },
 
   changeYL: function () {
@@ -124,7 +134,22 @@ Page({
     }
   },
   audioPause: function () {
-    this.audioCtx.pause()
+    var app = getApp();
+    this.setData({
+      musicbtn2: true,
+      musicbtn:false
+    });
+    app.data.musicon = false;
+    app.AppMusic.pause();
+  },
+  audioPlay: function () {
+    var app = getApp();
+    app.AppMusic.play();
+    app.data.musicon = true;
+    this.setData({
+      musicbtn: true,
+      musicbtn2:false
+    });
   },
   touchStart(e) {
     this.startPageX = e.changedTouches[0].pageX;

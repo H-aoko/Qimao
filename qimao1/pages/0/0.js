@@ -1,7 +1,14 @@
-const app = getApp();
+
+
 Page({
+  data: {
+   
+  },
+
   onLoad (option) {
-    console.log(option.query)
+    var app = getApp()
+    app.data.globalscore = 0
+
   },
 
   start: function(){ 

@@ -217,8 +217,7 @@ Page({
             url: '../stone_4/stone_4?type=time&score=' + score
         });
         }
-       }, 1800) 
-       
+       }, 1800)     
   },
   timeInterval: function(){
     var that = this;
@@ -246,6 +245,19 @@ Page({
   },
   onLoad: function(){
       var that = this;
+
+if(app.data.musicon==true){
+      that.setData({
+        musicbtn: true,
+        musicbtn2:false
+      });
+    }
+    if(app.data.musicon==false){
+      that.setData({
+        musicbtn2: true,
+        musicbtn:false
+      });
+    }
       wx.setNavigationBarTitle({
         title: that.data.typeName
       });
@@ -275,4 +287,23 @@ Page({
   again: function () {
     wx.redirectTo({ url: '../stone_0/stone_0', })
   },
+  audioPause: function () {
+    var app = getApp();
+    app.AppMusic.pause();
+    this.setData({
+      musicbtn2: true,
+      musicbtn:false
+    });
+    app.data.musicon = false;
+  },
+  audioPlay: function () {
+    var app = getApp();
+    app.AppMusic.play();
+    app.data.musicon = true;
+    this.setData({
+      musicbtn: true,
+      musicbtn2:false
+    });
+  }
+
 })

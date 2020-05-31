@@ -1,18 +1,21 @@
 const DEFAULT_PAGE = 0;
-const app = getApp();
+const app = getApp()
+
 Page({
   startPageX: 0,
   currentView:0,
   data: {
     toView: `card_${0}`,
-    list: ['../images/arrive.jpg','../images/sucess.jpg']
+    list: ['../images/arrive_1.jpg','../images/stonesuccess.jpg']
   },
   onLoad: function (options) {
+    var app = getApp()
+    if(app.data.globalscore < 1){
+      app.data.globalscore = 1
+    }
     var index = 1;
     var that = this;
-
     var timer = setInterval(function () {
-
       index = index + 1;   
       if (index == 3) {
         clearInterval(timer);

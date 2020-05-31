@@ -14,7 +14,18 @@ Page({
   onLoad: function (options) {
     var index = 1;
     var that = this;
-
+    if(app.data.musicon==true){
+      that.setData({
+        musicbtn: true,
+        musicbtn2:false
+      });
+    }
+    if(app.data.musicon==false){
+      that.setData({
+        musicbtn2: true,
+        musicbtn:false
+      });
+    }
     var timer = setInterval(function () {
 
       index = index + 1;   
@@ -108,7 +119,22 @@ Page({
     });
   },
   audioPause: function () {
-    this.audioCtx.pause()
+    var app = getApp();
+    app.AppMusic.pause();
+    this.setData({
+      musicbtn2: true,
+      musicbtn:false
+    });
+    app.data.musicon = false;
+  },
+  audioPlay: function () {
+    var app = getApp();
+    app.AppMusic.play();
+    app.data.musicon = true;
+    this.setData({
+      musicbtn: true,
+      musicbtn2:false
+    });
   },
   touchStart(e) {
     this.startPageX = e.changedTouches[0].pageX;

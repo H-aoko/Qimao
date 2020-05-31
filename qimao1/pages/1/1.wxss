@@ -21,6 +21,17 @@ page{
   background: rgb(184, 182, 182);
   opacity: 0.7;
 }
+.modal-dialog2 {
+  overflow: visible;
+  position: fixed;
+  width: 80%;
+  height: 90%;
+  top: 30%;
+  left: 15%;
+  margin: 0rpx 5rpx;
+  border-radius: 3%;
+  opacity: 0.85;
+}
 .modal-dialog .iconbench{
   padding-bottom: 10rpx;
   margin-bottom: 10rpx;
@@ -47,6 +58,13 @@ button[plain]
 .view-image2{
   width: 120rpx;
   height: 120rpx;
+  margin: 0rpx 6rpx;
+}
+.toother-hint{
+  width: 520rpx;
+  height: 300rpx;
+  top:60%;
+  left:20%;
   margin: 0rpx 6rpx;
 }
 .view-image{

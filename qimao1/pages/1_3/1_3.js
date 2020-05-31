@@ -5,7 +5,7 @@ Page({
   currentView:0,
   data: {
     toView: `card_${0}`,
-    list: ['../images/arrive.jpg','../images/1fail.jpg']
+    list: ['../images/arrive_1.jpg','../images/1fail.jpg']
   },
   toHome: function(){ 
     wx.redirectTo({ url: '../1/1', })

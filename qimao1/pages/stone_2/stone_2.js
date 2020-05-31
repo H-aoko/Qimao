@@ -55,6 +55,10 @@ Page({
   onLoad: function (options) {
     var index = 1;
     var that = this;
+    var app = getApp();
+    if(app.data.globalscore < 12){
+      app.data.globalscore = 12
+    }
     var timer = setInterval(function () {
 
       index = index + 1;   

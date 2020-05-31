@@ -48,7 +48,8 @@
       <button plain="true" class="iconbtn" bindtap="hintShow"><image class='view-image2' src="../images/hinticon.png"></image></button>
          </view>
           <view class="items">
-      <button plain="true" class="iconbtn" bindtap="audioPause"><image class='view-image2' src="../images/mute.png"></image></button>
+ <button plain="true" class="iconbtn" bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2' src="../images/mute.png"></image></button>
+ <button plain="true" class="iconbtn" bindtap="audioPlay" wx:if="{{musicbtn2}}"><image class='view-image2' src="../images/volume.png"></image></button>
          </view>
       </view>
     </view>
