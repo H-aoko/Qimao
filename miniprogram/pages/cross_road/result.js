@@ -1,11 +1,11 @@
-// pages/bridge/former.js
+// pages/cross_road/result.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    fail:"../../images/bridge/bad.jpg",
+    fail:"../../images/road/bad.jpg",
     success:"../../images/good.jpg",
     judge:1,
     hint:true,
@@ -22,12 +22,6 @@ Page({
       judge:options.judge
   });
   console.log(this.data.judge);
-  if(this.data.judge==0){
-      app = getApp()
-      if(app.data.globalscore < 1){
-      app.data.globalscore = 1
-    }
-  }
   },
 
   /**
@@ -75,6 +69,40 @@ Page({
   onShareAppMessage: function () {
 
   },
+  hintShow: function () { 
+    let that = this;
+    console.log(that.data.hint);
+    that.setData({
+      hint:false
+    });
+    console.log(that.data.hint);
+    that.hideModal(); 
+  },
+  hideHint:function(){
+    if(!this.data.hint){
+      this.setData({
+        hint:true
+      });
+    }
+  },
+  audioPause: function () {
+    //this.audioCtx.pause()
+  },
+  changeYL: function () {
+    if(this.data.showModal == false)
+    this.setData({
+      showModal: true
+    });
+    else  
+    this.setData({
+      showModal: false
+    });
+  },
+  hideModal: function () {
+    this.setData({
+      showModal: false
+    });
+  },
   toMenu: function(){ 
     wx.redirectTo({ url: '../1/1', })
   },
@@ -84,7 +112,7 @@ Page({
       app.data.hasClick = true;
       getCurrentPages().pop();
       wx.navigateTo({
-         url: '/pages/bridge/former',
+         url: '/pages/cross_road/former',
       });
     }
   },

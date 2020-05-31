@@ -1,13 +1,11 @@
-// pages/bridge/former.js
+// pages/cross_road/former.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    auto:true,
-    hint:true,
-    showModal:false,
+    auto:true
   },
 
   /**
@@ -16,19 +14,6 @@ Page({
   onLoad: function (options) {
     var app = getApp();
     app.data.hasClick = false;
-    var that = this;
-  if(app.data.musicon==true){
-      that.setData({
-        musicbtn: true,
-        musicbtn2:false
-      });
-    }
-    if(app.data.musicon==false){
-      that.setData({
-        musicbtn2: true,
-        musicbtn:false
-      });
-    }
   },
 
   /**
@@ -59,7 +44,7 @@ Page({
           app.data.hasClick = true;
           getCurrentPages().pop();
           wx.navigateTo({
-            url: '/pages/bridge/brige',
+            url: '/pages/cross_road/road',
           });
         },1000);
       }  
@@ -77,7 +62,7 @@ Page({
       app.data.hasClick = true;
       getCurrentPages().pop();
       wx.navigateTo({
-        url: '/pages/bridge/brige',
+        url: '/pages/cross_road/road',
       });
       // wx.redirectTo({
       //   url: '/pages/bridge/brige',
@@ -118,73 +103,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  hintShow: function () { 
-    let that = this;
-    console.log(that.data.hint);
-    that.setData({
-      hint:false
-    });
-    console.log(that.data.hint);
-    that.hideModal(); 
-  },
-  hideHint:function(){
-    if(!this.data.hint){
-      this.setData({
-        hint:true
-      });
-    }
-  },
-  audioPause: function () {
-    var app = getApp();
-    app.AppMusic.pause();
-    this.setData({
-      musicbtn2: true,
-      musicbtn:false
-    });
-    app.data.musicon = false;
-  },
-  audioPlay: function () {
-    var app = getApp();
-    app.AppMusic.play();
-    app.data.musicon = true;
-    this.setData({
-      musicbtn: true,
-      musicbtn2:false
-    });
-  },
-  changeYL: function () {
-    if(this.data.showModal == false)
-    this.setData({
-      showModal: true
-    });
-    else  
-    this.setData({
-      showModal: false
-    });
-  },
-  hideModal: function () {
-    this.setData({
-      showModal: false
-    });
-  },
-  toMenu: function(){ 
-    this.setData({
-      auto:false
-    });
-    wx.redirectTo({ url: '../1/1', })
-  },
-  again: function () {
-    var app = getApp();
-    if(!app.data.hasClick){
-      app.data.hasClick = true;
-      this.setData({
-        auto:false
-      });
-      getCurrentPages().pop();
-      wx.navigateTo({
-         url: '/pages/bridge/former',
-      });
-    }
-  },
+  }
 })

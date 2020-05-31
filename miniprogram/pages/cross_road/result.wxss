@@ -1,20 +1,20 @@
-page{
+/* pages/cross_road/result.wxss */
+page,.container,.ending{
   width: 100%;
   height: 100%;
 }
-.container{ 
-  height: 100%;
-  width: 100%;
+.home-wrap{
+  height: 90rpx;
+  margin-left: -150px;
+  position: absolute;
 }
-.former,.former swiper-item,.former swiper-item image.photo{
-  height: 100%;
-  width: 100%;
+.workbench .items image{
+  width: 80rpx;
+  height: 80rpx;
 }
-.skip{
-  height:100rpx;
-  width:180rpx;
-  margin-left: 540rpx;
-  position:absolute;
+.workbench .items image.service-icon2{
+  width: 100rpx;
+  height: 100rpx;
 }
 .modal-mask {
   width: 100%;
@@ -23,7 +23,7 @@ page{
   top: 9%;
   left: 2%;
   opacity: 0.85;
-  z-index:99;
+
 } 
 .modal-dialog {
   overflow: visible;
@@ -32,7 +32,6 @@ page{
   margin: 0rpx 5rpx;
   border-radius: 10%;
   position: fixed;
-  z-index:99;
 }
 
 .iconbench{
@@ -62,28 +61,11 @@ page{
 
 .hint image{
 position: absolute;
-margin-top: 300rpx;
-margin-left: -250rpx;
 height: 350rpx;
 width: 500rpx;
+top:23%;
+left:14%;
 z-index:5;
-}
-.home-wrap{
-  height: 90rpx;
-  margin-left: -150px;
-  position: absolute;
-}
-.workbench .items image{
-  width: 80rpx;
-  height: 80rpx;
-}
-.workbench .items image.service-icon2{
-  width: 100rpx;
-  height: 100rpx;
-  width: 100rpx;
-  height: 100rpx;
-  position: relative;
-  z-index:99;
 }
 button[plain]
 { 

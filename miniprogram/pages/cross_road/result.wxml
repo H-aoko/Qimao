@@ -1,5 +1,7 @@
 <view class="container" bindtap="hideHint">
- <view class="home-wrap" bindtap="hideHint">
+<image class="ending"  wx:if="{{judge==1}}" src="{{fail}}" ></image>
+<image class="ending"  wx:else src="{{success}}" ></image>
+<view class="home-wrap" bindtap="hideHint">
   <view class="workbench">
     <view class="list">
       <view class="items">
@@ -11,25 +13,7 @@
  <view class="hint" catchtap="hintShow">
    <image src="../../images/road/hint.png" hidden="{{hint}}"></image>
   </view>
-  
-  <view class="cars" wx:for="{{carschoosed}}" wx:for-index="index" wx:for-item="item" >
-    <image class="{{item.type}}" id="the-car" mode="aspectFit" animation="{{item.animation}}" src="{{item.src}}"></image>
-  </view>
-  <view wx:for="{{a}}" wx:for-index="index" wx:for-item="item">
-  <view class="{{item.class}}">{{index}}</view>
-  </view>
-  <view class="cross">
-   <image class="person" id="the-per" src="../../images/road/head.png" mode="aspectFit" animation="{{crossAnimation}}"></image>
-  </view>
-  <view class="direction">
-  <button><image class="arrow left" src="../../images/road/arrowleft.png"  bindtouchstart="startLeft" bind
-  bindtouchend="endLeft"></image></button>
-  <button><image class="arrow top" src="../../images/road/arrowtop.png" bindtouchstart="startTop" bind
-  bindtouchend="endTop"></image></button>
-  <button><image class="arrow right" src="../../images/road/arrowright.png" bindtouchstart="startRight" bind
-  bindtouchend="endRight"></image></button>
-  </view>
- <view class="modal-mask"  bindtap="hideModal" wx:if="{{showModal}}">
+   <view class="modal-mask"  bindtap="hideModal" wx:if="{{showModal}}">
   <image class='view-image' src="../../images/blank.png"></image>
  </view>
  <view class="modal-dialog" wx:if="{{showModal}}">

@@ -1,0 +1,19 @@
+/* pages/cross_road/former.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.container{ 
+  height: 100%;
+  width: 100%;
+}
+.former,.former swiper-item,.former swiper-item image.photo{
+  height: 100%;
+  width: 100%;
+}
+.skip{
+  height:100rpx;
+  width:180rpx;
+  margin-left: 540rpx;
+  position:absolute;
+}

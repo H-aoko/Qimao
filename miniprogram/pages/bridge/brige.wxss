@@ -95,3 +95,8 @@ page{
   margin-right: 50rpx;
   margin-top: 10rpx;
 }
+.fail image{
+  width: 700rpx;
+  height: 600rpx;
+  margin-left: -350rpx;
+}

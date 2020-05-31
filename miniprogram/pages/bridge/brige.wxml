@@ -8,9 +8,18 @@
     </view>
   </view>
  </view>
- <view class="hint_time" hidden="{{show_time}}">{{count}}</view>
+
   <view class="hint" catchtap="hintShow">
    <image src="../../images/bridge/hint.png" hidden="{{hint}}"></image>
+  </view>
+  <view class="hint fail" >
+   <image src="../../images/bridge/failRotate.png" hidden="{{failRotate}}"></image>
+  </view>
+  <view class="hint fail">
+   <image src="../../images/bridge/failTime.png" hidden="{{failTime}}"></image>
+  </view>
+    <view class="hint fail">
+   <image src="../../images/bridge/failFast.png" hidden="{{failFast}}"></image>
   </view>
  <view class="walk" animation="{{walk}}" bindtap="hideModal">
   <image wx:if="{{show_img==1}}"class="person" mode='aspectFill' 
@@ -37,10 +46,11 @@
        <view class="list">
       <view class="items">
       <button plain="true" bindtap="hintShow"><image  class='view-image2' src="../../images/hinticon.png" catchtap="hintShow"></image></button>
-         </view>
-          <view class="items">
-      <button plain="true" bindtap="audioPause"><image class='view-image2' src="../../images/mute.png"></image></button>
-         </view>
+      </view>
+      <view class="items">
+       <button plain="true" class="iconbtn" bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2' src="../images/mute.png"></image></button>
+       <button plain="true" class="iconbtn" bindtap="audioPlay" wx:if="{{musicbtn2}}"><image class='view-image2' src="../images/volume.png"></image></button>
+       </view>
       </view>
     </view>
   </view>

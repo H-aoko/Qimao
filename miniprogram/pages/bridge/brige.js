@@ -11,12 +11,29 @@ Page({
       count:7,
       show_time:true,
       timer:"",
-      fail:false
+      fail:false,
+      failRotate:true,
+      failTime:true,
+      failFast:true,
+      fast:false,
     },
     onLoad: function(options) {
         // 页面创建时执行
          var app = getApp();
          app.data.hasClick = false;
+         var that = this;
+        if(app.data.musicon==true){
+         that.setData({
+           musicbtn: true,
+           musicbtn2:false
+         });
+       }
+      if(app.data.musicon==false){
+      that.setData({
+        musicbtn2: true,
+        musicbtn:false
+      });
+      }
       },
       onShow: function() {
         // 页面出现在前台时执行
@@ -24,7 +41,7 @@ Page({
         var fail = 10;
         //延迟2s开始动画,给用户准备时间
         setTimeout(function(){
-          var limit = 2000;
+          var limit = 3000;
           var animation = wx.createAnimation({
             duration: limit,
             timingFunction: 'linear',
@@ -34,7 +51,7 @@ Page({
            var edit = 0;
            var start_time = Date.now();
            var last_time = start_time;
-           that.timeCount();
+          // that.timeCount();
            console.log(start_time);
            wx.onAccelerometerChange(function(res) {
              var now = Date.now();
@@ -48,6 +65,7 @@ Page({
             var up = Math.acos(-res.z)*180/Math.PI;
             //console.log(roll);
             console.log(up);
+            //在一段时间内倾斜才算作倾斜
             if(res.x != 0)edit++;
              //抬起，停止前进 
              if( up > 30 && Date.now()-start_time <= 4*limit){
@@ -60,8 +78,10 @@ Page({
             if(up < -30 && Date.now()-start_time <= 4*limit){
               that.setData({
                 show_img:2,
-                fail:true
+                fail:true,
+                fast:true
              });
+             that.fail();
              getCurrentPages().pop();
              wx.navigateTo({
                url: '/pages/bridge/fail?judge=1',
@@ -72,8 +92,10 @@ Page({
             //将动画分为四个阶段
              if(Date.now()-start_time <= limit){
                  //倾斜画面
+                 console.log(roll);
                  if(edit >= 1){
                    //失败画面
+                   console.log(roll);
                   if(roll >= fail){ 
                     console.log(roll);
                     animation.translate3d(-29, -45,0).rotate(fail).step();
@@ -84,6 +106,7 @@ Page({
                        show_img:3,
                        fail:true
                     });
+                    that.fail();
                     getCurrentPages().pop();
                     wx.navigateTo({
                       url: '/pages/bridge/fail?judge=1',
@@ -91,6 +114,7 @@ Page({
                     wx.offAccelerometerChange();
                     return;
                   }else{
+                    console.log(roll);
                     if(roll <= -fail){ 
                       animation.translate3d(-29, -45,0).rotate(-fail).step();
                       that.setData({
@@ -100,6 +124,7 @@ Page({
                          show_img:2,
                          fail:true
                       });
+                      that.fail();
                       getCurrentPages().pop();
                       wx.navigateTo({
                         url: '/pages/bridge/fail?judge=1',
@@ -121,6 +146,11 @@ Page({
                   }
                 }
                  if(Date.now()-start_time == limit)edit = 0;
+             }else{
+              console.log("zhengchang");
+              animation.translate3d(-29, -45,0).rotate(roll).step();
+              that.setData({
+               walk: animation.export()});
              }}
             if(Date.now()-start_time <= 2*limit &&Date.now()-start_time > limit) { 
                 if(edit >= 1){
@@ -134,6 +164,7 @@ Page({
                          show_img:3,
                          fail:true
                       });
+                      that.fail();
                       getCurrentPages().pop();
                       wx.navigateTo({
                         url: '/pages/bridge/fail?judge=1',
@@ -150,6 +181,7 @@ Page({
                         show_img:2,
                         fail:true
                       });
+                      that.fail();
                       getCurrentPages().pop();
                       wx.navigateTo({
                         url: '/pages/bridge/fail?judge=1',
@@ -171,12 +203,16 @@ Page({
                         }
                       }
                        if(Date.now()-start_time == 2*limit)edit = 0;
+                   }else{
+                    animation.translate3d(-70, -90,0).rotate(roll).step();
+                    that.setData({
+                     walk: animation.export()});
                    }}
             if(Date.now()-start_time <= 3*limit &&Date.now()-start_time > 2*limit) {
                 if(edit >= 1){
                  //失败画面
                  if(roll >= fail){ 
-                  //console.log(roll);
+                  console.log(roll);
                   animation.translate3d(-100, -135,0).rotate(fail).step();
                   that.setData({
                    walk: animation.export()
@@ -185,6 +221,7 @@ Page({
                      show_img:3,
                      fail:true
                   });
+                  that.fail();
                   getCurrentPages().pop();
                   wx.navigateTo({
                     url: '/pages/bridge/fail?judge=1',
@@ -193,7 +230,7 @@ Page({
                   return;
                 }else{
                   if(roll <= -fail){ 
-                    //console.log(roll);
+                    console.log(roll);
                     animation.translate3d(-100, -135,0).rotate(-fail).step();
                     that.setData({
                      walk: animation.export()
@@ -202,6 +239,7 @@ Page({
                        show_img:2,
                        fail:true
                     });
+                    that.fail();
                     getCurrentPages().pop();
                     wx.navigateTo({
                       url: '/pages/bridge/fail?judge=1',
@@ -223,12 +261,16 @@ Page({
                 }
               }
                if(Date.now()-start_time == limit)edit = 0;
+           }else{
+            animation.translate3d(-100, -135,0).rotate(roll).step();
+            that.setData({
+             walk: animation.export()});
            }}
             if(Date.now()-start_time <= 4*limit &&Date.now()-start_time > 3*limit) {
                 if(edit >= 1){
                  //失败画面
                  if(roll >= fail){ 
-                  //console.log(roll);
+                  console.log(roll);
                   animation.translate3d(-130, -195,0).rotate(fail).step();
                   that.setData({
                    walk: animation.export()
@@ -237,6 +279,7 @@ Page({
                      show_img:3,
                      fail:true
                   });
+                  that.fail();
                   getCurrentPages().pop();
                   wx.navigateTo({
                     url: '/pages/bridge/fail?judge=1',
@@ -254,6 +297,7 @@ Page({
                        show_img:2,
                        fail:true
                     });
+                    that.fail();
                     getCurrentPages().pop();
                     wx.navigateTo({
                       url: '/pages/bridge/fail?judge=1',
@@ -274,12 +318,17 @@ Page({
                   });}
                 }
               }
+           }else{
+            animation.translate3d(-130, -195,0).rotate(roll).step();
+            that.setData({
+             walk: animation.export()});
            }}
             if(Date.now()-start_time > 4*limit){
               //超时未完成
               console.log(that.data.count);
               console.log(that.data.fail);
               if(that.data.fail==true){
+               that.fail();
                getCurrentPages().pop();
                wx.navigateTo({
                  url: '/pages/bridge/fail?judge=1',
@@ -363,10 +412,7 @@ Page({
           hint:false
         });
         that.hideModal(); 
-        that.setData({
-          show_time:false
-        });
-       that.timeCount();
+        that.timeCount();
       },
       hideHint:function(){
         if(!this.data.hint){
@@ -376,26 +422,41 @@ Page({
         }
       },
       audioPause: function () {
-        //this.audioCtx.pause()
-      },
+          var app = getApp();
+          app.AppMusic.pause();
+          this.setData({
+            musicbtn2: true,
+            musicbtn:false
+          });
+          app.data.musicon = false;
+        },
+        audioPlay: function () {
+          var app = getApp();
+          app.AppMusic.play();
+          app.data.musicon = true;
+          this.setData({
+            musicbtn: true,
+            musicbtn2:false
+          });
+        },
       //计时器
-      timeCount:function(){
-        let that = this;
-        let count = that.data.count;
-        that.setData({
-          timer: setInterval(function () {
-            count--;
-            that.setData({
-              count: count
-            })
-            if (count <= 0 || that.data.show_img!=1) {
-              that.setData({
-                count: 0
-              });
-              clearInterval(that.data.timer);
-            }
-          }, 1000)
-      })},
+      // timeCount:function(){
+      //   let that = this;
+      //   let count = that.data.count;
+      //   that.setData({
+      //     timer: setInterval(function () {
+      //       count--;
+      //       that.setData({
+      //         count: count
+      //       })
+      //       if (count <= 0 || that.data.show_img!=1) {
+      //         that.setData({
+      //           count: 0
+      //         });
+      //         clearInterval(that.data.timer);
+      //       }
+      //     }, 1000)
+      // })},
       
   onHide: function () {
     this.setData({
@@ -412,6 +473,28 @@ Page({
       timer:"",
       fail:false
     })
+  },
+  fail:function(){
+    var that = this;
+    if(that.data.fail){
+      var showImage = that.data.show_img;
+      if(showImage==2||showImage==3){
+        if(showImage==2&&that.fast==true){
+          that.setData({
+            failFast:false
+          })
+        }else{
+          that.setData({
+            failRotate:false
+          })
+        }
+      }else{
+        that.setData({
+          failTime:false
+        })
+      }
+      setTimeout(function(){},3000);
+    }
   },
 
   /**

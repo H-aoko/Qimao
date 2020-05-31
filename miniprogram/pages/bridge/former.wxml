@@ -1,4 +1,42 @@
-<view class="container">
+<view class="container" bindtap="hideHint">
+<view class="home-wrap" bindtap="hideHint">
+  <view class="workbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" class="show-btn" bindtap="changeYL"><image src="../../images/menuicon2.png" class="service-icon2"></image> </button>
+      </view>
+    </view>
+  </view>
+ </view>
+  <view class="hint" catchtap="hintShow">
+   <image src="../../images/bridge/hint.png" hidden="{{hint}}"></image>
+  </view>
+<view class="modal-mask"  bindtap="hideModal" wx:if="{{showModal}}">
+  <image class='view-image' src="../../images/blank.png"></image>
+ </view>
+ <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="iconbench">
+    <view class="list" >
+      <view class="items">
+      <button plain="true" bindtap="toMenu"><image class='view-image2' src="../../images/mainpageicon.png"></image></button>
+      </view>
+      <view class="items">
+      <button plain="true" bindtap="again"><image class='view-image2' src="../../images/again.png"></image></button>
+      </view>
+      </view>
+    </view>
+    <view class="iconbench">
+       <view class="list">
+      <view class="items">
+      <button plain="true" bindtap="hintShow"><image  class='view-image2' src="../../images/hinticon.png" catchtap="hintShow"></image></button>
+         </view>
+          <view class="items">
+     <button plain="true" class="iconbtn" bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2' src="../images/mute.png"></image></button>
+     <button plain="true" class="iconbtn" bindtap="audioPlay" wx:if="{{musicbtn2}}"><image class='view-image2' src="../images/volume.png"></image></button>
+         </view>
+      </view>
+    </view>
+  </view>
 <swiper class="former" indicator-dots="{{false}}" autoplay="{{auto}}" interval='2000' bindchange="start" circular="{{false}}">
 
   <swiper-item item-id="1"> 

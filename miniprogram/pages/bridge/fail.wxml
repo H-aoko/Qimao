@@ -1,41 +1,15 @@
-<view class="container" bindtap="hideHint">
+<view class="container">
 <image class="ending"  wx:if="{{judge==1}}" src="{{fail}}" ></image>
 <image class="ending"  wx:else src="{{success}}" ></image>
-<view class="home-wrap" bindtap="hideHint">
-  <view class="workbench">
-    <view class="list">
+  <view class="list">
       <view class="items">
-        <button plain="true" class="show-btn" bindtap="changeYL"><image src="../../images/menuicon2.png" class="service-icon2"></image> </button>
+        <button plain="true" class="home" bindtap="toMenu"><image src="../../images/mainpageicon.png" class="service-icon2"></image> </button>
       </view>
-    </view>
-  </view>
- </view>
- <view class="hint" catchtap="hintShow">
-   <image src="../../images/bridge/hint.png" hidden="{{hint}}"></image>
-  </view>
-   <view class="modal-mask"  bindtap="hideModal" wx:if="{{showModal}}">
-  <image class='view-image' src="../../images/blank.png"></image>
- </view>
- <view class="modal-dialog" wx:if="{{showModal}}">
-    <view class="iconbench">
-    <view class="list" >
-      <view class="items">
-      <button plain="true" bindtap="toMenu"><image class='view-image2' src="../../images/mainpageicon.png"></image></button>
-      </view>
-      <view class="items">
-      <button plain="true" bindtap="again"><image class='view-image2' src="../../images/again.png"></image></button>
-      </view>
-      </view>
-    </view>
-    <view class="iconbench">
-       <view class="list">
-      <view class="items">
-      <button plain="true" bindtap="hintShow"><image  class='view-image2' src="../../images/hinticon.png" catchtap="hintShow"></image></button>
-         </view>
-          <view class="items">
-      <button plain="true" bindtap="audioPause"><image class='view-image2' src="../../images/mute.png"></image></button>
-         </view>
-      </view>
-    </view>
+      <view class="items" wx:if="{{judge==1}}">
+       <button plain="true" class="again" bindtap="again"><image src="../../images/again.png" class="service-icon"></image> </button>
+       </view>
+        <view class="items" wx:else>
+       <button plain="true" class="next" bindtap="next"><image src="../../images/next.png" class="service-icon"></image> </button>
+       </view>
   </view>
 </view>
