@@ -1,0 +1,69 @@
+<app.json>(可以不看)
+data: {
+    globalscore:0,
+    musicon:true
+  }
+onlaunch中：
+this.AppMusic = wx.createInnerAudioContext();
+    this.AppMusic.autoplay = true;
+    this.AppMusic.loop = true;
+    this.AppMusic.src = "music/奇怪的人.mp3";
+    this.AppMusic.onPlay(() => {
+    console.log('开始播放')
+    })
+    this.AppMusic.onError((res) => {
+    console.log(res.errMsg)
+    console.log(res.errCode)
+    })
+***********************
+一、关于背景音乐：
+在每个有菜单框的界面中：
+1.<wxml>
+原喇叭图标<button></button>改为：
+ <button plain="true" class="iconbtn" bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2' src="../images/mute.png"></image></button>
+ <button plain="true" class="iconbtn" bindtap="audioPlay" wx:if="{{musicbtn2}}"><image class='view-image2' src="../images/volume.png"></image></button>
+2.<js>
+1）在onload函数中加上：
+var that = this;
+if(app.data.musicon==true){
+      that.setData({
+        musicbtn: true,
+        musicbtn2:false
+      });
+    }
+    if(app.data.musicon==false){
+      that.setData({
+        musicbtn2: true,
+        musicbtn:false
+      });
+    }
+2）原audioPause函数改为：
+ audioPause: function () {
+    var app = getApp();
+    app.AppMusic.pause();
+    this.setData({
+      musicbtn2: true,
+      musicbtn:false
+    });
+    app.data.musicon = false;
+  },
+  audioPlay: function () {
+    var app = getApp();
+    app.AppMusic.play();
+    app.data.musicon = true;
+    this.setData({
+      musicbtn: true,
+      musicbtn2:false
+    });
+  },
+
+
+二、关于关卡分数的全局变量：
+在每关游戏结束后进入的成功界面中：
+<js>
+onload函数中加上：
+    var app = getApp()
+    if(app.data.globalscore < 1){
+      app.data.globalscore = 1
+    }
+（1改为这一关的关卡数）
