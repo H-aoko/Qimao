@@ -5,10 +5,10 @@ Page({
   startPageX: 0,
   currentView: DEFAULT_PAGE,
   data: {
-    showJump: false,
+    showJump: true,
     showButton: false,
     toView: `card_${DEFAULT_PAGE}`,
-    list: ['../images/ball2.jpg','../images/ball3.jpg','../images/ball4.jpg','../images/ball5.jpg','../images/ball6.jpg']
+    list: ['../images/ball3.jpg','../images/ball4.jpg','../images/ball5.jpg','../images/ball6.jpg']
   },
   onLoad: function (options) {
     var index = 1;
@@ -27,7 +27,7 @@ Page({
     }
     var timer = setInterval(function () {
       index = index + 1;   
-      if (that.currentView>=3) {
+      if (that.currentView>=2) {
         clearInterval(timer);
         that.setData({
           showJump: false
@@ -59,34 +59,15 @@ Page({
     wx.redirectTo({ url: '../1/1', })
   },
   again: function () {
-    this.currentView=0;
-    this.setData({
-      toView: `card_${this.currentView}`
-    });
-    this.setData({
-      showJump: true
-    });
-    this.setData({
-      showModal: false
-    });
-    this.setData({
-      showButton: false
-    });
-    this.setData({
-      showHint1: false
-    });
-    wx.showToast({
-      icon:'nothing',
-      duration:1500
-    });    
+    wx.redirectTo({ url: '../8-1/1', })
   },
   pointCorrect: function(){ 
     wx.redirectTo({ url: '../8-6/6', })
   },
   jumpPage: function(){ 
-    this.currentView=4;
+    this.currentView=3;
     this.setData({
-      toView: `card_${4}`
+      toView: `card_${3}`
     });
     this.setData({
       showJump: false
