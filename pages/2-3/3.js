@@ -26,31 +26,15 @@ Page({
   },
   touchEnd(e) {
     const moveX = e.changedTouches[0].pageX - this.startPageX;
-    const maxPage = this.data.list.length - 1;
     if (Math.abs(moveX) >= 150){
-      if (moveX > 0) {
-        wx.showToast({
-          title:'剧情不可回放',
-          icon:'loading',
-          duration:1000
-        })
-      } else {
-        if(this.currentView==maxPage){
-          wx.showToast({
-            title:'请点击按钮',
-            icon:'loading',
-            duration:1000
-          })   
-        } else {
-          this.setData({
-            showModal: true
-          });
-          this.currentView = this.currentView !== maxPage ? this.currentView + 1 : maxPage;
-        }   
-      }
+       wx.showToast({
+                    title:'请点击按钮',
+                    icon:'loading',
+                    duration:1000
+                  })
     }
     this.setData({
       toView: `card_${this.currentView}`
     });
-  },
+  }
 })
