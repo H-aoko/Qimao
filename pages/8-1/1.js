@@ -125,20 +125,15 @@ Page({
           icon:'loading',
           duration:1000
         })
-      } else {
-        if(this.currentView==maxPage){
+      } 
+      else {
           wx.showToast({
             title:'请寻找钥匙',
             icon:'loading',
             duration:1000
           })   
-        } else {
-          this.setData({
-            showModal: true
-          });
+      } 
           this.currentView = this.currentView !== maxPage ? this.currentView + 1 : maxPage;
-        }   
-      }
     }
     this.setData({
       toView: `card_${this.currentView}`

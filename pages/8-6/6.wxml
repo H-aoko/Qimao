@@ -1,4 +1,3 @@
-<!--pages/zt-3/3.wxml-->
 <scroll-view class="scroll-box" scroll-x scroll-with-animation
   scroll-into-view="{{toView}}"
   bindtouchstart="touchStart"
@@ -19,7 +18,7 @@
         <button plain="true"> <image src="../images/nothing.jpg" class="service-icon2"></image> </button>
       </view>  
       <view class="items">
-        <button plain="true" bindtap="next"> <image src="../images/next.png" class="service-icon2"></image> </button>
+        <button plain="true" bindtap="next" wx:if="{{showModal}}"> <image src="../images/next.png" class="service-icon2"></image> </button>
       </view>  
     </view>
   </view>
