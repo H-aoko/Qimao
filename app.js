@@ -1,10 +1,25 @@
 //app.js
 App({
+  data: {
+    globalscore:0,
+    musicon:true
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    this.AppMusic = wx.createInnerAudioContext();
+    this.AppMusic.autoplay = true;
+    this.AppMusic.loop = true;
+    this.AppMusic.src = "music/奇怪的人.mp3";
+    this.AppMusic.onPlay(() => {
+    console.log('开始播放')
+    })
+    this.AppMusic.onError((res) => {
+    console.log(res.errMsg)
+    console.log(res.errCode)
+    })
 
     // 登录
     wx.login({

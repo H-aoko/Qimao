@@ -14,8 +14,8 @@ page{
   position: fixed;
   width: 56%;
   height: 40%;
-  top: 65%;
-  left: 17%;
+  top: 85%;
+  left: 20%;
   margin: 0rpx 0rpx;
   border-radius: 3%;
   background: rgb(184, 182, 182);
@@ -41,12 +41,12 @@ page{
 }
 button[plain]
 { border:0;
-  width: 250px;
+  width: 200px;
+  height: 100rpx;
 }
-
 .view-image2{
-  width: 300rpx;
-  height: 450rpx;
+  width: 150rpx;
+  height: 100rpx;
   margin: 0rpx 0rpx;
 }
 .view-image{

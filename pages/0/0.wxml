@@ -6,7 +6,7 @@
   <view class="iconbench">
     <view class="list">
       <view class="items">
-        <button plain="true" bindtap="start"><image src="../images/start.png" class="view-image2"></image> </button>
+        <button plain="true" bindtap="start"></button>
       </view>
     </view>
    </view>

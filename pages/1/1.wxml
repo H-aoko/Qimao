@@ -31,7 +31,7 @@
         <button plain="true" bindtap="toOther"><image src="../images/7.png" class="view-image2"></image> </button>
       </view>
       <view class="items">
-         <button plain="true" bindtap="toOther"><image src="../images/8.png" class="view-image2"></image></button>
+         <button plain="true" bindtap="toEig"><image src="../images/8.png" class="view-image2"></image></button>
       </view>
     </view>
    </view>

@@ -11,13 +11,16 @@ Page({
     wx.redirectTo({ url: '../1_1/1_1', })
   },
   toTwo: function(){ 
-    wx.redirectTo({ url: '../key-1/1', })
+    wx.redirectTo({ url: '../2-1/1', })
   },
   toThr: function(){ 
-    wx.redirectTo({ url: '../zt-1/1', })
+    wx.redirectTo({ url: '../3-1/1', })
   },
   toFor: function(){ 
-    wx.redirectTo({ url: '../jm-1/1', })
+    wx.redirectTo({ url: '../4-1/1', })
+  },
+  toEig: function(){ 
+    wx.redirectTo({ url: '../8-1/1', })
   },
   toLast: function(){ 
     wx.redirectTo({ url: '../58_1/58_1', })
