@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/bridge/former",
+   
     "pages/road_plus/former",
     "pages/cross_road/former",
+    "pages/bridge/former",
     "pages/cross_road/road",
     "pages/cross_road/result",
     "pages/road_plus/road",

@@ -38,7 +38,9 @@
     </view>
   </view>
 <swiper class="former" indicator-dots="{{false}}" autoplay="{{auto}}" interval='2000' bindchange="start" circular="{{false}}">
-
+ <swiper-item item-id="0"> 
+   <image class="skip" src="../../images/tiaoguo.png" bindtap="skipto" ></image>
+    <image class="photo" src="../../images/bridge/former0.jpg"></image></swiper-item>
   <swiper-item item-id="1"> 
    <image class="skip" src="../../images/tiaoguo.png" bindtap="skipto" ></image>
     <image class="photo" src="../../images/bridge/former1.jpg"></image></swiper-item>
