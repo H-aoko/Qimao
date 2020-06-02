@@ -98,7 +98,7 @@ hideModal: function () {
   });
 },
 toMenu: function(){ 
-  wx.redirectTo({ url: 'light/light1/light1', })
+  wx.navigateTo({ url: 'light/light1/light1', })
 },
 again: function () {
   wx.navigateTo({

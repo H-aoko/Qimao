@@ -100,10 +100,16 @@ Page({
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show43==false&this.data.show44==false){
+    if(this.data.show32==true){
   this.setData({
     show31:false,
-    show33:true,
-  })
+    show33:false,
+  })}
+  if(this.data.show32==false){
+    this.setData({
+      show31:false,
+      show33:true,
+    })}
 }}
 },
 L3:function(e){
@@ -201,10 +207,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show33==false&this.data.show34==false){
+    if(this.data.show41==false){
   this.setData({
     show42:false,
     show43:true,
-  })
+  })}
+  if(this.data.show41==true){
+    this.setData({
+      show42:false,
+      show43:false,
+    })}
   }}
   },
   L42:function(e){
@@ -221,10 +233,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime>0){
   if(this.data.show73==false&this.data.show74==false){
+    if(this.data.show42==false){
   this.setData({
     show43:false,
     show44:true,
-  })
+  })}
+  if(this.data.show42==true){
+    this.setData({
+      show43:false,
+      show44:false,
+    })}
   }}
   },
   L43:function(e){
@@ -240,10 +258,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show112==true){
+    if(this.data.show43==false){
   this.setData({
     show44:false,
     show45:true,
-  })
+  })}
+  if(this.data.show43==true){
+    this.setData({
+      show44:false,
+      show45:false,
+    })}
   }}
   },
   L44:function(e){
@@ -280,10 +304,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show114==false){
+    if(this.data.show54==false){
   this.setData({
     show55:false,
     show51:true,
-  })
+  })}
+  if(this.data.show54==true){
+    this.setData({
+      show55:false,
+      show51:false,
+    })}
   }}
   },
   L55:function(e){
@@ -330,10 +360,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show55==false&this.data.show35==false){
+    if(this.data.show61==false){
   this.setData({
     show62:false,
     show63:true,
-  })
+  })}
+  if(this.data.show61==true){
+    this.setData({
+      show62:false,
+      show63:false,
+    })}
   }}
   },
   L62:function(e){
@@ -371,10 +407,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show44==false&this.data.show45==false){
+    if(this.data.show71==false){
   this.setData({
     show72:false,
     show73:true,
-  })
+  })}
+  if(this.data.show71==true){
+    this.setData({
+      show72:false,
+      show73:false,
+    })}
   }}
   },
   L72:function(e){
@@ -392,10 +434,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show121==false&this.data.show124==false){
+    if(this.data.show72==false){
   this.setData({
     show73:false,
     show74:true,
-  })
+  })}
+  if(this.data.show72==true){
+    this.setData({
+      show73:false,
+      show74:false,
+    })}
   }}
   },
   L73:function(e){
@@ -411,10 +459,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show55==false&this.data.show51==false){
+    if(this.data.show73==false){
   this.setData({
     show74:false,
     show75:true,
-  })
+  })}
+  if(this.data.show73==true){
+    this.setData({
+      show74:false,
+      show75:false,
+    })}
   }}
   },
   L74:function(e){
@@ -453,10 +507,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show41==false){
+    if(this.data.show81==false){
   this.setData({
     show82:false,
     show83:true,
-  })
+  })}
+  if(this.data.show81==true){
+    this.setData({
+      show82:false,
+      show83:false,
+    })}
   }}
   },
   L82:function(e){
@@ -474,10 +534,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show122==false){
+    if(this.data.show82==false){
   this.setData({
     show83:false,
     show84:true,
-  })
+  })}
+  if(this.data.show82==true){
+    this.setData({
+      show83:false,
+      show84:false,
+    })}
   }}
   },
   L83:function(e){
@@ -493,10 +559,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show61==false){
+    if(this.data.show83==false){
   this.setData({
     show84:false,
     show85:true,
-  })
+  })}
+  if(this.data.show83==true){
+    this.setData({
+      show84:false,
+      show85:false,
+    })}
   }}
   },
   L84:function(e){
@@ -526,10 +598,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show124==true){
+    if(this.data.show93==false){
   this.setData({
     show91:false,
     show94:true,
-  })
+  })}
+  if(this.data.show93==true){
+    this.setData({
+      show91:false,
+      show94:false,
+    })}
   }}
   },
   L9:function(e){
@@ -581,10 +659,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show62==false&this.data.show63==false&this.data.show54==false){
+    if(this.data.show91==false){
   this.setData({
     show94:false,
     show95:true,
-  })
+  })}
+  if(this.data.show91==true){
+    this.setData({
+      show94:false,
+      show95:false,
+    })}
   }}
   },
   L94:function(e){
@@ -613,10 +697,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime>0){
   if(this.data.show71==false){
+    if(this.data.show103==false){
   this.setData({
     show101:false,
     show104:true,
-  })
+  })}
+  if(this.data.show103==true){
+    this.setData({
+      show101:false,
+      show104:false,
+    })}
   }}
   },
   L10:function(e){
@@ -632,10 +722,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show32==false){
+    if(this.data.show102==false){
   this.setData({
     show103:false,
     show101:true,
-  })
+  })}
+  if(this.data.show102==true){
+    this.setData({
+      show103:false,
+      show101:false,
+    })}
   }}
   },
   L103:function(e){
@@ -667,10 +763,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show112==false){
+    if(this.data.show101==false){
   this.setData({
     show104:false,
     show105:true,
-  })
+  })}
+  if(this.data.show101==true){
+    this.setData({
+      show104:false,
+      show105:false,
+    })}
   }}
   },
   L104:function(e){
@@ -699,11 +801,17 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show124==false){
+    if(this.data.show112==true){
   this.setData({
     show111:false,
-    show113:true,
-  })
+    show113:false,
+  })}
   }}
+  if(this.data.show112==false){
+    this.setData({
+      show111:false,
+      show113:true,
+    })}
   },
   L11:function(e){
     if(this.data.show105==false){
@@ -734,10 +842,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show51==false){
+    if(this.data.show111==false){
   this.setData({
     show113:false,
     show114:true,
-  })
+  })}
+  if(this.data.show111==true){
+    this.setData({
+      show113:false,
+      show114:false,
+    })}
   }}
   },
   L113:function(e){
@@ -856,10 +970,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show31==false&this.data.show33==false){
+    if(this.data.show1==false){
   this.setData({
     show2:false,
     show3:true,
-  })
+  })}
+  if(this.data.show1==true){
+    this.setData({
+      show2:false,
+      show3:false,
+    })}
   }}
   },
   L132:function(e){
@@ -877,10 +997,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show72==false&this.data.show73==false){
+    if(this.data.show2==false){
   this.setData({
     show3:false,
     show4:true,
-  })
+  })}
+  if(this.data.show2==true){
+    this.setData({
+      show3:false,
+      show4:false,
+    })}
   }}
   },
   L133:function(e){
@@ -893,10 +1019,16 @@ L34:function(e){
 },
 L134:function(e){
   if(this.data.show91==false&this.data.show93==false){
+    if(this.data.show5==false){
     this.setData({
       show4:false,
       show3:true,
-    })
+    })}
+    if(this.data.show5==true){
+      this.setData({
+        show4:false,
+        show3:false,
+      })}
     } 
 },
  134:function(e){
