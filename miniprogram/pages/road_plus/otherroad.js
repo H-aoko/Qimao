@@ -62,17 +62,18 @@ Page({
           fail:true,
           failTime:false
         });
-        setTimeout(function(){},3000);
-        console.log("t");
+        setTimeout(function(){
+          getCurrentPages().pop();
+          wx.navigateTo({
+            url: '/pages/road_plus/result?judge=1',
+          });
+          return;
+        },3000);
         clearInterval(listenerPer);
-        getCurrentPages().pop();
-        wx.navigateTo({
-          url: '/pages/road_plus/result?judge=1',
-        });
-        return;
+       
       }else{
         //成功，进入下一张页面
-        if(that.data.positionX>=80 && that.data.positionX<=220 && that.data.positionY<=-200 && !that.data.greenHide){
+        if(that.data.positionX>=80 && that.data.positionX<=220 && that.data.positionY<=-340 && !that.data.greenHide){
           clearInterval(listenerPer);
           getCurrentPages().pop();
           wx.navigateTo({
@@ -86,13 +87,15 @@ Page({
                 fail:true,
                 failTime:false
               });
-              setTimeout(function(){},3000);
+              setTimeout(function(){
+                getCurrentPages().pop();
+                wx.navigateTo({
+                   url: '/pages/road_plus/result?judge=1',
+                });
+                 return;
+              },3000);
              clearInterval(listenerPer);
-             getCurrentPages().pop();
-             wx.navigateTo({
-                url: '/pages/road_plus/result?judge=1',
-             });
-              return;
+           
            }
         }
       }

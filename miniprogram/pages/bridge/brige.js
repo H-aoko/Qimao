@@ -53,6 +53,8 @@ Page({
            var last_time = start_time;
           // that.timeCount();
            console.log(start_time);
+           var distanceX;
+           var distanceY;
            wx.onAccelerometerChange(function(res) {
              var now = Date.now();
              if( now - last_time < 200)return;
@@ -82,10 +84,12 @@ Page({
                 fast:true
              });
              that.fail();
-             getCurrentPages().pop();
-             wx.navigateTo({
-               url: '/pages/bridge/fail?judge=1',
-             });
+             setTimeout(function(){
+              getCurrentPages().pop();
+              wx.navigateTo({
+                url: '/pages/bridge/fail?judge=1',
+              });
+            },3000); 
              wx.offAccelerometerChange();
              return;
             }
@@ -106,11 +110,21 @@ Page({
                        show_img:3,
                        fail:true
                     });
+                     //失败停止移动
+                     let stopTime = Date.now()-start_time;
+                     distanceX = -(29*stopTime/limit);
+                     distanceY = -(45*stopTime/limit);
+                     animation.translate3d(distanceX, distanceY,0).rotate(-fail).step();
+                     that.setData({
+                      walk: animation.export()
+                     });
                     that.fail();
-                    getCurrentPages().pop();
-                    wx.navigateTo({
-                      url: '/pages/bridge/fail?judge=1',
-                    });
+                    setTimeout(function(){
+                      getCurrentPages().pop();
+                      wx.navigateTo({
+                        url: '/pages/bridge/fail?judge=1',
+                      });
+                    },3000); 
                     wx.offAccelerometerChange();
                     return;
                   }else{
@@ -124,11 +138,23 @@ Page({
                          show_img:2,
                          fail:true
                       });
-                      that.fail();
-                      getCurrentPages().pop();
-                      wx.navigateTo({
-                        url: '/pages/bridge/fail?judge=1',
+                      //失败停止移动
+                      let stopTime = Date.now()-start_time;
+                      distanceX = -(29*stopTime/limit);
+                      distanceY = -(45*stopTime/limit);
+                      console.log(distanceX);
+                      animation.translate3d(distanceX, distanceY,0).rotate(0).step();
+                      that.setData({
+                       walk: animation.export()
                       });
+                      console.log(that.data.walk);
+                      that.fail();
+                      setTimeout(function(){
+                        getCurrentPages().pop();
+                        wx.navigateTo({
+                          url: '/pages/bridge/fail?judge=1',
+                        });
+                      },3000); 
                       wx.offAccelerometerChange();
                       return;
                   }else{
@@ -147,7 +173,6 @@ Page({
                 }
                  if(Date.now()-start_time == limit)edit = 0;
              }else{
-              console.log("zhengchang");
               animation.translate3d(-29, -45,0).rotate(roll).step();
               that.setData({
                walk: animation.export()});
@@ -164,11 +189,22 @@ Page({
                          show_img:3,
                          fail:true
                       });
-                      that.fail();
-                      getCurrentPages().pop();
-                      wx.navigateTo({
-                        url: '/pages/bridge/fail?judge=1',
+                      //失败停止移动
+                      let stopTime = Date.now()-start_time;
+                      distanceX = -(70*stopTime/2*limit);
+                      distanceY = -(90*stopTime/2*limit);
+                      console.log(distanceX);
+                      animation.translate3d(distanceX, distanceY,0).rotate(0).step();
+                      that.setData({
+                       walk: animation.export()
                       });
+                      that.fail();
+                      setTimeout(function(){
+                        getCurrentPages().pop();
+                        wx.navigateTo({
+                          url: '/pages/bridge/fail?judge=1',
+                        });
+                      },3000); 
                       wx.offAccelerometerChange();
                       return;
                   }else{
@@ -181,11 +217,22 @@ Page({
                         show_img:2,
                         fail:true
                       });
+                       //失败停止移动
+                       let stopTime = Date.now()-start_time;
+                       distanceX = -(70*stopTime/2*limit);
+                       distanceY = -(90*stopTime/2*limit);
+                       console.log(distanceX);
+                       animation.translate3d(distanceX, distanceY,0).rotate(0).step();
+                       that.setData({
+                        walk: animation.export()
+                       });
                       that.fail();
-                      getCurrentPages().pop();
-                      wx.navigateTo({
-                        url: '/pages/bridge/fail?judge=1',
-                      });
+                      setTimeout(function(){
+                        getCurrentPages().pop();
+                        wx.navigateTo({
+                          url: '/pages/bridge/fail?judge=1',
+                        });
+                      },3000); 
                       wx.offAccelerometerChange();
                       return;
                     }else{
@@ -221,11 +268,21 @@ Page({
                      show_img:3,
                      fail:true
                   });
+                   //失败停止移动
+                   let stopTime = Date.now()-start_time;
+                   distanceX = -(100*stopTime/3*limit);
+                   distanceY = -(135*stopTime/3*limit);
+                   animation.translate3d(distanceX, distanceY,0).rotate(0).step();
+                   that.setData({
+                    walk: animation.export()
+                   });
                   that.fail();
-                  getCurrentPages().pop();
-                  wx.navigateTo({
-                    url: '/pages/bridge/fail?judge=1',
-                  });
+                  setTimeout(function(){
+                    getCurrentPages().pop();
+                    wx.navigateTo({
+                      url: '/pages/bridge/fail?judge=1',
+                    });
+                  },3000); 
                   wx.offAccelerometerChange();
                   return;
                 }else{
@@ -239,11 +296,21 @@ Page({
                        show_img:2,
                        fail:true
                     });
+                     //失败停止移动
+                     let stopTime = Date.now()-start_time;
+                     distanceX = -(100*stopTime/3*limit);
+                     distanceY = -(135*stopTime/3*limit);
+                     animation.translate3d(distanceX, distanceY,0).rotate(0).step();
+                     that.setData({
+                      walk: animation.export()
+                     });
                     that.fail();
-                    getCurrentPages().pop();
-                    wx.navigateTo({
-                      url: '/pages/bridge/fail?judge=1',
-                    });
+                    setTimeout(function(){
+                      getCurrentPages().pop();
+                      wx.navigateTo({
+                        url: '/pages/bridge/fail?judge=1',
+                      });
+                    },3000); 
                     wx.offAccelerometerChange();
                     return;
                 }else{
@@ -279,11 +346,22 @@ Page({
                      show_img:3,
                      fail:true
                   });
+                   //失败停止移动
+                   let stopTime = Date.now()-start_time;
+                   distanceX = -(130*stopTime/4*limit);
+                   distanceY = -(195*stopTime/4*limit);
+                   console.log(distanceX);
+                   animation.translate3d(distanceX, distanceY,0).rotate(0).step();
+                   that.setData({
+                    walk: animation.export()
+                   });
                   that.fail();
-                  getCurrentPages().pop();
-                  wx.navigateTo({
-                    url: '/pages/bridge/fail?judge=1',
-                  });
+                  setTimeout(function(){
+                    getCurrentPages().pop();
+                    wx.navigateTo({
+                      url: '/pages/bridge/fail?judge=1',
+                    });
+                  },3000); 
                   wx.offAccelerometerChange();
                   return;
                 }else{
@@ -297,11 +375,22 @@ Page({
                        show_img:2,
                        fail:true
                     });
+                     //失败停止移动
+                     let stopTime = Date.now()-start_time;
+                     distanceX = -(130*stopTime/4*limit);
+                     distanceY = -(195*stopTime/4*limit);
+                     console.log(distanceX);
+                     animation.translate3d(distanceX, distanceY,0).rotate(0).step();
+                     that.setData({
+                      walk: animation.export()
+                     });
                     that.fail();
-                    getCurrentPages().pop();
-                    wx.navigateTo({
-                      url: '/pages/bridge/fail?judge=1',
-                    });
+                    setTimeout(function(){
+                      getCurrentPages().pop();
+                      wx.navigateTo({
+                        url: '/pages/bridge/fail?judge=1',
+                      });
+                    },3000);  
                     wx.offAccelerometerChange();
                     return;
                 }else{
@@ -325,14 +414,16 @@ Page({
            }}
             if(Date.now()-start_time > 4*limit){
               //超时未完成
-              console.log(that.data.count);
+             // console.log(that.data.count);
               console.log(that.data.fail);
               if(that.data.fail==true){
                that.fail();
-               getCurrentPages().pop();
-               wx.navigateTo({
-                 url: '/pages/bridge/fail?judge=1',
-               });
+               setTimeout(function(){
+                getCurrentPages().pop();
+                wx.navigateTo({
+                  url: '/pages/bridge/fail?judge=1',
+                });
+               },3000);
                wx.offAccelerometerChange();
                return;
               }else{
@@ -482,18 +573,17 @@ Page({
         if(showImage==2&&that.fast==true){
           that.setData({
             failFast:false
-          })
+          });
         }else{
           that.setData({
             failRotate:false
-          })
+          });
         }
       }else{
         that.setData({
           failTime:false
-        })
+        });
       }
-      setTimeout(function(){},3000);
     }
   },
 

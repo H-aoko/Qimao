@@ -29,7 +29,7 @@
     <view class="iconbench">
        <view class="list">
       <view class="items">
-      <button plain="true" bindtap="hintShow"><image  class='view-image2' src="../../images/hinticon.png" catchtap="hintShow"></image></button>
+      <button plain="true" bindtap="hintShow"><image  class='view-image2' src="../../images/road/plus/hint.png" catchtap="hintShow"></image></button>
          </view>
           <view class="items">
      <button plain="true" class="iconbtn" bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2' src="../images/mute.png"></image></button>

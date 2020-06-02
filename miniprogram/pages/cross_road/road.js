@@ -118,7 +118,7 @@ Page({
              }else{
                //不同车型、速度
                if((carschoosed[i].type.indexOf("c")!=-1&&carschoosed[j].type.indexOf("l")!=-1)||(carschoosed[j].type.indexOf("c")!=-1&&carschoosed[i].type.indexOf("l")!=-1)){
-                   if(interTime<1350&&(carschoosed[i].drive=="one"||carschoosed[i].drive=="four")){
+                   if(interTime<1500&&(carschoosed[i].drive=="one"||carschoosed[i].drive=="four")){
                      //console.log("here");
                      carschoosed.splice(j,1);
                      timearray.splice(j,1);
@@ -188,13 +188,15 @@ Page({
                  failTime:false
                });
                setTimeout(function(){
-               },3000);
-               clearInterval(listenerStruck);
-               getCurrentPages().pop();
+                 //console.log("relay");
+                 getCurrentPages().pop();
                  wx.navigateTo({
                    url: '/pages/cross_road/result?judge=1',
                  });
                return;
+               },2500);
+               clearInterval(listenerStruck);
+               
           }else{
             clearInterval(listenerStruck);
             getCurrentPages().pop();
