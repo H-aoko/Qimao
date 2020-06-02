@@ -98,11 +98,11 @@ hideModal: function () {
   });
 },
 toMenu: function(){ 
-  wx.redirectTo({ url: '../light1/light1', })
+  wx.redirectTo({ url: 'light/light1/light1', })
 },
 again: function () {
   wx.navigateTo({
-    url: '../light1/light1',
+    url: '/light/light1/light1',
   })
 },
 xiaoshi:function(){

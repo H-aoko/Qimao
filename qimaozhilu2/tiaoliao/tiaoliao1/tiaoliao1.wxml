@@ -37,4 +37,6 @@
      <image class='view-image4' src="/tiaoliao/images/volume.png" bindtap="audioPlay"
       wx:if="{{musicbtn2}}"></image>
   </view>
-  
+  <view>
+<image src="/tiaoliao/images/tip.png" class="tip" wx:if="{{showtip}}" bindtap="tip"></image>
+</view>

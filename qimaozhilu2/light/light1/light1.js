@@ -4,14 +4,14 @@ const app = getApp();
 Page({
   startPageX: 0,
   showModal:false,
-  
+  showtip:false,
   currentView: DEFAULT_PAGE,
   /**
    * 页面的初始数据
    */
   data: {
     toView: `card_${DEFAULT_PAGE}`,
-    list: ['../images/light1.jpg','../images/light2.jpg','../images/light3.jpg','../images/light4.jpg','../images/light5.jpg']
+    list: ['../images/057.jpg','../images/light1.jpg','../images/light2.jpg','../images/light3.jpg','../images/light4.jpg','../images/light5.jpg']
    },
   onLoad: function (options) {
 
@@ -38,7 +38,7 @@ Page({
       that.setData({
         toView: `card_${that.currentView}`
       });
-if(that.currentView==5){
+if(that.currentView==6){
   wx.navigateTo({
     url: '/light/light2/light2',
   })
@@ -82,7 +82,7 @@ if(that.currentView==5){
     wx.navigateTo({
       url: '/light/light2/light2',
     }),
-    this.currentView=7;
+    this.currentView=8;
     this.setData({
       toView: `card_${this.currentView}`
     });
@@ -96,7 +96,7 @@ if(that.currentView==5){
     wx.navigateTo({
       url: '/light/light1/light1',
     })
-    this.currentView=7;
+    this.currentView=8;
     this.setData({
       toView: `card_${this.currentView}`
     });
@@ -120,5 +120,25 @@ if(that.currentView==5){
       musicbtn: true,
       musicbtn2:false
     });
+  },
+  tip:function () {
+    this.setData({
+      showtip:false,
+      hintshow:true,
+    hintshow2:false,
+    })
+  },
+  hintShow:function(){
+    if(this.data.showtip==true){
+      this.setData({
+    showtip: false
+  })
+  }
+  else{
+    this.setData({
+      showtip:true,
+      showModal:false,
+    })
+  }
   },
 })

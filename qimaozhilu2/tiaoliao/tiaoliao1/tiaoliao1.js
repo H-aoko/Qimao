@@ -5,14 +5,14 @@ var index = 1;
 Page({
   startPageX: 0,
   showModal:false,
-  
+  showtip:false,
   currentView: DEFAULT_PAGE,
   /**
    * 页面的初始数据
    */
   data: {
     toView: `card_${DEFAULT_PAGE}`,
-    list: ['../images/tiaoliao1.jpg','../images/tiaoliao2.jpg','../images/tiaoliao3.jpg','../images/tiaoliao4.jpg','../images/tiaoliao5.jpg','../images/tiaoliao6.jpg']
+    list: ['../images/005.jpg','../images/tiaoliao1.jpg','../images/tiaoliao2.jpg','../images/tiaoliao3.jpg','../images/tiaoliao4.jpg','../images/tiaoliao5.jpg','../images/tiaoliao6.jpg']
    },
   onLoad: function (options) {
 
@@ -40,7 +40,7 @@ if(app.data.musicon==true){
       that.setData({
         toView: `card_${that.currentView}`
       });
-if(that.currentView==6){
+if(that.currentView==7){
   wx.navigateTo({
     url: '/tiaoliao/tiaoliao7/tiaoliao7',
   })
@@ -99,7 +99,7 @@ if(that.currentView==6){
     wx.navigateTo({
       url: '/tiaoliao/tiaoliao7/tiaoliao7',
     }),
-    this.currentView=7;
+    this.currentView=8;
     this.setData({
       toView: `card_${this.currentView}`
     });
@@ -113,11 +113,30 @@ if(that.currentView==6){
     wx.navigateTo({
       url: '/tiaoliao/tiaoliao1/tiaoliao1',
     })
-    this.currentView=7;
+    this.currentView=8;
     this.setData({
       toView: `card_${this.currentView}`
     });
   },
   hintShow: function () {  
+  },
+  tip:function () {
+    this.setData({
+      showtip:false,
+      
+    })
+  },
+  hintShow:function(){
+    if(this.data.showtip==true){
+      this.setData({
+    showtip: false
+  })
+  }
+  else{
+    this.setData({
+      showtip:true,
+      showModal:false,
+    })
+  }
   },
 })

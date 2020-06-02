@@ -6,6 +6,7 @@ Page({
   showvoice1:false,
   startPageX: 0,
   showModal:false,
+  showtip:false,
   
   currentView: DEFAULT_PAGE,
   /**
@@ -13,7 +14,7 @@ Page({
    */
   data: {
     toView: `card_${DEFAULT_PAGE}`,
-    list: ['../images/huarongdao1.jpg','../images/huarongdao2.jpg','../images/huarongdao3.jpg','../images/huarongdao4.jpg','../images/huarongdao5.jpg','../images/huarongdao6.jpg']
+    list: ['../images/009.jpg','../images/huarongdao1.jpg','../images/huarongdao2.jpg','../images/huarongdao3.jpg','../images/huarongdao4.jpg','../images/huarongdao5.jpg','../images/huarongdao6.jpg']
    },
   onLoad: function (options) {
 
@@ -40,7 +41,7 @@ if(app.data.musicon==true){
       that.setData({
         toView: `card_${that.currentView}`
       });
-if(that.currentView==6){
+if(that.currentView==7){
   wx.navigateTo({
     url: '/huarongdao/huarongdao3/huarongdao3',
   })
@@ -99,12 +100,10 @@ if(that.currentView==6){
     wx.navigateTo({
       url: '/huarongdao/huarongdao3/huarongdao3',
     }),
-    this.currentView=7;
+    this.currentView=8;
     this.setData({
       toView: `card_${this.currentView}`
     });
-  },
-  hintShow:function () {
   },
   toMenu: function(){ 
     wx.redirectTo({ url: '../huarongdao1/huarongdao1', })
@@ -113,12 +112,30 @@ if(that.currentView==6){
     wx.navigateTo({
       url: '/huarongdao/huarongdao1/huarongdao1',
     })
-    this.currentView=7;
+    this.currentView=8;
     this.setData({
       toView: `card_${this.currentView}`
     });
   },
   hintShow: function () {  
   },
- 
+  tip:function () {
+    this.setData({
+      showtip:false,
+      
+    })
+  },
+  hintShow:function(){
+    if(this.data.showtip==true){
+      this.setData({
+    showtip: false
+  })
+  }
+  else{
+    this.setData({
+      showtip:true,
+      showModal:false,
+    })
+  }
+  },
 })

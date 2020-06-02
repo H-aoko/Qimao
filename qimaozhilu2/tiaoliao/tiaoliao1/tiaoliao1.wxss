@@ -136,3 +136,11 @@ button[plain]
   width: 15%;
   z-index:15;
 }
+.tip{
+  position: fixed;
+  top:30%;
+  left: 5%;
+  width: 90%;
+  z-index: 2;
+  opacity: 0.85;
+}

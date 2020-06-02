@@ -545,10 +545,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show42==false&this.data.show43==false){
+    if(this.data.show92==true){
   this.setData({
     show93:false,
-    show91:true,
-  })
+    show91:false,
+  })}
+  if(this.data.show92==false){
+    this.setData({
+      show93:false,
+      show91:true,
+    })}
   }}
   },
   L93:function(e){
@@ -783,10 +789,16 @@ L34:function(e){
   // 控制点击事件在350ms内触发，加这层判断是为了防止长按时会触发点击事件
   if (that.touchEndTime - that.touchStartTime >0){
   if(this.data.show75==false&this.data.show74==false){
+    if(this.data.show122==true){
   this.setData({
     show123:false,
-    show121:true,
-  })
+    show121:false,
+  })}
+  if(this.data.show122==false){
+    this.setData({
+      show123:false,
+      show121:true,
+    })}
   }}
   },
   L123:function(e){
