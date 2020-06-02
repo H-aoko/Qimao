@@ -1,13 +1,40 @@
-//试验页
+//迷宫游戏界面
 var app = getApp()  
+var interval
+var timeout
 Page({  
   data: {
     mleft: "160rpx",
     mtop: "675rpx",
     show: false,
-    hintshow:false
+    hintshow:false,
+    seconds:30,
+    musicbtn:true,
+    musicbtn2:false
   },
   onLoad: function () {  
+    this.mysetInterval();
+    timeout=setTimeout(function(){
+      clearInterval(interval);
+      getCurrentPages().pop();
+      wx.redirectTo({
+        url: '../mgfail/mgfail',
+      })
+    },30000);
+
+    /*var that = this;
+    if(app.data.musicon==true){
+      that.setData({
+        musicbtn: true,
+        musicbtn2:false
+      });
+    }
+    if(app.data.musicon==false){
+      that.setData({
+        musicbtn2: true,
+        musicbtn:false
+      });
+    }*/
   },  
   openmenu:function() {
     var cshow=this.data.show;
@@ -20,14 +47,20 @@ Page({
       show: cshow
     })
   },
+  hide:function() {
+    this.setData({
+      show:false,
+      hintshow:false
+    })
+  },
   home:function() {
-    wx.navigateTo({
-      url: '../index/index',
+    wx.reLaunch({
+      url: '../../index/index',
     })
   },
   again:function() {
-    wx.navigateTo({
-      url: '../migong/migong',
+    wx.redirectTo({
+      url: '../../migong/migong',
     })
   },
   hint:function() {
@@ -59,6 +92,13 @@ Page({
         mleft: cleft,
         mtop: (Number(ctop.substring(0,ctop.indexOf("r")))-65).toString()+"rpx",
         })
+      if (cleft=="550rpx"&&ctop=="220rpx") {
+        clearInterval(interval);
+        clearTimeout(timeout);
+        wx.redirectTo({
+          url: '../mgsuccess/mgsuccess',
+        })
+      }
     }
   },
   qmdown :function() {
@@ -120,6 +160,31 @@ Page({
         mtop: ctop
         })
       }
-  }
+  },
+  mysetInterval:function() {
+    interval=setInterval(() => {
+    this.setData({
+      seconds: this.data.seconds-1
+      })
+   }, 1000);
+  },
+  audioPause: function () {
+    /*var app = getApp();
+    app.AppMusic.pause();
+    app.data.musicon = false;*/
+    this.setData({
+      musicbtn2: true,
+      musicbtn:false
+    });
+  },
+  audioPlay: function () {
+    /*var app = getApp();
+    app.AppMusic.play();
+    app.data.musicon = true;*/
+    this.setData({
+      musicbtn: true,
+      musicbtn2:false
+    });
+  },
 })  
 

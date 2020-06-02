@@ -1,0 +1,135 @@
+/* miniprogram/pages/tanchishe/tcsgame/tcsgame.wxss */
+.gameview {
+  display: flex; 
+  flex-direction: column;
+  background-color: white;
+}
+.topview {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0rpx;
+  height:100rpx;
+  width:100%;
+}
+.menu {
+  position:absolute;
+  top: -10rpx;
+  left: -5rpx;
+}
+.menuimage {
+  height:100rpx;
+  width: 100rpx;
+}
+.score {
+  position: absolute;
+  right:10rpx;
+  top:40rpx;
+  flex-direction: row;
+  width: 150rpx;
+}
+.boxes {
+  height: 60rpx;
+  width: 60rpx;
+}
+.scorecontent {
+  position: absolute;
+  top:10rpx;
+  font-size: 40rpx;
+}
+.backview {
+  top:110rpx;
+}
+.canvas {
+  width:300px;
+  height:300px;
+  position: absolute;
+  top:160rpx;
+  left: 60rpx;
+}
+.menucontent {
+  position: absolute;
+  left: 50rpx;
+  top:110rpx;
+  height:200rpx;
+  width: 200rpx;
+  opacity: 0.85;
+}
+.blank {
+  height:290rpx;
+  width: 290rpx;
+}
+.home {
+  height:140rpx;
+  position:absolute;
+  left:-20rpx;
+  top:10rpx;
+}
+.again {
+  height:140rpx;
+  position:absolute;
+  left:90rpx;
+  top: 10rpx;
+}
+.hint {
+  height:140rpx;
+  position:absolute;
+  left:-20rpx;
+  top: 120rpx;
+}
+.music {
+  height:140rpx;
+  position:absolute;
+  left:90rpx;
+  top:120rpx;
+}
+.menubtnimage {
+  height:90rpx;
+  width: 90rpx;
+}
+.hintcontent {
+  height:400rpx;
+  width:600rpx;
+  position: absolute;
+  left: 130rpx;
+  top:450rpx;
+}
+.hintcontentimage {
+  height: 300rpx;
+  width: 500rpx;
+}
+.controlView {
+  width: 100%;
+  position: absolute;
+  top:850rpx;
+  right:30rpx;
+}
+.controlview_child {
+  display: flex;
+  flex-direction: row;
+}
+.btnClass{
+  height: 160rpx;
+}
+.btnimage {
+  height:140rpx;
+  width:150rpx;
+}
+.btnClass_updown {
+  height:70rpx;
+}
+.btnimage_updown {
+  height:60rpx;
+  width:250rpx;
+}
+.btnClass_center {
+  height:20rpx;
+  display: flex;
+  align-items: center;
+}
+.btnimage_center {
+  height: 50rpx;
+  width: 100rpx;
+  position: absolute;
+  top: 55rpx;
+  left: 45rpx;
+}

@@ -1,0 +1,14 @@
+<!--miniprogram/pages/migongplus/mgplusfail/mgplusfail.wxml-->
+<view class="outcomeview">
+  <view class="imageview">
+    <image class="failimage" mode="widthFix" src="../images/迷宫plus失败.png"></image>
+  </view>
+  <view class="bottomview">
+    <button class="home" style="width:200rpx" bindtap="home" hover-class="none">
+      <image class="btnimage" src="../../migong/images/mainpageicon.png"></image>
+    </button>
+    <button class="again" style="width:200rpx" bindtap="again" hover-class="none">
+      <image  class="btnimage" src="../../migong/images/again.png"></image>
+    </button>
+  </view>
+</view>

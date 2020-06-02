@@ -56,17 +56,23 @@
   </view>
 
   <!--migong-->
-   <view class="uploader">
+  <view class="uploader">
     <navigator url="../migong/migong" open-type="navigate" class="uploader-text">
       <text>迷宫</text>
     </navigator>
   </view>
 
-   <!--try-->
-   <view class="uploader">
-    <navigator url="../try/try" open-type="navigate" class="uploader-text">
-      <text>try</text>
+<!--tanchishe-->
+  <view class="uploader">
+    <navigator url="../tanchishe/tanchishe" open-type="navigate" class="uploader-text">
+      <text>贪吃蛇</text>
     </navigator>
   </view>
 
+<!--migongplus-->
+  <view class="uploader">
+    <navigator url="../migongplus/migongplus" open-type="navigate" class="uploader-text">
+      <text>迷宫plus</text>
+    </navigator>
+  </view>
 </view>

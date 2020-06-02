@@ -7,29 +7,32 @@
 .topview {
   display: flex;
   flex-direction: row;
-  position: absolute;
   margin-left: 0rpx;
-  margin-top: 10rpx;
-  height:150rpx;
+  height:100rpx;
   width:100%;
 }
 .menu {
-  
   position:absolute;
   margin-left: 40rpx;
 }
 .menuimage {
-  height:90rpx;
+  height:100rpx;
   width: 100rpx;
 }
 .clock {
-  
   position:absolute;
   right:40rpx;
+  top:20rpx
 }
 .clockimage {
-  height:90rpx;
-  width:95rpx;
+  height:100rpx;
+  width:110rpx;
+}
+.seconds {
+  position: absolute;
+  font-size: 20rpx;
+  top:42rpx;
+  right:42rpx;
 }
 .menucontent {
   position: absolute;
@@ -37,38 +40,39 @@
   top:110rpx;
   height:200rpx;
   width: 200rpx;
+  opacity: 0.85;
 }
 .blank {
-  height:190rpx;
-  width: 190rpx;
+  height:290rpx;
+  width: 290rpx;
 }
 .home {
-  height:80rpx;
-  position:relative;
-  right:70rpx;
-  bottom: 200rpx;
+  height:140rpx;
+  position:absolute;
+  left:-20rpx;
+  top:10rpx;
 }
 .again {
-  height:80rpx;
+  height:140rpx;
   position:absolute;
-  left:50rpx;
-  top: 0rpx;
+  left:90rpx;
+  top: 10rpx;
 }
 .hint {
-  height:80rpx;
+  height:140rpx;
   position:absolute;
-  left:-30rpx;
-  top: 70rpx;
+  left:-20rpx;
+  top: 120rpx;
 }
-.mute {
-  height:80rpx;
+.music {
+  height:140rpx;
   position:absolute;
-  left:50rpx;
-  top: 70rpx;
+  left:90rpx;
+  top:120rpx;
 }
 .menubtnimage {
-  height:60rpx;
-  width: 60rpx;
+  height:90rpx;
+  width: 90rpx;
 }
 .hintcontent {
   height:400rpx;
@@ -82,11 +86,10 @@
   width: 500rpx;
 }
 .mgimage {
-  /*height: 750rpx;*/
   width: 100%;
   position:absolute;
   margin-left: 15rpx;
-  margin-top: 40rpx; /*40*/
+  margin-top: 40rpx; 
 }
 .qmimage {
   position:absolute;
@@ -123,7 +126,4 @@
 .btnview1 {
   display: flex;
   flex-direction: row;
-}
-.up_btn::after {
-  border: none;
 }
