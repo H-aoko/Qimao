@@ -1,4 +1,4 @@
-<!--pages/cross_road/former.wxml-->
+<!--pages/road_plus/former.wxml-->
 <view class="container" bindtap="hideHint">
 <view class="home-wrap" bindtap="hideHint">
   <view class="workbench">
@@ -42,19 +42,22 @@
 
   <swiper-item item-id="1"> 
    <image class="skip" src="../../images/tiaoguo.png" bindtap="skipto" ></image>
-    <image class="photo" src="../../images/road/former1.jpg"></image></swiper-item>
+    <image class="photo" src="../../images/road/plus/former1.jpg"></image></swiper-item>
   <swiper-item item-id="2">
     <image class="skip" src="../../images/tiaoguo.png" bindtap="skipto"></image>
-    <image class="photo" src="../../images/road/former2.jpg"></image>
+    <image class="photo" src="../../images/road/plus/former2.jpg"></image>
   </swiper-item>
   <swiper-item item-id="3"> 
     <image class="skip" src="../../images/tiaoguo.png" bindtap="skipto"></image>
-    <image class="photo" src="../../images/road/former3.jpg"></image>
+    <image class="photo" src="../../images/road/plus/former3.jpg"></image>
   </swiper-item>
   <swiper-item item-id="4"> 
     <image class="skip" src="../../images/tiaoguo.png" bindtap="skipto"></image>
-    <image class="photo" src="../../images/road/former4.jpg"></image>
+    <image class="photo" src="../../images/road/plus/former4.jpg"></image>
   </swiper-item>
-
+ <swiper-item item-id="5"> 
+    <image class="skip" src="../../images/tiaoguo.png" bindtap="skipto"></image>
+    <image class="photo" src="../../images/road/plus/former5.jpg"></image>
+  </swiper-item>
 </swiper>
 </view>

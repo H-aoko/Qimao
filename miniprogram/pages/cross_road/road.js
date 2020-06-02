@@ -8,19 +8,16 @@ Page({
     showModal:false,
     hint:true,
     carschoosed:[],
-    time:20,
+    time:25,
     drive:[],
-    animation:'',
-    a:[{"name":"aa","class":"th"},{"name":"bb","class":"th"}],
+    animationArray:[],
     touchLeft:0,
     touchTop:0,
     touchRight:0,
-    timeLeft:1,
-    timeTop:1,
-    timeRight:1,
     positionX:0,
     positionY:0,
     fail:false,
+    failTime:true,
   },
 
   /**
@@ -29,6 +26,19 @@ Page({
   onLoad: function (options) {
     var app = getApp();
     app.data.hasClick = false;
+    var that = this;
+   if(app.data.musicon==true){
+      that.setData({
+        musicbtn: true,
+        musicbtn2:false
+      });
+    }
+    if(app.data.musicon==false){
+      that.setData({
+        musicbtn2: true,
+        musicbtn:false
+      });
+    }
   },
 
   /**
@@ -55,22 +65,24 @@ Page({
     var car2 = { v:80,src:"../../images/road/lorrytoleft.png",type:"lorry lorry-one",drive:"one"};
     //2车道
     var car3 = { v:155,src:"../../images/road/cartoleft.png",type:"car car-two",drive:"two"};
-    var car4 = { v:120,src:"../../images/road/lorrytoleft.png",type:"lorry lorry-two",drive:"two"};
+    var car4 = { v:130,src:"../../images/road/lorrytoleft.png",type:"lorry lorry-two",drive:"two"};
     //3车道
     var car5 = { v:155,src:"../../images/road/cartoright.png",type:"car car-three",drive:"three"};
-    var car6 = { v:120,src:"../../images/road/lorrytoright.png",type:"lorry lorry-three",drive:"three"};
+    var car6 = { v:130,src:"../../images/road/lorrytoright.png",type:"lorry lorry-three",drive:"three"};
     //4车道
     var car7 = { v:90,src:"../../images/road/cartoright.png",type:"car car-four",drive:"four"};
     var car8 = { v:80,src:"../../images/road/lorrytoright.png",type:"lorry lorry-four",drive:"four"};
     //所有类型的车
     var allcars = [car1,car2,car3,car4,car5,car6,car7,car8];
     //选择此次出现的车辆
-    var carsNum = 12;
+    //从allcars中随机选择车型
+    var carsNum = 50;
     var randomarray=new Array(carsNum);
     for(var i=0;i<carsNum;i++){
         randomarray[i]=Math.floor(Math.random()*8);
     }
     var carschoosed = [];
+    console.log(carschoosed);
     for(var i=0;i<carsNum;i++){
       var index = randomarray[i];
       carschoosed.push(allcars[index]);
@@ -84,34 +96,46 @@ Page({
   console.log(timearray);
   console.log(carschoosed);
   //删去重叠的车辆
-  // for(var i=0;i<carsNum;i++){
-  //  for(var j=0;j<carsNum;j++){
-  //    //相同车道
-  //      if(i!=j && carschoosed[i].drive == carschoosed[j].drive){
-  //        //相同车型、速度
-  //       if(carschoosed[i].v == carschoosed[j].v){
-  //         var interTime = Math.abs(timearray[i]-timearray[j]);
-  //         //小车
-  //         if((carschoosed[i].type.indexOf("c")!=-1 && interTime<500)||
-  //         //货车
-  //           (carschoosed[i].type.indexOf("l")!=-1 && interTime<500)){
-  //             carschoosed.splice(j,1);
-  //             timearray.splice(j,1);
-  //             carsNum--;
-  //           }
-  //           }else{
-  //             //不同车型、速度
-  //             if((carschoosed[i].type.indexOf("c")!=-1&&carschoosed[j].type.indexOf("l")!=-1)||(carschoosed[j].type.indexOf("c")!=-1&&carschoosed[i].type.indexOf("l")!=-1)){
-  //                 if(interTime<800&&(carschoosed[i].drive=="one"||carschoosed[i].drive=="four")){
-  //                   carschoosed.splice(j,1);
-  //                   timearray.splice(j,1);
-  //                   carsNum--;
-  //                 }
-  //             }
-  //       }
-  //      }
-  //  }
-  // };
+  var interTime
+  for(var i=0;i<carsNum;i++){
+    console.log(carsNum);
+   for(var j=0;j<carsNum;j++){
+     //相同车道
+      if(carschoosed[j]&&carschoosed[i]){
+        if(i!=j && carschoosed[i].drive == carschoosed[j].drive){
+          //相同车型、速度
+          interTime = Math.abs(timearray[i]-timearray[j]);
+         if(carschoosed[i].v == carschoosed[j].v){
+           //小车
+           if((carschoosed[i].type.indexOf("c")!=-1 && interTime<800)||
+           //货车
+             (carschoosed[i].type.indexOf("l")!=-1 && interTime<1500)){
+               //console.log("here");
+               carschoosed.splice(j,1);
+               timearray.splice(j,1);
+               carsNum = carsNum-1;
+             }
+             }else{
+               //不同车型、速度
+               if((carschoosed[i].type.indexOf("c")!=-1&&carschoosed[j].type.indexOf("l")!=-1)||(carschoosed[j].type.indexOf("c")!=-1&&carschoosed[i].type.indexOf("l")!=-1)){
+                   if(interTime<1350&&(carschoosed[i].drive=="one"||carschoosed[i].drive=="four")){
+                     //console.log("here");
+                     carschoosed.splice(j,1);
+                     timearray.splice(j,1);
+                     carsNum = carsNum-1;
+                   }else{
+                     if(interTime<900&&(carschoosed[i].drive=="two"||carschoosed[i].drive=="three")){
+                       //console.log("here");
+                       carschoosed.splice(j,1);
+                       timearray.splice(j,1);
+                       carsNum = carsNum-1;
+                   }
+                   }
+         }
+        }
+      } 
+   }}
+  };
   // console.log(carsNum);
   // console.log(timearray);
   // console.log(carschoosed);
@@ -119,34 +143,37 @@ Page({
     carschoosed:carschoosed
   });
   //设置车辆的动画
+  that.timeCount();
+  var animationArray=[];
   for(var i=0;i<carsNum;i++){
-    var v = carschoosed[i].v/1000;
+    let v = carschoosed[i].v/1000;
     console.log(v);
     console.log(timearray[i]);
-    var animation = wx.createAnimation({
+    let animation = wx.createAnimation({
       duration: 400/v,
       timingFunction: 'linear',
       delay: timearray[i],
      });
+     console.log(timearray[i]);
      if(carschoosed[i].drive=="one" || carschoosed[i].drive=="two"){
       animation.translate(-600,0).step();
      }else{
       animation.translate(600,0).step();
      }
-     carschoosed[i].animation = animation.export();
+     animationArray.push(animation.export());
    }
-    that.setData({
-      carschoosed:carschoosed
-    });
-    console.log(carschoosed);
-    console.log(that.data.carschoosed);
+   that.setData({
+     animationArray:animationArray
+   });
+    // console.log(carschoosed);
+    // console.log(that.data.carschoosed);
     //监听坐标
     that.queryMultipleNodes();
     var listenerStruck = setInterval(function(){
       var positionY = that.data.positionY;
-      if(positionY>=-340 && !that.data.fail){
-        console.log(that.data.fail);
-        console.log(positionY);
+      if(positionY>=-340 && !that.data.fail && that.data.time>0){
+       // console.log(that.data.fail);
+        //console.log(positionY);
         that.queryMultipleNodes();
       }
       else{
@@ -155,14 +182,31 @@ Page({
           clearInterval(listenerStruck);
           return;
         }else{
-          clearInterval(listenerStruck);
-          getCurrentPages().pop();
-            wx.navigateTo({
-              url: '/pages/cross_road/result?judge=0',
-            });
+          //超时
+          if(that.data.time<=0){
+               that.setData({
+                 failTime:false
+               });
+               setTimeout(function(){
+               },3000);
+               clearInterval(listenerStruck);
+               getCurrentPages().pop();
+                 wx.navigateTo({
+                   url: '/pages/cross_road/result?judge=1',
+                 });
+               return;
+          }else{
+            clearInterval(listenerStruck);
+            getCurrentPages().pop();
+              wx.navigateTo({
+                url: '/pages/cross_road/result?judge=0',
+              });
+              clearInterval(that.data.timer);
+              return;
+          }
         }
       }
-    },700);
+    },350);
     
   },
   //获得车辆和人物的坐标，判断是否相撞
@@ -181,6 +225,7 @@ Page({
       }).exec();  
     wx.createSelectorQuery().selectAll('#the-car').boundingClientRect(function(rects){
       rects.forEach(function(rect){
+       // console.log(rect.left);
         //判断是否相撞,失败跳转
         if(rect.left>=perLeft&&rect.left<=perRight){
           if( (rect.top>=perTop&&rect.top<=perBottom)||
@@ -189,6 +234,7 @@ Page({
             that.setData({
               fail:true
             });
+            clearInterval(that.data.timer);
             getCurrentPages().pop();
             wx.navigateTo({
               url: '/pages/cross_road/result?judge=1',
@@ -204,6 +250,7 @@ Page({
               that.setData({
                 fail:true
               });
+              clearInterval(that.data.timer);
               getCurrentPages().pop();
               wx.navigateTo({
                 url: '/pages/cross_road/result?judge=1',
@@ -273,7 +320,7 @@ Page({
       app.data.hasClick = true;
       getCurrentPages().pop();
       wx.navigateTo({
-         url: '/pages/cross_road/road',
+         url: '/pages/cross_road/former',
       });
     }
   },
@@ -293,8 +340,24 @@ Page({
       });
     }
   },
+  //音效
   audioPause: function () {
-    //this.audioCtx.pause()
+    var app = getApp();
+    app.AppMusic.pause();
+    this.setData({
+      musicbtn2: true,
+      musicbtn:false
+    });
+    app.data.musicon = false;
+  },
+  audioPlay: function () {
+    var app = getApp();
+    app.AppMusic.play();
+    app.data.musicon = true;
+    this.setData({
+      musicbtn: true,
+      musicbtn2:false
+    });
   },
   //根据按键移动人物
   //左方向按键
@@ -311,8 +374,8 @@ Page({
       timingFunction: 'linear',
       delay: 0,
      });
-     let time = that.data.timeLeft;
-     if(that.data.touchLeft==1 && positionX>=-150 && positionY>=-340){
+     //向左移动
+     if(that.data.touchLeft==1 && positionX>=-150 && positionY>=-340 &&!that.data.fail){
       positionX += -25;
       positionY += -25;
       animation.translate(positionX,positionY).step();
@@ -321,14 +384,9 @@ Page({
         positionX:positionX,
         positionY:positionY
       });
-      time++;
-      that.setData({
-        timeLeft:time
-      });
     }
      var peopleWalk = setInterval(function () {
-        if(that.data.touchLeft==1 && positionX>=-150 && positionY>=-340){
-          time = that.data.timeLeft;
+        if(that.data.touchLeft==1 && positionX>=-150 && positionY>=-340&&!that.data.fail){
           positionX += -25;
           positionY += -25;
           animation.translate(positionX,positionY).step();
@@ -337,10 +395,6 @@ Page({
             positionX:positionX,
             positionY:positionY
           });
-          time++;
-          that.setData({
-            timeLeft:time
-          });
         }else{
           clearInterval(peopleWalk);
         } 
@@ -348,6 +402,7 @@ Page({
       
      
   },
+  //停止向左移动
   endLeft:function(){
       this.setData({
         touchLeft:0
@@ -367,8 +422,8 @@ Page({
      timingFunction: 'linear',
      delay: 0,
     });
-    let time = that.data.timeTop;
-    if(that.data.touchTop==1 && positionX>=-150 && positionY>=-340){
+    //向上移动
+    if(that.data.touchTop==1 && positionX>=-150 && positionY>=-340&&!that.data.fail){
       positionX += 0;
       positionY += -25;
       animation.translate(positionX,positionY).step();
@@ -377,13 +432,9 @@ Page({
         positionX:positionX,
         positionY:positionY
       });
-     time++;
-     that.setData({
-       timeTop:time
-     });
    }
     var peopleWalk = setInterval(function () {
-       if(that.data.touchTop==1 && positionX>=-150 && positionY>=-340){
+       if(that.data.touchTop==1 && positionX>=-150 && positionY>=-340&&!that.data.fail){
         positionX += 0;
         positionY += -25;
         animation.translate(positionX,positionY).step();
@@ -392,15 +443,12 @@ Page({
           positionX:positionX,
           positionY:positionY
         });
-         time++;
-         that.setData({
-           timeTop:time
-         });
        }else{
          clearInterval(peopleWalk);
        } 
      }, 700)
  },
+ //停止向上移动
  endTop:function(){
      this.setData({
        touchTop:0
@@ -420,8 +468,8 @@ Page({
    timingFunction: 'linear',
    delay: 0,
   });
-  var time = that.data.timeRight;
-  if(that.data.touchRight==1 && positionX>=-150 && positionY>=-340){
+  //向右移动
+  if(that.data.touchRight==1 && positionX>=-150 && positionY>=-340&&!that.data.fail){
     positionX += 25;
     positionY += -25;
     animation.translate(positionX,positionY).step();
@@ -430,13 +478,9 @@ Page({
         positionX:positionX,
         positionY:positionY
     });
-   time++;
-   that.setData({
-     timeRight:time
-   });
  }
   var peopleWalk = setInterval(function () {
-     if(that.data.touchRight==1 && positionX>=-150 && positionY>=-340){
+     if(that.data.touchRight==1 && positionX>=-150 && positionY>=-340&&!that.data.fail){
       positionX += 25;
       positionY += -25;
       animation.translate(positionX,positionY).step();
@@ -445,10 +489,6 @@ Page({
         positionX:positionX,
         positionY:positionY
       });
-       time++;
-       that.setData({
-         timeRight:time
-       });
      }else{
        clearInterval(peopleWalk);
      } 
@@ -456,9 +496,29 @@ Page({
    
   
 },
+//停止向右移动
 endRight:function(){
    this.setData({
      touchRight:0
    })
 },
+ //计时器
+timeCount:function(){
+    let that = this;
+    let count = that.data.time;
+    that.setData({
+       timer: setInterval(function () {
+        count--;
+        that.setData({
+         time: count
+        })
+    console.log(count);
+    if (count <= 0 ) {
+        that.setData({
+          time: 0
+        });
+        clearInterval(that.data.timer);
+   }
+  }, 1000)
+  })},
 })

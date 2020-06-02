@@ -8,15 +8,15 @@
     </view>
   </view>
  </view>
+<view class="timeCount">{{time}}</view>
  <view class="hint" catchtap="hintShow">
    <image src="../../images/road/hint.png" hidden="{{hint}}"></image>
   </view>
-  
-  <view class="cars" wx:for="{{carschoosed}}" wx:for-index="index" wx:for-item="item" >
-    <image class="{{item.type}}" id="the-car" mode="aspectFit" animation="{{item.animation}}" src="{{item.src}}"></image>
+  <view class="hint fail" >
+   <image src="../../images/road/failT.png" hidden="{{failTime}}"></image>
   </view>
-  <view wx:for="{{a}}" wx:for-index="index" wx:for-item="item">
-  <view class="{{item.class}}">{{index}}</view>
+  <view class="cars" wx:for="{{carschoosed}}" wx:for-index="index" wx:for-item="item" >
+    <image class="{{item.type}}" id="the-car" mode="aspectFit" animation="{{animationArray[index]}}" src="{{item.src}}"></image>
   </view>
   <view class="cross">
    <image class="person" id="the-per" src="../../images/road/head.png" mode="aspectFit" animation="{{crossAnimation}}"></image>
@@ -49,7 +49,8 @@
       <button plain="true" bindtap="hintShow"><image  class='view-image2' src="../../images/hinticon.png" catchtap="hintShow"></image></button>
          </view>
           <view class="items">
-      <button plain="true" bindtap="audioPause"><image class='view-image2' src="../../images/mute.png"></image></button>
+     <button plain="true" class="iconbtn" bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2' src="../images/mute.png"></image></button>
+     <button plain="true" class="iconbtn" bindtap="audioPlay" wx:if="{{musicbtn2}}"><image class='view-image2' src="../images/volume.png"></image></button>
          </view>
       </view>
     </view>

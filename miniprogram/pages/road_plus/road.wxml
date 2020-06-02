@@ -1,6 +1,5 @@
-<!--pages/cross_road/former.wxml-->
 <view class="container" bindtap="hideHint">
-<view class="home-wrap" bindtap="hideHint">
+ <view class="home-wrap" bindtap="hideHint">
   <view class="workbench">
     <view class="list">
       <view class="items">
@@ -9,10 +8,27 @@
     </view>
   </view>
  </view>
-  <view class="hint" catchtap="hintShow">
-   <image src="../../images/road/hint.png" hidden="{{hint}}"></image>
+ <view class="hint" catchtap="hintShow">
+   <image src="../../images/road/plus/hint.png" hidden="{{hint}}"></image>
   </view>
-<view class="modal-mask"  bindtap="hideModal" wx:if="{{showModal}}">
+  <view class="hint fail" >
+   <image src="../../images/road/plus/fail.png" hidden="{{failTime}}"></image>
+  </view>
+  <view class="nonstop">
+  <image class="manyCars" src="../../images/road/plus/plus.gif"></image>
+  </view>
+  <view class="cross">
+   <image class="person" id="the-per" src="../../images/road/head.png" mode="aspectFit" animation="{{crossAnimation}}"></image>
+  </view>
+  <view class="direction">
+  <button><image class="arrow left" src="../../images/road/arrowleft.png"  bindtouchstart="startLeft" bind
+  bindtouchend="endLeft"></image></button>
+  <button><image class="arrow top" src="../../images/road/arrowtop.png" bindtouchstart="startTop" bind
+  bindtouchend="endTop"></image></button>
+  <button><image class="arrow right" src="../../images/road/arrowright.png" bindtouchstart="startRight" bind
+  bindtouchend="endRight"></image></button>
+  </view>
+ <view class="modal-mask"  bindtap="hideModal" wx:if="{{showModal}}">
   <image class='view-image' src="../../images/blank.png"></image>
  </view>
  <view class="modal-dialog" wx:if="{{showModal}}">
@@ -38,23 +54,4 @@
       </view>
     </view>
   </view>
-<swiper class="former" indicator-dots="{{false}}" autoplay="{{auto}}" interval='2000' bindchange="start" circular="{{false}}">
-
-  <swiper-item item-id="1"> 
-   <image class="skip" src="../../images/tiaoguo.png" bindtap="skipto" ></image>
-    <image class="photo" src="../../images/road/former1.jpg"></image></swiper-item>
-  <swiper-item item-id="2">
-    <image class="skip" src="../../images/tiaoguo.png" bindtap="skipto"></image>
-    <image class="photo" src="../../images/road/former2.jpg"></image>
-  </swiper-item>
-  <swiper-item item-id="3"> 
-    <image class="skip" src="../../images/tiaoguo.png" bindtap="skipto"></image>
-    <image class="photo" src="../../images/road/former3.jpg"></image>
-  </swiper-item>
-  <swiper-item item-id="4"> 
-    <image class="skip" src="../../images/tiaoguo.png" bindtap="skipto"></image>
-    <image class="photo" src="../../images/road/former4.jpg"></image>
-  </swiper-item>
-
-</swiper>
 </view>

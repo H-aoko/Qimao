@@ -1,4 +1,4 @@
-/* pages/cross_road/result.wxss */
+/* pages/road_plus/result.wxss */
 page,.container,.ending{
   width: 100%;
   height: 100%;

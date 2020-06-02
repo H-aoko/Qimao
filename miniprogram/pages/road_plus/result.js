@@ -1,11 +1,11 @@
-// pages/bridge/former.js
+// pages/road_plus/result.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    fail:"../../images/bridge/bad.jpg",
+    fail:"../../images/road/plus/bad.jpg",
     success:"../../images/good.jpg",
     judge:1,
   },
@@ -22,8 +22,8 @@ Page({
   console.log(this.data.judge);
   if(this.data.judge==0){
       app = getApp()
-      if(app.data.globalscore < 11){
-      app.data.globalscore = 11
+      if(app.data.globalscore < 7){
+      app.data.globalscore = 7
     }
   }
   },
@@ -32,7 +32,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
@@ -42,6 +42,9 @@ Page({
 
   },
 
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
   onHide: function () {
 
   },
@@ -82,7 +85,7 @@ Page({
       app.data.hasClick = true;
       getCurrentPages().pop();
       wx.navigateTo({
-         url: '/pages/bridge/former',
+         url: '/pages/road_plus/former',
       });
     }
   },

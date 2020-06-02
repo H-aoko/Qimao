@@ -1,3 +1,4 @@
+<!--pages/road_plus/result.wxml-->
 <view class="container" >
 <image class="ending"  wx:if="{{judge==1}}" src="{{fail}}" ></image>
 <image class="ending"  wx:else src="{{success}}" ></image>

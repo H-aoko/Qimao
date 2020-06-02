@@ -1,4 +1,4 @@
-page{
+page,.manyCars,.nonstop{
   height: 100%;
   width: 100%;
 }
@@ -96,6 +96,7 @@ button[plain]
     left:45%;
     bottom: 13%;
   }
+  
 .direction{
   width: 90%;
   display: flex;
@@ -116,66 +117,8 @@ button[plain]
   margin-left:0;
   margin-right: 0;
 }
-.cars{
-  position:absolute;
-  width: 100%;
-  height:100%;
-}
-
 .arrow{
   height: 90rpx;
   width: 160rpx;
   position: relative;
-}
-image.car{
-  width:200rpx;
-  height: 100rpx;
-  position: absolute;
-}
-image.lorry{
-  width:320rpx;
-  height: 100rpx;
-  position: absolute;
-}
-image.car-one{
-  right:-30%;
-  top:32.3%;
-}
-image.lorry-one{
-  right:-42%;
-  top:32.3%;
-}
-image.car-two{
-  right:-30%;
-  top:42.5%;
-}
-image.lorry-two{
-  right:-42%;
-  top:42.7%;
-}
-image.car-three{
-  left:-30%;
-  top:53.5%;
-}
-image.lorry-three{
-  left:-42.8%;
-  top:53.5%;
-}
-image.car-four{
-  left:-30%;
-  top:65%;
-}
-image.lorry-four{
-  left:-42.8%;
-  top:64.5%;
-}
-.th{
-  position: absolute;
-  left:20%;
-  top:2%;
-}
-.fail image{
-  width: 700rpx;
-  height: 600rpx;
-  margin-left: -100rpx;
 }

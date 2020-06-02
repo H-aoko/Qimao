@@ -1,4 +1,4 @@
-// pages/cross_road/former.js
+// pages/road_plus/former.js
 Page({
 
   /**
@@ -35,7 +35,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
@@ -44,47 +44,7 @@ Page({
   onShow: function () {
 
   },
-  //跳转到游戏界面
-  start:function(e){
-    console.log(e.detail.currentItemId);
-    var id = e.detail.currentItemId;
-    if(id == 4){
-      this.setData({
-        auto:false
-      });
-      var app = getApp();
-      //console.log(app.data.hasClick);
-      if(!app.data.hasClick){
-        setTimeout(function(){
-          app.data.hasClick = true;
-          getCurrentPages().pop();
-          wx.navigateTo({
-            url: '/pages/cross_road/road',
-          });
-        },1000);
-      }  
-    }     
-  },
-  //跳过剧情
-  skipto:function(){
-    this.setData({
-      auto:false
-    });
-    var app = getApp();
-    console.log(app.data.hasClick);
-    if(!app.data.hasClick){
-      console.log("here");
-      app.data.hasClick = true;
-      getCurrentPages().pop();
-      wx.navigateTo({
-        url: '/pages/cross_road/road',
-      });
-      // wx.redirectTo({
-      //   url: '/pages/bridge/brige',
-      // });
-    }
-    
-  },
+
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -183,9 +143,49 @@ Page({
       });
       getCurrentPages().pop();
       wx.navigateTo({
-         url: '/pages/cross_road/former',
+         url: '/pages/road_plus/former',
       });
     }
   },
-
+  //跳过剧情
+  skipto:function(){
+    this.setData({
+      auto:false
+    });
+    var app = getApp();
+    console.log(app.data.hasClick);
+    if(!app.data.hasClick){
+      console.log("here");
+      app.data.hasClick = true;
+      getCurrentPages().pop();
+      wx.navigateTo({
+        url: '/pages/road_plus/road',
+      });
+      // wx.redirectTo({
+      //   url: '/pages/bridge/brige',
+      // });
+    }
+    
+  },
+  //跳转到游戏界面
+  start:function(e){
+    console.log(e.detail.currentItemId);
+    var id = e.detail.currentItemId;
+    if(id == 5){
+      this.setData({
+        auto:false
+      });
+      var app = getApp();
+      //console.log(app.data.hasClick);
+      if(!app.data.hasClick){
+        setTimeout(function(){
+          app.data.hasClick = true;
+          getCurrentPages().pop();
+          wx.navigateTo({
+            url: '/pages/road_plus/road',
+          });
+        },1000);
+      }  
+    }     
+   },
 })
