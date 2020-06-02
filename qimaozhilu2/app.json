@@ -1,16 +1,23 @@
 {
   "pages":[
     
-    "pages/tiaoliao1/tiaoliao1",
-    "pages/tiaoliao7/tiaoliao7",
-    "pages/success/success",
-    "pages/fail/fail"
-    
+    "tiaoliao/tiaoliao1/tiaoliao1",
+    "tiaoliao/tiaoliao7/tiaoliao7",
+    "tiaoliao/success/success",
+    "tiaoliao/fail/fail",
+    "huarongdao/huarongdao3/huarongdao3",
+    "huarongdao/huarongdao1/huarongdao1",
+    "huarongdao/fail/fail",
+    "huarongdao/success/success",
+    "light/light2/light2",
+    "light/success/success",
+    "light/light1/light1",
+    "light/fail/fail"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "调料",
+    "navigationBarTitleText": "7mao",
     "navigationBarTextStyle":"black"
   },
   "style": "v2",

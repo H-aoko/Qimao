@@ -1,0 +1,16 @@
+<!--light/success/success.wxml-->
+ <image src='/light/images/mainpageicon.png' class="zhuye" bindtap="zhuye"></image>
+<image src='/light/images/next.png' class="next" bindtap="next"></image>
+
+<scroll-view class="scroll-box" scroll-x scroll-with-animation
+  scroll-into-view="{{toView}}"
+  bindtouchstart="touchStart"
+  bindtouchend="touchEnd">
+    <view wx:for="{{list}}" wx:key="{{item}}" class="card-box" id="card_{{index}}">
+      <view class="card">
+        <image src='{{item}}'  mode='widthFix' class="image1"></image>
+      </view>
+    </view>
+</scroll-view>
+
+

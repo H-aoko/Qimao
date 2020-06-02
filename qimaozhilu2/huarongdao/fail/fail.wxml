@@ -1,0 +1,6 @@
+<!--huarongdao/fail/fail.wxml-->
+<view class="yinru" >
+<image src='/huarongdao/images/fail.jpg' class="image1"></image>
+</view>
+<image src='/huarongdao/images/mainpageicon.png' class="zhuye"bindtap="zhuye"></image>
+<image src='/huarongdao/images/again.png' class="again" bindtap="again"></image>
