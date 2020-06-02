@@ -7,7 +7,7 @@ Page({
     showJump: true,
     showButton: false,
     toView: `card_${DEFAULT_PAGE}`,
-    list: ['../images/jm1.jpg','../images/jm2.jpg','../images/jm3.jpg','../images/jm4.jpg','../images/jm5.jpg']
+    list: ['../images/jm0.jpg','../images/jm1.jpg','../images/jm2.jpg','../images/jm3.jpg','../images/jm4.jpg','../images/jm5.jpg']
   },
   onLoad: function (options) {
     var index = 1;
@@ -27,7 +27,7 @@ Page({
     }
     var timer = setInterval(function () {
       index = index + 1;   
-      if (that.currentView>=3) {
+      if (that.currentView>=4) {
         clearInterval(timer);
         that.setData({
           showJump: false
@@ -74,9 +74,9 @@ Page({
     wx.redirectTo({ url: '../2-3/3', })
   },
   jumpPage: function(){ 
-    this.currentView=4;
+    this.currentView=5;
     this.setData({
-      toView: `card_${4}`
+      toView: `card_${5}`
     });
     this.setData({
       showJump: false

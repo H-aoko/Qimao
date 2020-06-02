@@ -1,60 +1,73 @@
-page{
+page {
   overflow: hidden;
   background: rgb(255, 255, 255);
 }
-.home-wrap{
+
+.home-wrap {
   background: #f2f2f2;
   height: 40rpx;
 }
-.workbench{
+
+.workbench {
   font-size: 10rpx;
   background: #fff;
   padding-bottom: 0rpx;
-  margin-bottom:0rpx;
+  margin-bottom: 0rpx;
   color: #333;
 }
-.workbench .list{
+
+.workbench .list {
   display: flex;
   flex-direction: row;
-  flex:1;
+  flex: 1;
 }
-.workbench .items{
+
+.workbench .items {
   width: 50rpx;
-  flex:1;
+  flex: 1;
   text-align: center;
 }
-.workbench .items image{
+
+.workbench .items image {
   width: 60rpx;
   height: 30rpx;
 }
-.workbench .items image.service-icon{
+
+.workbench .items image.service-icon {
   width: 80rpx;
   height: 80rpx;
 }
-.workbench .items image.service-icon1{
+
+.workbench .items image.service-icon1 {
   width: 200rpx;
   height: 70rpx;
 }
-.workbench .items image.service-icon2{
+
+.workbench .items image.service-icon2 {
   width: 100rpx;
   height: 100rpx;
 }
-.workbench .items image.service-icon3{
+
+.workbench .items image.service-icon3 {
   width: 220rpx;
   height: 100rpx;
 }
-button[plain]
-{ border:0;
+
+button[plain] {
+  border: 0;
   width: 160px;
 }
-.scroll-box{
+
+.scroll-box {
   white-space: nowrap;
   height: 85vh;
 }
-.card-box{
+
+.card-box {
   display: inline-block;
 }
-.card{
+
+.card {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,93 +1,131 @@
 /* pages/1/1.wxss */
-page{
+page {
   overflow: hidden;
   background: rgb(255, 255, 255);
 }
-.home-wrap{
+
+.home-wrap {
   background: #f2f2f2;
   height: 90rpx;
 }
-.workbench{
+
+.workbench {
   font-size: 10rpx;
   background: #fff;
   padding-bottom: 0rpx;
-  margin-bottom:0rpx;
+  margin-bottom: 0rpx;
   color: #333;
 }
-.workbench .list{
+
+.workbench .list {
   display: flex;
   flex-direction: row;
-  flex:1;
+  flex: 1;
 }
-.workbench .items{
+
+.workbench .items {
   width: 120rpx;
-  flex:1;
+  flex: 1;
   text-align: center;
 }
-.workbench .items image{
+
+.workbench .items image {
   width: 80rpx;
   height: 80rpx;
 }
-.workbench .items image.service-icon{
+
+.workbench .items image.service-icon {
   width: 120rpx;
   height: 120rpx;
 }
-.workbench .items image.service-icon1{
+
+.workbench .items image.service-icon1 {
   width: 105rpx;
   height: 105rpx;
 }
-.workbench .items image.service-icon2{
+
+.workbench .items image.service-icon2 {
   width: 180rpx;
   height: 90rpx;
 }
-.workbench .items image.service-icon3{
+
+.workbench .items image.service-icon3 {
   width: 190rpx;
   height: 90rpx;
 }
-.btn1{
-  border:0;
-  top: 330rpx;
-  left: 304rpx;
+
+.btn0 {
+  position: absolute;
 }
-.btn2{
-  border:0;
-  top: 500rpx;
-  left: 620rpx;
+
+.btn1 {
+  border: 0;
+  top: 360rpx;
+  left: 296rpx;
 }
-.btn3{
-  border:0;
-  top: 520rpx;
-  left: 280rpx;
+
+.btn2 {
+  border: 0;
+  top: 680rpx;
+  left: 700rpx;
 }
-.iconbtn{
-  border:0;
+
+.btn3 {
+  border: 0;
+  top: 780rpx;
+  left: 300rpx;
+}
+
+.btn4 {
+  border: 0;
+  top: 950rpx;
+  left: 115rpx;
+}
+
+.btn5 {
+  border: 0;
+  top: 100rpx;
+  left: 600rpx;
+}
+
+.btn6 {
+  border: 0;
+  top: 650rpx;
+  left: 610rpx;
+}
+
+.iconbtn {
+  border: 0;
   width: 70px;
   margin: 0vh 5vw;
 }
-button[plain]{ 
-  border:0;
+
+button[plain] {
+  border: 0;
 }
 
-.scroll-box{
+.scroll-box {
   white-space: nowrap;
   height: 130vh;
 }
-.card-box{
+
+.card-box {
   display: inline-block;
 }
- 
-.card{
+
+.card {
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  height: 85vh;
-  width: 100vw;
+  height: 90%;
+  width: 100%;
   margin: 0vh 0vw;
   font-size: 40px;
   background: rgb(255, 255, 255);
   border-radius: 0px;
 }
+
 .modal-mask {
   width: 100%;
   height: 100%;
@@ -96,6 +134,7 @@ button[plain]{
   left: 4%;
   opacity: 0.85;
 }
+
 .modal-dialog3 {
   overflow: visible;
   position: fixed;
@@ -105,6 +144,7 @@ button[plain]{
   opacity: 0.85;
   border-radius: 30%;
 }
+
 .modal-dialog {
   overflow: visible;
   position: fixed;
@@ -113,6 +153,7 @@ button[plain]{
   margin: 0rpx 5rpx;
   border-radius: 10%;
 }
+
 .modal-dialog2 {
   overflow: visible;
   position: fixed;
@@ -122,61 +163,91 @@ button[plain]{
   border-radius: 0%;
 }
 
-.iconbench{
+.iconbench {
   padding-bottom: 0rpx;
-  margin-bottom:0rpx;
+  margin-bottom: 0rpx;
   color: #333;
 }
-.iconbench .list{
+
+.iconbench .list {
   display: flex;
   flex-direction: row;
-  flex:1;
+  flex: 1;
 }
-.iconbench .items{
+
+.iconbench .items {
   width: 100rpx;
   height: 100rpx;
-  flex:1;
+  flex: 1;
 }
-.iconbench2{
+
+.iconbench2 {
   padding-bottom: 0rpx;
-  margin-bottom:0rpx;
+  margin-bottom: 0rpx;
   color: #333;
-}
-.iconbench2 .list2{
   display: flex;
   flex-direction: row;
-  flex:1;
+  flex: 1;
 }
-.iconbench2 .items2{
-  flex:1;
-  margin: 0rpx 0rpx;
+
+.view-image0 {
+  width: 750rpx;
+  height: 1100rpx;
 }
-.view-image{
+
+.view-image {
   width: 290rpx;
   height: 290rpx;
 }
-.view-image2{
+
+.view-image2 {
   width: 90rpx;
   height: 90rpx;
   margin: 5rpx 5rpx;
 }
-.view-image3{
-  width: 110rpx;
-  height: 100rpx;
+
+.view-image3 {
+  width: 146rpx;
+  height: 140rpx;
   margin: 0rpx 0rpx;
 }
-.view-image4{
+
+.view-image4 {
   width: 160rpx;
   height: 120rpx;
   margin: 0rpx 0rpx;
 }
-.view-image5{
+
+.view-image5 {
   width: 130rpx;
   height: 50rpx;
   margin: 0rpx 0rpx;
 }
-.view-image6{
+
+.view-image6 {
   width: 550rpx;
   height: 300rpx;
+  margin: 0rpx 0rpx;
+}
+
+.view-image7 {
+  width: 750rpx;
+  height: 200rpx;
+  margin: 0rpx 0rpx;
+}
+
+.view-image8 {
+  width: 200rpx;
+  height: 270rpx;
+  margin: 0rpx 0rpx;
+}
+.view-image9 {
+  width: 290rpx;
+  height: 310rpx;
+  margin: 0rpx 0rpx;
+}
+.view-image10 {
+  width: 290rpx;
+  height: 210rpx;
   margin: 0rpx 0rpx;
 }

@@ -6,7 +6,5 @@ Page({
 
   start: function(){ 
     wx.redirectTo({ url: '../1/1', })
-  },
- 
-  
+  }, 
 })

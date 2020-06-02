@@ -7,7 +7,7 @@ Page({
     showJump: true,
     showButton: false,
     toView: `card_${DEFAULT_PAGE}`,
-    list: ['../images/zt1.jpg','../images/zt2.jpg','../images/zt3.jpg','../images/zt4.jpg','../images/zt5.jpg']
+    list: ['../images/zt0.jpg','../images/zt1.jpg','../images/zt2.jpg','../images/zt3.jpg','../images/zt4.jpg','../images/zt5.jpg']
   },
   onLoad: function (options) {
     var index = 1;
