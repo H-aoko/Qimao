@@ -1,0 +1,123 @@
+<!--pages/1/1.wxml-->
+
+<view class="modal-mask">
+<image class='view-image' src="../images/qimao.jpg"></image>
+</view>
+  <view class="modal-dialog" >
+  <view class="iconbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" bindtap="toOne"><image src="../images/1.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toTwo" wx:if="{{twobtn}}"><image src="../images/2.png" class="view-image2"></image></button>
+          <button plain="true" bindtap="toOther" wx:if="{{twobtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image></button>
+      </view>
+      <view class="items">
+        <button plain="true" bindtap="toThree" wx:if="{{threebtn}}"><image src="../images/3.png" class="view-image2"></image> </button>
+        <button plain="true" bindtap="toOther" wx:if="{{threebtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toFour" wx:if="{{fourbtn}}"><image src="../images/4.png" class="view-image2"></image></button>
+         <button plain="true" bindtap="toOther" wx:if="{{fourbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image></button>
+      </view>
+    </view>
+   </view>
+     <view class="iconbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" bindtap="toFive" wx:if="{{fivebtn}}"><image src="../images/5.png" class="view-image2"></image> </button>
+        <button plain="true" bindtap="toOther" wx:if="{{fivebtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+      </view>
+       <view class="items">
+         <button plain="true" bindtap="toSix" wx:if="{{sixbtn}}"><image src="../images/6.png" class="view-image2"></image></button>
+          <button plain="true" bindtap="toOther" wx:if="{{sixbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image></button>
+      </view>
+      <view class="items">
+        <button plain="true" bindtap="toSeven" wx:if="{{sevenbtn}}"><image src="../images/7.png" class="view-image2"></image> </button>
+        <button plain="true" bindtap="toOther" wx:if="{{sevenbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toEight" wx:if="{{eightbtn}}"><image src="../images/8.png" class="view-image2"></image></button>
+         <button plain="true" bindtap="toOther" wx:if="{{eightbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image></button>
+      </view>
+    </view>
+   </view>
+     <view class="iconbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" bindtap="toNine" wx:if="{{ninebtn}}"><image src="../images/9.png" class="view-image2"></image> </button>
+        <button plain="true" bindtap="toOther" wx:if="{{ninebtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+      </view>
+       <view class="items">
+         <button plain="true" bindtap="toTen" wx:if="{{tenbtn}}"><image src="../images/10.png" class="view-image2"></image></button>
+          <button plain="true" bindtap="toOther" wx:if="{{tenbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image></button>
+      </view>
+      <view class="items">
+        <button plain="true" bindtap="toEleven" wx:if="{{elevenbtn}}"><image src="../images/11.png" class="view-image2"></image> </button>
+        <button plain="true" bindtap="toOther" wx:if="{{elevenbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toTwelve" wx:if="{{twelvebtn}}"><image src="../images/12.png" class="view-image2"></image></button>
+         <button plain="true" bindtap="toOther" wx:if="{{twelvebtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image></button>
+      </view>
+    </view>
+   </view>
+   <view class="iconbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" bindtap="to13" wx:if="{{thirteenbtn}}"><image src="../images/13.png" class="view-image2"></image> </button>
+        <button plain="true" bindtap="toOther" wx:if="{{thirteenbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+      </view>
+       <view class="items">
+         <button plain="true" bindtap="to14" wx:if="{{fourteenbtn}}"><image src="../images/14.png" class="view-image2"></image></button>
+          <button plain="true" bindtap="toOther" wx:if="{{fourteenbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image></button>
+      </view>
+      <view class="items">
+        <button plain="true" bindtap="to15" wx:if="{{fifteenbtn}}"><image src="../images/15.png" class="view-image2"></image> </button>
+        <button plain="true" bindtap="toOther" wx:if="{{fifteenbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toOther"><image src="../images/lockingicon.png" class="view-image2"></image></button>
+        
+      </view>
+    </view>
+   </view>
+   <view class="iconbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toOther"><image src="../images/lockingicon.png" class="view-image2"></image></button>
+      </view>
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toOther"><image src="../images/lockingicon.png" class="view-image2"></image></button>
+      </view>
+    </view>
+   </view>
+    <view class="iconbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toOther"><image src="../images/lockingicon.png" class="view-image2"></image></button>
+      </view>
+      <view class="items">
+        <button plain="true" bindtap="toOther"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="toLast" wx:if="{{lastbtn}}"><image src="../images/58.png" class="view-image2"></image></button>
+         <button plain="true" bindtap="toOther" wx:if="{{lastbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+      </view>
+    </view>
+   </view>
+  
+</view>
+<view class="modal-dialog2" bindtap="hideHint" wx:if="{{toOtherBtn}}" >
+<image src="../images/toother.png" class="toother-hint"></image>
+</view>

@@ -1,0 +1,26 @@
+/* miniprogram/pages/migongplus/mgplusfail/mgplusfail.wxss */
+page {
+  background-color: white;
+}
+.outcomeview {
+  background-color: white;
+}
+.failimage {
+  width: 100%;
+}
+.bottomview {
+  display: flex;
+  flex-direction: row;
+}
+.btnimage {
+  height:100rpx;
+  width: 100rpx;
+}
+.home {
+  position: absolute;
+  left: 0rpx;
+}
+.again {
+  position: absolute;
+  right: 0rpx;
+}

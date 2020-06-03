@@ -1,0 +1,57 @@
+<view class="container" bindtap="hideHint">
+ <view class="home-wrap" bindtap="hideHint">
+  <view class="workbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" class="show-btn" bindtap="changeYL"><image src="../../images/menuicon2.png" class="service-icon2"></image> </button>
+      </view>
+    </view>
+  </view>
+ </view>
+
+  <view class="hint" catchtap="hintShow">
+   <image src="../../images/bridge/hint.png" hidden="{{hint}}"></image>
+  </view>
+  <view class="hint fail" >
+   <image src="../../images/bridge/failRotate.png" hidden="{{failRotate}}"></image>
+  </view>
+  <view class="hint fail">
+   <image src="../../images/bridge/failTime.png" hidden="{{failTime}}"></image>
+  </view>
+    <view class="hint fail">
+   <image src="../../images/bridge/failFast.png" hidden="{{failFast}}"></image>
+  </view>
+ <view class="walk" animation="{{walk}}" bindtap="hideModal">
+  <image wx:if="{{show_img==1}}"class="person" mode='aspectFill' 
+  src="{{person}}" hidden='{{per_hide}}'></image>
+  <image wx:elif="{{show_img==2}}"class="person" mode='aspectFill' src="{{falling_left}}" ></image>
+  <image wx:elif="{{show_img==3}}"class="person" mode='aspectFill' src="{{falling_right}}" ></image>
+  <image wx:else class="person" mode='aspectFill' src="{{success}}" ></image>
+ </view>
+ <view class="modal-mask"  bindtap="hideModal" wx:if="{{showModal}}">
+  <image class='view-image' src="../../images/blank.png"></image>
+ </view>
+ <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="iconbench">
+    <view class="list" >
+      <view class="items">
+      <button plain="true" bindtap="toMenu"><image class='view-image2' src="../../images/mainpageicon.png"></image></button>
+      </view>
+      <view class="items">
+      <button plain="true" bindtap="again"><image class='view-image2' src="../../images/again.png"></image></button>
+      </view>
+      </view>
+    </view>
+    <view class="iconbench">
+       <view class="list">
+      <view class="items">
+      <button plain="true" bindtap="hintShow"><image  class='view-image2' src="../../images/hinticon.png" catchtap="hintShow"></image></button>
+      </view>
+      <view class="items">
+       <button plain="true" class="iconbtn" bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2' src="../images/mute.png"></image></button>
+       <button plain="true" class="iconbtn" bindtap="audioPlay" wx:if="{{musicbtn2}}"><image class='view-image2' src="../images/volume.png"></image></button>
+       </view>
+      </view>
+    </view>
+  </view>
+</view>

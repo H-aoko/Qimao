@@ -1,0 +1,44 @@
+<!--light/huarongdao1/huarongdao1.wxml-->
+  <view class="home-wrap">
+  <view class="workbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" class="show-btn" bindtap="changeYL"><image src="/light/images/menuicon2.png" class="service-icon2"></image> </button>
+      </view>
+     
+      <view class="items">
+         <button plain="true" ><image src="/light/images/nothing.jpg" class="service-icon3"></image></button>
+      </view>
+      <view class="items">
+         <button plain="true" bindtap="jumpPage" ><image src="/light/images/tiaoguo.png" class="service-icon2"></image></button>
+      </view>
+    </view>
+  </view>
+  </view>
+
+<scroll-view class="scroll-box" scroll-x scroll-with-animation
+  scroll-into-view="{{toView}}"
+  bindtouchstart="touchStart"
+  bindtouchend="touchEnd">
+    <view wx:for="{{list}}" wx:key="{{item}}" class="card-box" id="card_{{index}}">
+      <view class="card">
+        <image src='{{item}}'  mode='widthFix' class="image1"></image>
+      </view>
+    </view>
+</scroll-view>
+<view class="modal-mask" bindtap="hideModal"  wx:if="{{showModal}}">
+  <image class='view-image' src="/light/images/blank.png"></image>
+  </view>
+ <view class="modal-dialog" wx:if="{{showModal}}">
+      <image class='view-image1' src="/light/images/mainpageicon.png"bindtap="toMenu"></image>
+     <image class='view-image2' src="/light/images/again.png" bindtap="again"></image>
+      <image class='view-image3' src="/light/images/hinticon.png"  bindtap="hintShow"></image>
+     <image class='view-image4' src="/light/images/mute.png" bindtap="audioPause"
+      wx:if="{{musicbtn}}"></image>
+     <image class='view-image4' src="/light/images/volume.png" bindtap="audioPlay"
+      wx:if="{{musicbtn2}}"></image>
+  </view>
+<view>
+<image src="/light/images/lighttip.png" class="tip" wx:if="{{showtip}}" bindtap="tip"></image>
+</view>
+

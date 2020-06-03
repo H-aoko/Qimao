@@ -1,0 +1,45 @@
+/* pages/road_plus/result.wxss */
+page,.container,.ending{
+  width: 100%;
+  height: 100%;
+}
+.list{
+  height: 90rpx;
+  width: 100%;
+  top:88%;
+  position: absolute;
+}
+.items{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.home{ 
+  position:absolute;
+  left:0%;
+}
+.again,.next{
+  position:absolute;
+  right:0%;
+}
+.item button{
+ margin-right:100rpx;
+}
+.items image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.items image.service-icon2{
+  width: 100rpx;
+  height: 100rpx;
+}
+.items image.service-icon{
+  width: 100rpx;
+  height: 100rpx;
+}
+button[plain]
+{ 
+  border:0;
+  width: 100px;
+}
+

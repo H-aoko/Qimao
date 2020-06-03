@@ -1,0 +1,42 @@
+<!--<view class="container">-->
+  <view class="topbar">
+    <button plain="true" class="menu" style="width:180rpx" hover-class="none" bindtap="openmenu">
+      <image src="../migong/images/菜单.png" class="menuimage"></image>
+    </button>
+    <button plain="true" class="skip" style="width:280rpx" hover-class="none" bindtap="skip">
+      <image src="../migong/images/跳过.png" class="skipimage"></image>
+    </button>
+  </view>
+
+  <view class="swiperview" bindtap="hide">
+    <swiper class="swiper" indicator-dots="{{false}}" autoplay="{{auto}}" interval="2500" duration="1000" bindchange="startgame">  
+      <block wx:for="{{movies}}" wx:for-index="index">  
+        <swiper-item >  
+          <image src="{{item.url}}" class="slide-image" mode="scaleToFill" />  
+        </swiper-item>  
+      </block>  
+    </swiper>  
+  </view>
+  
+  <view class="menucontent" wx:if="{{show}}">
+    <image class="blank" src="../migong/images/blank.png"></image>
+    <button plain="true" class="home" style="width:140rpx" hover-class="none" bindtap="home">
+      <image class="btnimage" src="../migong/images/mainpageicon.png"></image>
+    </button>
+    <button plain="true" class="again" style="width:140rpx" hover-class="none" bindtap="again">
+      <image class="btnimage" src="../migong/images/again.png"></image>
+    </button>
+    <button plain="true" class="hint" style="width:140rpx" hover-class="none" bindtap="hint">
+      <image class="btnimage" src="../migong/images/hinticon.png"></image>
+    </button>
+    <button plain="true" class="music" style="width:140rpx" hover-class="none" bindtap="audioPause" wx:if="{{musicbtn}}">
+      <image class="btnimage" src="../migong/images/mute.png"></image>
+    </button>
+    <button plain="true" class="music" style="width:140rpx" hover-class="none" bindtap="audioPlay" wx:if="{{musicbtn2}}">
+      <image class="btnimage" src="../migong/images/volume.png"></image>
+    </button>
+  </view>
+  <view class="hintcontent" wx:if="{{hintshow}}">
+    <image class="hintcontentimage" src="../tanchishe/images/提示.png" ></image>
+  </view>
+<!--</view>-->
