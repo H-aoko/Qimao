@@ -1,0 +1,7 @@
+<!--light/fail/fail.wxml-->
+<view class="yinru" >
+<image src='/light/images/fail.jpg' class="image1"></image>
+</view>
+<image src='/light/images/mainpageicon.png' class="zhuye"bindtap="zhuye"></image>
+<image src='/light/images/again.png' class="again" bindtap="again"></image>
+

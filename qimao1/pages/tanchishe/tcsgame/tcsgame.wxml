@@ -1,0 +1,59 @@
+<!--miniprogram/pages/tanchishe/tcsgame/tcsgame.wxml-->
+<view class="gameview">
+	<view class="topview">
+		<button plain="true" class="menu" style="width:150rpx" hover-class="none" bindtap="openmenu">
+			<image src="../../migong/images/菜单.png" class="menuimage"></image>
+		</button>
+		<view class="score">
+			<image class="boxes" src="../images/蛇身.png"></image>
+			<text class="scorecontent"> ：{{boxes}}</text>
+		</view>
+	</view>
+  
+  <view class="backview" bindtap="hide">
+		<image class="backimage" src="../images/游戏背景.png" mode="widthFix" style="width:100%"></image>
+		<canvas canvas-id="snakeCanvas" class="canvas" />
+	</view>
+	
+	<view class="controlView" bindtap="hide">
+		<button plain="true" class="btnClass_updown" style="width:300rpx" bindtap="changedirup" hover-class="none" id="up">
+			<image class="btnimage_updown" src="../images/方向键上.png"></image>
+		</button>
+		<view class="controlview_child">
+			<button plain="true" class="btnClass" style="width:200rpx" bindtap="changedirleft" hover-class="none" id="left">
+				<image class="btnimage" src="../images/方向键左.png"></image>
+			</button>
+			<button plain="true" class="btnClass" style="width:150rpx" hover-class="none">
+				<image class="btnimage_center" src="../images/方向键中.png"></image>
+			</button>
+			<button plain="true" class="btnClass" style="width:200rpx" bindtap="changedirright" hover-class="none" id="right">
+				<image class="btnimage" src="../images/方向键右.png"></image>
+			</button>
+		</view>
+		<button plain="true" class="btnClass_updown" style="width:300rpx" bindtap="changedirdown" hover-class="none" id="down">
+			<image class="btnimage_updown" src="../images/方向键下.png"></image>
+		</button>
+	</view>
+
+	<view class="menucontent" wx:if="{{show}}">
+		<image class="blank" src="../../migong/images/blank.png"></image>
+		<button plain="true" class="home" style="width:140rpx" hover-class="none" bindtap="home">
+			<image class="menubtnimage" src="../../migong/images/mainpageicon.png"></image>
+		</button>
+		<button plain="true" class="again" style="width:140rpx" hover-class="none" bindtap="again">
+			<image class="menubtnimage" src="../../migong/images/again.png"></image>
+		</button>
+		<button plain="true" class="hint" style="width:140rpx" hover-class="none" bindtap="hint">
+			<image class="menubtnimage" src="../../migong/images/hinticon.png"></image>
+		</button>
+		<button plain="true" class="music" style="width:140rpx" hover-class="none" bindtap="audioPause" wx:if="{{musicbtn}}">
+			<image class="menubtnimage" src="../../migong/images/mute.png"></image>
+		</button>
+		<button plain="true" class="music" style="width:140rpx" hover-class="none" bindtap="audioPlay" wx:if="{{musicbtn2}}">
+      <image class="menubtnimage" src="../../migong/images/volume.png"></image>
+    </button>
+	</view>
+	<view class="hintcontent" wx:if="{{hintshow}}">
+		<image class="hintcontentimage" src="../images/提示.png"></image>
+	</view>
+</view>

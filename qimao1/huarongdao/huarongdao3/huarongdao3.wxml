@@ -1,0 +1,199 @@
+<!--huarongdao/huarongdao2/huarongdao2.wxml-->
+<view bindtap="changeYL" >
+<image src="/huarongdao/images/menuicon2.png" class="service-icon2" ></image> 
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/tingchechang.png' class="image1" bindtap="xiaoshi"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/shuoming.png' class="shuoming" bindtap="xiaoshi"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/time.png' class="image2" ></image>
+</view>
+<view class="container1"> {{timecount}}</view>
+
+<view class="yinru" >
+<image src='/huarongdao/images/car1.png' class="image3" bindlongtap="L3" bindtap="3"  bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show31}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car1.png' class="image32"  bindlongtap="L32" bindtap="32" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show32}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car1.png' class="image33"  bindlongtap="L33" bindtap="33"  bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show33}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car1.png' class="image34" bindlongtap="L34"  bindtap="34" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show34}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car1.png' class="image35" bindlongtap="L35"  bindtap="35" bindtouchstart="touchStart" bindtouchend="touchEnd"  wx:if="{{show35}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car2.png' class="image4" bindlongtap="L4"  bindtap="4" bindtouchstart="touchStart" bindtouchend="touchEnd"  wx:if="{{show41}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car2.png' class="image42"  bindlongtap="L42" bindtap="42" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show42}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car2.png' class="image43"  bindlongtap="L43" bindtap="43" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show43}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car2.png' class="image44" bindlongtap="L44"  bindtap="44" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show44}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car2.png' class="image45" bindlongtap="L45"  bindtap="45" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show45}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car3.png' class="image5" bindlongtap="L5"  bindtap="5" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show51}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car3.png' class="image52" bindlongtap="L52"  bindtap="52" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show52}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car3.png' class="image53"  bindlongtap="L53" bindtap="53" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show53}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car3.png' class="image54"  bindlongtap="L54" bindtap="54" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show54}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car3.png' class="image55" bindlongtap="L55"  bindtap="55" bindtouchstart="touchStart55" bindtouchend="touchEnd55" wx:if="{{show55}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car4.png' class="image6" bindlongtap="L6"  bindtap="6" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show61}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car4.png' class="image62"  bindlongtap="L62" bindtap="62" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show62}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car4.png' class="image63" bindlongtap="L63"  bindtap="63" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show63}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car4.png' class="image64"  bindlongtap="L64" bindtap="64" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show64}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car4.png' class="image65"  bindlongtap="L65" bindtap="65" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show65}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car5.png' class="image7" bindlongtap="L7"  bindtap="7" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show71}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car5.png' class="image72"  bindlongtap="L72" bindtap="72" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show72}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car5.png' class="image73"  bindlongtap="L73" bindtap="73" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show73}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car5.png' class="image74" bindlongtap="L74" bindtap="74" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show74}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car5.png' class="image75"  bindlongtap="L75" bindtap="75" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show75}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car6.png' class="image8"  bindlongtap="L8" bindtap="8" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show81}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car6.png' class="image82" bindlongtap="L82"  bindtap="82" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show82}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car6.png' class="image83" bindlongtap="L83"  bindtap="83" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show83}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car6.png' class="image84" bindlongtap="L84"  bindtap="84" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show84}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car6.png' class="image85"  bindlongtap="L85" bindtap="85" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show85}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car7.png' class="image9" bindlongtap="L9"  bindtap="9" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show91}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car7.png' class="image92"  bindlongtap="L92" bindtap="92" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show92}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car7.png' class="image93" bindlongtap="L93"  bindtap="93" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show93}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car7.png' class="image94"  bindlongtap="L94" bindtap="94" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show94}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car7.png' class="image95" bindlongtap="L95"  bindtap="95" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show95}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car8.png' class="image10"  bindlongtap="L10" bindtap="10" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show101}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car8.png' class="image102" bindlongtap="L102"  bindtap="102" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show102}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car8.png' class="image103"  bindlongtap="L103" bindtap="103" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show103}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car8.png' class="image104" bindlongtap="L104"  bindtap="104" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show104}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car8.png' class="image105" bindlongtap="L105"  bindtap="105" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show105}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car9.png' class="image112"  bindlongtap="L112"  bindtap="112" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show112}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car9.png' class="image113"  bindlongtap="L113"  bindtap="113" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show113}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car9.png' class="image114"  bindlongtap="L114"  bindtap="114" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show114}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car9.png' class="image11"  bindlongtap="L11"  bindtap="11" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show111}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car10.png' class="image12"  bindlongtap="L12"  bindtap="12" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show121}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car10.png' class="image122"  bindlongtap="L122"  bindtap="122" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show122}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car10.png' class="image123"  bindlongtap="L123"  bindtap="123" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show123}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car10.png' class="image124"  bindlongtap="L124"  bindtap="124" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show124}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car.png' class="image13"  bindlongtap="L13"  bindtap="13"  bindlongtap="L13" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show1}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car.png' class="image132"  bindlongtap="L132"  bindtap="132" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show2}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car.png' class="image133"  bindlongtap="L133"  bindtap="133" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show3}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car.png' class="image134"  bindlongtap="L134"   bindtap="134" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show4}}"></image>
+</view>
+<view class="yinru" >
+<image src='/huarongdao/images/car.png' class="image135"  bindlongtap="L135"  bindtap="135" bindtouchstart="touchStart" bindtouchend="touchEnd" wx:if="{{show5}}"></image>
+</view>
+
+
+
+<view class="yinru" wx:if="{{showstart}}">
+<image src="/huarongdao/images/start.png" bindtap='start' class="start1" ></image>
+</view>
+
+
+
+<view class="view-image"  bindtap="hideModal"wx:if="{{showModal}}">
+<image src='/huarongdao/images/blank.png' class="view-image"></image>
+</view>
+ <view class="modal-dialog" wx:if="{{showModal}}">
+      <image class='view-image1' src="/huarongdao/images/mainpageicon.png" bindtap="toMenu"></image>
+     <image class='view-image2' src="/huarongdao/images/again.png" bindtap="again"></image>
+      <image class='view-image3' src="/huarongdao/images/hinticon.png"  bindtap="hintShow"></image>
+    <image class='view-image4' src="/huarongdao/images/mute.png" bindtap="audioPause"
+      wx:if="{{musicbtn}}"></image>
+     <image class='view-image4' src="/huarongdao/images/volume.png" bindtap="audioPlay"
+      wx:if="{{musicbtn2}}"></image>
+  </view>
+<view>
+<image src="/huarongdao/images/tip.png" class="tip" wx:if="{{showtip}}" bindtap="tip"></image>
+</view>
+

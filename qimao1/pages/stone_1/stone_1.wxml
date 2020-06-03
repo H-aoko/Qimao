@@ -1,0 +1,130 @@
+<!--pages/stone_1/stone_1.wxml-->
+<view class="time">时间：{{time}}s</view>
+<view class="score">离上岸还有{{100-score}}步</view>
+<view class="play-box">
+
+    <block wx:for="{{blockData}}" wx:for-index="i" wx:key="i">
+        <view class="block-line" id="line-{{blockData[i].id}}">
+            <block wx:for="{{blockData[i].block}}" wx:key="*this" wx:for-index="j">
+                <view wx:if="{{blockData[i].block[j] == 0}}" id="block-{{blockData[i].id}}-{{j}}-{{0}}" class="block" bindtap="handleClick"><image src="../images/1.png" class="view-image1"></image></view>
+                <view wx:else class="block black" id="block-{{blockData[i].id}}-{{j}}-{{1}}" bindtap="handleClick"><image src="../images/stoneitself.png" class="view-image3"></image></view>
+            </block>  
+        </view>
+         <image class='background' src="../images/riverstonefrom.jpg" mode="aspectFill"></image>
+    </block>
+</view>
+<view class="home-wrap">
+<view class="workbench">
+<view class="list">
+      <view class="items">
+        <button plain="true" bindtap="changeYL"><image src="../images/menuicon2.jpg" class="service-icon2"></image> </button>
+      </view>
+      <view class="items">
+         <button plain="true"><image src="../images/nothing.jpg" class="service-icon3"></image></button>
+      </view>
+      <view class="items">
+         <button plain="true"><image src="../images/nothing.jpg" class="service-icon3"></image></button>
+      </view>
+</view>
+</view>
+</view>
+   <view class="modal-mask" bindtap="hideModal"  wx:if="{{showModal}}">
+  <image class='view-image' src="../images/blank.png"></image>
+  </view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="iconbench">
+    <view class="list">
+      <view class="items">
+      <button plain="true" class="iconbtn" bindtap="toMenu"><image class='view-image2' src="../images/mainpageicon.png"></image></button>
+      </view>
+      <view class="items">
+      <button plain="true" class="iconbtn" bindtap="again"><image class='view-image2' src="../images/again.png"></image></button>
+      </view>
+      </view>
+    </view>
+    <view class="iconbench">
+       <view class="list">
+      <view class="items">
+      <button plain="true" class="iconbtn" bindtap="hintShow"><image class='view-image2' src="../images/hinticon.png"></image></button>
+         </view>
+          <view class="items">
+ <button plain="true" class="iconbtn" bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2' src="../images/mute.png"></image></button>
+ <button plain="true" class="iconbtn" bindtap="audioPlay" wx:if="{{musicbtn2}}"><image class='view-image2' src="../images/volume.png"></image></button>
+         </view>
+      </view>
+    </view>
+  </view>
+    <view class="modal-dialog3" wx:if="{{showResult0}}">
+      <view class="items3">
+      <image class='view-image5' src="../images/stoneresult1.png"></image>
+      </view>
+  </view> 
+      <view class="modal-dialog4" wx:if="{{showResult1}}">
+      <view class="items3">
+      <image class='view-image5' src="../images/stoneresult3.png"></image>
+      </view>
+  </view> 
+      <view class="modal-dialog5" wx:if="{{showResult2}}">
+      <view class="items3">
+      <image class='view-image5' src="../images/stoneresult4.png"></image>
+      </view>
+  </view> 
+      <view class="modal-dialog6" wx:if="{{showResult3}}">
+      <view class="items3">
+      <image class='view-image5' src="../images/stoneresult2.png"></image>
+      </view>
+  </view> 
+        <view class="modal-dialog7" wx:if="{{showHint}}">
+      <view class="items3">
+      <image class='view-image7' src="../images/stonehint.png"></image>
+      </view>
+  </view> 
+
+
+      <view class="modal-dialog8" wx:if="{{local1}}">
+      <view class="items3">
+      <image class='view-image0' src="../images/qimaoonstone.png"></image>
+      </view>
+  </view> 
+      <view class="modal-dialog9" wx:if="{{local2}}">
+      <view class="items3">
+      <image class='view-image0' src="../images/qimaoonstone.png"></image>
+      </view>
+  </view> 
+      <view class="modal-dialog10" wx:if="{{local3}}">
+      <view class="items3">
+      <image class='view-image0' src="../images/qimaoonstone.png"></image>
+      </view>
+  </view> 
+      <view class="modal-dialog11" wx:if="{{local4}}">
+      <view class="items3">
+      <image class='view-image0' src="../images/qimaoonstone.png"></image>
+      </view>
+  </view> 
+      <view class="modal-dialog12" wx:if="{{local0}}">
+      <view class="items3">
+      <image class='view-image0' src="../images/qimaoonstone.png"></image>
+      </view>
+  </view> 
+
+
+        <view class="modal-dialog-8" wx:if="{{local_1}}">
+      <view class="items3">
+      <image class='view-image_0' src="../images/qimaofallstone.png"></image>
+      </view>
+  </view> 
+      <view class="modal-dialog-9" wx:if="{{local_2}}">
+      <view class="items3">
+      <image class='view-image_0' src="../images/qimaofallstone.png"></image>
+      </view>
+  </view> 
+      <view class="modal-dialog-10" wx:if="{{local_3}}">
+      <view class="items3">
+      <image class='view-image_0' src="../images/qimaofallstone.png"></image>
+      </view>
+  </view> 
+      <view class="modal-dialog-11" wx:if="{{local_4}}">
+      <view class="items3">
+      <image class='view-image_0' src="../images/qimaofallstone.png"></image>
+      </view>
+  </view> 

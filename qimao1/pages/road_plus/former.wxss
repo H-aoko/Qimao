@@ -1,0 +1,97 @@
+/* pages/road_plus/former.wxss */
+page{
+  width: 100%;
+  height: 100%;
+}
+.container{ 
+  height: 100%;
+  width: 100%;
+}
+.former,.former swiper-item,.former swiper-item image.photo{
+  height: 100%;
+  width: 100%;
+}
+.skip{
+  height:100rpx;
+  width:180rpx;
+  margin-left: 540rpx;
+  position:absolute;
+}
+.modal-mask {
+  width:40%;
+  height: 22%;
+  position: fixed;
+  top: 8%;
+  left: 4%;
+  opacity: 0.85;
+  z-index:99;
+} 
+.modal-dialog {
+  overflow: visible;
+  height: 22%;
+  width:32%;
+  top: 11%;
+  left: 5%;
+  margin: 0rpx 5rpx;
+  border-radius: 10%;
+  position: fixed;
+  z-index:99;
+}
+
+.iconbench{
+  padding-bottom: 0rpx;
+  margin-bottom:0rpx;
+  color: #333;
+}
+.iconbench .list{
+  display: flex;
+  flex-direction: row;
+  flex:1;
+  justify-content: space-between;
+}
+.iconbench .items{
+  width: 90rpx;
+  height: 90rpx;
+  flex:1;
+}
+.view-image{
+  width: 290rpx;
+  height: 290rpx;
+}
+.view-image2{
+  width: 90rpx;
+  height: 90rpx;
+  margin: 0rpx 0rpx;
+}
+image.right{
+  margin-left:-15rpx;
+}
+.hint image{
+position: absolute;
+margin-top: 300rpx;
+margin-left: -250rpx;
+height: 350rpx;
+width: 500rpx;
+z-index:5;
+}
+.home-wrap{
+  height: 90rpx;
+  margin-left: -150px;
+  position: absolute;
+}
+.workbench .items image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.workbench .items image.service-icon2{
+  width: 100rpx;
+  height: 100rpx;
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  z-index:99;
+}
+button[plain]
+{ 
+  border:0;
+}
