@@ -15,7 +15,7 @@ Page({
       showModal: true
     })
   },
-  toMenu: function(){ 
+  toHome: function(){ 
     wx.redirectTo({ url: '../1/1', })
   },
   again: function () {

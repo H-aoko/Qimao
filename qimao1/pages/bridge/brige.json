@@ -1,4 +1,6 @@
 {
-    "backgroundTextStyle": "light"
-    
-}
+    "navigationBarTitleText":"订单0011",
+    "backgroundColor": "#FFFFFF",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black"
+  }
