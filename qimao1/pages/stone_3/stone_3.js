@@ -12,7 +12,7 @@ Page({
     wx.redirectTo({ url: '../1/1', })
   },
   again: function(){ 
-    wx.redirectTo({ url: '../stone_1/stone_1', })
+    wx.redirectTo({ url: '../stone_0/stone_0', })
   },
 
   touchStart(e) {
