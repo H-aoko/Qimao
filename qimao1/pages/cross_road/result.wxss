@@ -41,5 +41,6 @@ button[plain]
 { 
   border:0;
   width: 100px;
+
 }
 

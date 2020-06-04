@@ -1,13 +1,16 @@
 /* pages/success/success.wxss */
 .yinru{
   display: flex;
-  height: 100%;
+  top: 0;
+  height: 100vh;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  z-index: -2;
 }
 .image1{
   position: absolute;
-  top: -15%;
+  top: -10%;
   left: 0rem;
   height: 100%;
   width: 100%;

@@ -41,7 +41,7 @@ if(app.data.musicon==true){
         toView: `card_${that.currentView}`
       });
 if(that.currentView==7){
-  wx.navigateTo({
+  wx.redirectTo({
     url: '/tiaoliao/tiaoliao7/tiaoliao7',
   })
 }
@@ -96,7 +96,7 @@ if(that.currentView==7){
   },
   jumpPage:function () {
     
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/tiaoliao/tiaoliao7/tiaoliao7',
     }),
     this.currentView=8;
@@ -107,10 +107,16 @@ if(that.currentView==7){
   hintShow:function () {
   },
   toMenu: function(){ 
-    wx.redirectTo({ url: '../tiaoliao1/tiaoliao1', })
+    wx.redirectTo({
+      url: '../../pages/1/1',
+    })
+    this.currentView=8;
+    this.setData({
+      toView: `card_${this.currentView}`
+    });
   },
   again: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/tiaoliao/tiaoliao1/tiaoliao1',
     })
     this.currentView=8;

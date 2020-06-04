@@ -503,7 +503,7 @@ Page({
           hint:false
         });
         that.hideModal(); 
-        that.timeCount();
+       // that.timeCount();
       },
       hideHint:function(){
         if(!this.data.hint){

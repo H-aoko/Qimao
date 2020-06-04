@@ -29,7 +29,7 @@
   <image class='view-image' src="/huarongdao/images/blank.png"></image>
   </view>
    <view class="modal-dialog" wx:if="{{showModal}}">
-      <image class='view-image1' src="/huarongdao/images/mainpageicon.png"bindtap="toMenu"></image>
+      <image class='view-image1' src="/huarongdao/images/mainpageicon.png" bindtap="toMenu"></image>
      <image class='view-image2' src="/huarongdao/images/again.png" bindtap="again"></image>
       <image class='view-image3' src="/huarongdao/images/hinticon.png"  bindtap="hintShow"></image>
      <image class='view-image4' src="/huarongdao/images/mute.png" bindtap="audioPause"

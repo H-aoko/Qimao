@@ -26,7 +26,7 @@ Page({
       that.setData({
         toView: `card_${that.currentView}`
       });
-    }, 2000);
+    }, 1500);
   },
   hideModal: function () {
     this.setData({
@@ -37,7 +37,7 @@ Page({
     wx.redirectTo({ url: '../1/1', })
   },
   next: function(){ 
-    wx.redirectTo({ url: '../9-1/1', })
+    wx.redirectTo({ url: '../../huarongdao/huarongdao1/huarongdao1', })
   },
   touchStart(e) {
     this.startPageX = e.changedTouches[0].pageX;

@@ -39,7 +39,7 @@ Page({
         toView: `card_${that.currentView}`
       });
 if(that.currentView==6){
-  wx.navigateTo({
+  wx.redirectTo({
     url: '/light/light2/light2',
   })
 }
@@ -79,7 +79,7 @@ if(that.currentView==6){
   },
   jumpPage:function () {
     
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/light/light2/light2',
     }),
     this.currentView=8;
@@ -90,10 +90,16 @@ if(that.currentView==6){
   hintShow:function () {
   },
   toMenu: function(){ 
-    wx.redirectTo({ url: '../light1/light1', })
+    wx.redirectTo({
+      url: '../../pages/1/1',
+    })
+    this.currentView=8;
+    this.setData({
+      toView: `card_${this.currentView}`
+    });
   },
   again: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/light/light1/light1',
     })
     this.currentView=8;

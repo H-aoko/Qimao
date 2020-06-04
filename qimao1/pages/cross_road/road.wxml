@@ -22,12 +22,12 @@
    <image class="person" id="the-per" src="../../images/road/head.png" mode="aspectFit" animation="{{crossAnimation}}"></image>
   </view>
   <view class="direction">
-  <button><image class="arrow left" src="../../images/road/arrowleft.png"  bindtouchstart="startLeft" bind
-  bindtouchend="endLeft"></image></button>
-  <button><image class="arrow top" src="../../images/road/arrowtop.png" bindtouchstart="startTop" bind
-  bindtouchend="endTop"></image></button>
-  <button><image class="arrow right" src="../../images/road/arrowright.png" bindtouchstart="startRight" bind
-  bindtouchend="endRight"></image></button>
+  <button bindtouchstart="startLeft" 
+  bindtouchend="endLeft"><image class="arrow left" src="../../images/road/arrowleft.png"  ></image></button>
+  <button bindtouchstart="startTop" 
+  bindtouchend="endTop"><image class="arrow top" src="../../images/road/arrowtop.png" ></image></button>
+  <button bindtouchstart="startRight" 
+  bindtouchend="endRight"><image class="arrow right" src="../../images/road/arrowright.png"></image></button>
   </view>
  <view class="modal-mask"  bindtap="hideModal" wx:if="{{showModal}}">
   <image class='view-image' src="../../images/blank.png"></image>
@@ -39,18 +39,18 @@
       <button plain="true" bindtap="toMenu"><image class='view-image2' src="../../images/mainpageicon.png"></image></button>
       </view>
       <view class="items">
-      <button plain="true" bindtap="again"><image class='view-image2' src="../../images/again.png"></image></button>
+      <button plain="true" bindtap="again"><image class='view-image2 right' src="../../images/again.png"></image></button>
       </view>
       </view>
     </view>
     <view class="iconbench">
        <view class="list">
       <view class="items">
-      <button plain="true" bindtap="hintShow"><image  class='view-image2' src="../../images/hinticon.png" catchtap="hintShow"></image></button>
+      <button plain="true" catchtap="hintShow"><image  class='view-image2' src="../../images/hinticon.png"></image></button>
          </view>
           <view class="items">
-     <button plain="true" class="iconbtn" bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2' src="../images/mute.png"></image></button>
-     <button plain="true" class="iconbtn" bindtap="audioPlay" wx:if="{{musicbtn2}}"><image class='view-image2' src="../images/volume.png"></image></button>
+     <button plain="true"  bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2 right' src="../images/mute.png"></image></button>
+     <button plain="true" bindtap="audioPlay" wx:if="{{musicbtn2}}"><image class='view-image2 right' src="../images/volume.png"></image></button>
          </view>
       </view>
     </view>

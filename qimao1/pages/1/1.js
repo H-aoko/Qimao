@@ -42,13 +42,13 @@ Page({
     wx.redirectTo({ url: '../1_1/1_1', })
   },
   toTwo: function(){ 
-    wx.redirectTo({ url: '../2_1/2_1', })
+    wx.redirectTo({ url: '../2-1/1', })
   },
   toThree: function(){ 
-    wx.redirectTo({ url: '../3_1/3_1', })
+    wx.redirectTo({ url: '../3-1/1', })
   },
   toFour: function(){ 
-    wx.redirectTo({ url: '../4_1/4_1', })
+    wx.redirectTo({ url: '../4-1/1', })
   },
   toFive: function(){ 
     wx.redirectTo({ url: '../../tiaoliao/tiaoliao1/tiaoliao1', })
@@ -57,10 +57,10 @@ Page({
     wx.redirectTo({ url: '../cross_road/former', })
   },
   toSeven: function(){ 
-    wx.redirectTo({ url: '../road_plus/former.js', })
+    wx.redirectTo({ url: '../road_plus/former', })
   },
   toEight: function(){ 
-    wx.redirectTo({ url: '../8_1/8_1', })
+    wx.redirectTo({ url: '../8-1/1', })
   },
   toNine: function(){ 
     wx.redirectTo({ url: '../../huarongdao/huarongdao1/huarongdao1', })

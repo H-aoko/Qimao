@@ -1,5 +1,4 @@
 // pages/cross_road/former.js
-
 Page({
 
   /**

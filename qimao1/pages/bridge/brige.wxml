@@ -38,18 +38,18 @@
       <button plain="true" bindtap="toMenu"><image class='view-image2' src="../../images/mainpageicon.png"></image></button>
       </view>
       <view class="items">
-      <button plain="true" bindtap="again"><image class='view-image2' src="../../images/again.png"></image></button>
+      <button plain="true" bindtap="again"><image class='view-image2 right' src="../../images/again.png"></image></button>
       </view>
       </view>
     </view>
     <view class="iconbench">
        <view class="list">
       <view class="items">
-      <button plain="true" bindtap="hintShow"><image  class='view-image2' src="../../images/hinticon.png" catchtap="hintShow"></image></button>
+      <button plain="true" catchtap="hintShow"><image  class='view-image2' src="../../images/hinticon.png" ></image></button>
       </view>
       <view class="items">
-       <button plain="true" class="iconbtn" bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2' src="../images/mute.png"></image></button>
-       <button plain="true" class="iconbtn" bindtap="audioPlay" wx:if="{{musicbtn2}}"><image class='view-image2' src="../images/volume.png"></image></button>
+       <button plain="true" bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2 right' src="../images/mute.png"></image></button>
+       <button plain="true"bindtap="audioPlay" wx:if="{{musicbtn2}}"><image class='view-image2 right' src="../images/volume.png"></image></button>
        </view>
       </view>
     </view>

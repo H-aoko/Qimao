@@ -1138,7 +1138,7 @@ hideModal: function () {
   });
 },
 toMenu: function(){ 
-  wx.redirectTo({ url: '../huarongdao1/huarongdao1', })
+  wx.redirectTo({ url: '../../pages/1/1', })
 },
 again: function () {
   wx.redirectTo({

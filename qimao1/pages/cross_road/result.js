@@ -7,7 +7,7 @@ Page({
   data: {
     fail:"../../images/road/bad.jpg",
     success:"../../images/good.jpg",
-    judge:1,
+    judge:1
   },
 
   /**
@@ -73,11 +73,11 @@ Page({
   onShareAppMessage: function () {
 
   },
-  toMenu: function(){ 
-    wx.redirectTo({ url: '../1/1', })
-  },
   next: function(){
-    wx.redirectTo({ url: '../road_plus/former', })
+    wx.redirectTo({ url: '../road_plus/former'})
+  },
+  toMenu: function(){ 
+    wx.redirectTo({ url: '../1/1'})
   },
   again: function () {
     var app = getApp();

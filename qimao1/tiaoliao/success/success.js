@@ -14,7 +14,7 @@ zhuye:function () {
 },
 next:function () {
   wx.redirectTo({
-    url: '/huarongdao/huarongdao1/huarongdao1',
+    url: '/pages/cross_road/former',
   })
   
 },

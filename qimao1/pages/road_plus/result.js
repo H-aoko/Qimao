@@ -7,7 +7,7 @@ Page({
   data: {
     fail:"../../images/road/plus/bad.jpg",
     success:"../../images/good.jpg",
-    judge:1,
+    judge:1
   },
 
   /**
@@ -77,10 +77,10 @@ Page({
 
   },
   toMenu: function(){ 
-    wx.redirectTo({ url: '../1/1', })
+    wx.redirectTo({ url: '../1/1'})
   },
-  next:function(){
-    wx.redirectTo({ url: '../8-1/1', })
+  next: function(){
+    wx.redirectTo({ url: '../8-1/1'})
   },
   again: function () {
     var app = getApp();
@@ -91,5 +91,5 @@ Page({
          url: '/pages/road_plus/former',
       });
     }
-  },
+  }
 })

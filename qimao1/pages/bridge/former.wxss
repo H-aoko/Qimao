@@ -17,18 +17,20 @@ page{
   position:absolute;
 }
 .modal-mask {
-  width: 100%;
-  height: 100%;
+  width:40%;
+  height: 22%;
   position: fixed;
-  top: 9%;
-  left: 2%;
+  top: 8%;
+  left: 4%;
   opacity: 0.85;
   z-index:99;
 } 
 .modal-dialog {
   overflow: visible;
+  height: 22%;
+  width:32%;
   top: 11%;
-  left: 0%;
+  left: 5%;
   margin: 0rpx 5rpx;
   border-radius: 10%;
   position: fixed;
@@ -44,10 +46,11 @@ page{
   display: flex;
   flex-direction: row;
   flex:1;
+  justify-content: space-between;
 }
 .iconbench .items{
-  width: 100rpx;
-  height: 100rpx;
+  width: 90rpx;
+  height: 90rpx;
   flex:1;
 }
 .view-image{
@@ -59,7 +62,9 @@ page{
   height: 90rpx;
   margin: 0rpx 0rpx;
 }
-
+image.right{
+  margin-left:-15rpx;
+}
 .hint image{
 position: absolute;
 margin-top: 300rpx;
@@ -80,13 +85,11 @@ z-index:5;
 .workbench .items image.service-icon2{
   width: 100rpx;
   height: 100rpx;
-  width: 100rpx;
-  height: 100rpx;
   position: relative;
+  left:15rpx;
   z-index:99;
 }
 button[plain]
 { 
   border:0;
-  width: 100px;
 }

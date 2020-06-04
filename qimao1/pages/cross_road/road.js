@@ -453,7 +453,9 @@ Page({
      })
  },
  //右方向按键
- startRight:function(){
+ startRight:function(e){
+  console.log("right");
+  console.log(e);
   var that = this;
   var positionX = that.data.positionX;
   var positionY = that.data.positionY;
@@ -496,6 +498,7 @@ Page({
 },
 //停止向右移动
 endRight:function(){
+  console.log("right");
    this.setData({
      touchRight:0
    })
@@ -518,5 +521,6 @@ timeCount:function(){
         clearInterval(that.data.timer);
    }
   }, 1000)
-  })},
+  })
+},
 })

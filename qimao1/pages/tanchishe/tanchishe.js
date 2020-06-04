@@ -55,7 +55,7 @@ Page({
   },
   home:function() {
     wx.reLaunch({
-      url: '../../1/1',
+      url: '../1/1',
     })
   },
   again:function() {

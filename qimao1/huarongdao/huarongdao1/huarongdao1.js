@@ -42,7 +42,7 @@ if(app.data.musicon==true){
         toView: `card_${that.currentView}`
       });
 if(that.currentView==7){
-  wx.navigateTo({
+  wx.redirectTo({
     url: '/huarongdao/huarongdao3/huarongdao3',
   })
 }
@@ -97,7 +97,7 @@ if(that.currentView==7){
   },
   jumpPage:function () {
     
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/huarongdao/huarongdao3/huarongdao3',
     }),
     this.currentView=8;
@@ -106,10 +106,16 @@ if(that.currentView==7){
     });
   },
   toMenu: function(){ 
-    wx.redirectTo({ url: '../huarongdao1/huarongdao1', })
+    wx.redirectTo({
+      url: '../../pages/1/1',
+    })
+    this.currentView=8;
+    this.setData({
+      toView: `card_${this.currentView}`
+    });
   },
   again: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '/huarongdao/huarongdao1/huarongdao1',
     })
     this.currentView=8;

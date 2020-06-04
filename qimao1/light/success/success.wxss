@@ -20,7 +20,7 @@ page{
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
   margin: 0vh 0vw;
   font-size: 40px;

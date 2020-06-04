@@ -14,7 +14,7 @@ Page({
     positionX:0,
     positionY:0,
     fail:false,
-    failTime:true,
+    failTime:true
   },
 
   /**
@@ -124,7 +124,7 @@ Page({
     });
   },
   toMenu: function(){ 
-    wx.redirectTo({ url: '../1/1', })
+    wx.redirectTo({ url: '../1/1' })
   },
   again: function () {
     var app = getApp();
@@ -132,13 +132,14 @@ Page({
       app.data.hasClick = true;
       getCurrentPages().pop();
       wx.navigateTo({
-         url: '/pages/road_plus/road',
+         url: '/pages/road_plus/former',
       });
     }
   },
   jumpPage: function(){ 
   },
   hintShow: function () { 
+    console.log("hint");
     let that = this;
     that.setData({
       hint:false

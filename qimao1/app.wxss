@@ -4,16 +4,14 @@ page {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
 }
 .container {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-
   box-sizing: border-box;
+  height: 100%;
+  justify-content: space-between;
 } 
 button[plain]
 { 
