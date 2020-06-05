@@ -74,8 +74,7 @@
           <button plain="true" bindtap="toOther" wx:if="{{fourteenbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image></button>
       </view>
       <view class="items">
-        <button plain="true" bindtap="to15" wx:if="{{fifteenbtn}}"><image src="../images/15.png" class="view-image2"></image> </button>
-        <button plain="true" bindtap="toOther" wx:if="{{fifteenbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+        <button plain="true" bindtap="toOther"><image src="../images/lockingicon.png" class="view-image2"></image></button>
       </view>
       <view class="items">
          <button plain="true" bindtap="toOther"><image src="../images/lockingicon.png" class="view-image2"></image></button>
@@ -108,7 +107,8 @@
          <button plain="true" bindtap="toOther"><image src="../images/lockingicon.png" class="view-image2"></image></button>
       </view>
       <view class="items">
-        <button plain="true" bindtap="toOther"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
+         <button plain="true" bindtap="to15" wx:if="{{fifteenbtn}}"><image src="../images/57.png" class="view-image2"></image> </button>
+        <button plain="true" bindtap="toOther" wx:if="{{fifteenbtn2}}"><image src="../images/lockingicon.png" class="view-image2"></image> </button>
       </view>
       <view class="items">
          <button plain="true" bindtap="toLast" wx:if="{{lastbtn}}"><image src="../images/58.png" class="view-image2"></image></button>
