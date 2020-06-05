@@ -77,7 +77,7 @@ Page({
     wx.redirectTo({ url: '../1/1' })
   },
   next:function(){
-    wx.redirectTo({ url: '../stone_0' })
+    wx.redirectTo({ url: '../stone_0/stone_0' })
   },
   again: function () {
     var app = getApp();

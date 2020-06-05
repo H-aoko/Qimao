@@ -4,43 +4,43 @@ page,.container,.ending{
   height: 100%;
 }
 .list{
-  height: 90rpx;
+  height: 100rpx;
   width: 100%;
   top:88%;
   position: absolute;
 }
-.items{
+.items-left{
   position: absolute;
-  width: 100%;
-  height: 100%;
+  left:35rpx;  
+  width: 100rpx;
+  height: 100rpx;
+}
+.items-right{
+  position: absolute;
+  right:45rpx;
+  width: 100rpx;
+  height: 100rpx;
 }
 .home{ 
   position:absolute;
-  left:0%;
+  left:-30%;
 }
 .again,.next{
   position:absolute;
-  right:0%;
+  right:-30%;
+  
 }
-.item button{
- margin-right:100rpx;
-}
-.items image{
-  width: 80rpx;
-  height: 80rpx;
-}
-.items image.service-icon2{
+.items-left image,.items-right image{
   width: 100rpx;
   height: 100rpx;
 }
-.items image.service-icon{
+.items-left image.service-icon,.items-right image.service-icon{
   width: 100rpx;
   height: 100rpx;
 }
+
 button[plain]
 { 
-  border:0;
-  width: 100px;
-
+  border:2;
 }
 

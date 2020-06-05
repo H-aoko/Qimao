@@ -91,9 +91,9 @@ Page({
   },
 
   jumpPage: function(){ 
-    this.currentView=3;
+    this.currentView=4;
     this.setData({
-      toView: `card_${3}`
+      toView: `card_${4}`
     });
     this.setData({
       showJump: false

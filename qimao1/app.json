@@ -1,8 +1,14 @@
 {
   "pages": [
+    "pages/stone_0/stone_0", 
+    "pages/stone_1/stone_1",
+    "pages/stone_2/stone_2",
+    "pages/stone_3/stone_3",
+    "pages/stone_4/stone_4",
 
-
-   
+    "pages/cross_road/former",
+    "pages/cross_road/road", 
+    "pages/cross_road/result",
     "pages/0/0",
     "pages/1/1",
     "pages/1_1/1_1",
@@ -25,9 +31,7 @@
     "pages/8-5/4",
     "pages/8-5/5",
     "pages/8-6/6",
-    "pages/cross_road/former", 
-    "pages/cross_road/road", 
-    "pages/cross_road/result",
+    
     "pages/road_plus/former", 
     "pages/road_plus/road", 
     "pages/road_plus/otherroad", 
@@ -41,7 +45,7 @@
     "pages/migongplus/mgplussuccess/mgplussuccess",
     "pages/migongplus/mgplusfail/mgplusfail",
     "pages/bridge/former",
-    "pages/bridge/fail", 
+    "pages/bridge/fail",
     "pages/bridge/brige",
     "pages/migong/migong",
     "pages/migong/mggame/mggame",
@@ -60,11 +64,7 @@
     "light/success/success",
     "light/fail/fail",  
    
-    "pages/stone_0/stone_0", 
-    "pages/stone_1/stone_1",
-    "pages/stone_2/stone_2",
-    "pages/stone_3/stone_3",
-    "pages/stone_4/stone_4",
+   
     "pages/58_1/58_1",
     "pages/58_2/58_2",
     "pages/58_3/58_3",

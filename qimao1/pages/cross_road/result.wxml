@@ -2,13 +2,13 @@
 <image class="ending"  wx:if="{{judge==1}}" src="{{fail}}" ></image>
 <image class="ending"  wx:else src="{{success}}" ></image>
 <view class="list">
-   <view class="items">
-    <button plain="true" class="home" bindtap="toMenu"><image src="../../images/mainpageicon.png" class="service-icon2"></image> </button>
+   <view class="items-left">
+    <button plain="true" class="home" bindtap="toMenu"><image src="../../images/mainpageicon.png" class="service-icon"></image> </button>
   </view>
-  <view class="items" wx:if="{{judge==1}}">
+  <view class="items-right" wx:if="{{judge==1}}">
      <button plain="true" class="again" bindtap="again"><image src="../../images/again.png" class="service-icon"></image> </button>
   </view>
-  <view class="items" wx:else>
+  <view class="items-right" wx:else>
       <button plain="true" class="next" bindtap="next"><image src="../../images/next.png" class="service-icon"></image> </button>
   </view>
 </view>

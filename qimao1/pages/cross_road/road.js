@@ -76,7 +76,7 @@ Page({
     var allcars = [car1,car2,car3,car4,car5,car6,car7,car8];
     //选择此次出现的车辆
     //从allcars中随机选择车型
-    var carsNum = 50;
+    var carsNum = 40;
     var randomarray=new Array(carsNum);
     for(var i=0;i<carsNum;i++){
         randomarray[i]=Math.floor(Math.random()*8);
@@ -374,8 +374,8 @@ Page({
      });
      //向左移动
      if(that.data.touchLeft==1 && positionX>=-150 && positionY>=-340 &&!that.data.fail){
-      positionX += -25;
-      positionY += -25;
+      positionX += -35;
+      positionY += -35;
       animation.translate(positionX,positionY).step();
       that.setData({
         crossAnimation:animation.export(),
@@ -385,8 +385,8 @@ Page({
     }
      var peopleWalk = setInterval(function () {
         if(that.data.touchLeft==1 && positionX>=-150 && positionY>=-340&&!that.data.fail){
-          positionX += -25;
-          positionY += -25;
+          positionX += -35;
+          positionY += -35;
           animation.translate(positionX,positionY).step();
           that.setData({
             crossAnimation:animation.export(),
@@ -423,7 +423,7 @@ Page({
     //向上移动
     if(that.data.touchTop==1 && positionX>=-150 && positionY>=-340&&!that.data.fail){
       positionX += 0;
-      positionY += -25;
+      positionY += -35;
       animation.translate(positionX,positionY).step();
       that.setData({
         crossAnimation:animation.export(),
@@ -434,7 +434,7 @@ Page({
     var peopleWalk = setInterval(function () {
        if(that.data.touchTop==1 && positionX>=-150 && positionY>=-340&&!that.data.fail){
         positionX += 0;
-        positionY += -25;
+        positionY += -35;
         animation.translate(positionX,positionY).step();
         that.setData({
           crossAnimation:animation.export(),
@@ -470,8 +470,8 @@ Page({
   });
   //向右移动
   if(that.data.touchRight==1 && positionX>=-150 && positionY>=-340&&!that.data.fail){
-    positionX += 25;
-    positionY += -25;
+    positionX += 35;
+    positionY += -35;
     animation.translate(positionX,positionY).step();
     that.setData({
         crossAnimation:animation.export(),
@@ -481,8 +481,8 @@ Page({
  }
   var peopleWalk = setInterval(function () {
      if(that.data.touchRight==1 && positionX>=-150 && positionY>=-340&&!that.data.fail){
-      positionX += 25;
-      positionY += -25;
+      positionX += 35;
+      positionY += -35;
       animation.translate(positionX,positionY).step();
       that.setData({
         crossAnimation:animation.export(),

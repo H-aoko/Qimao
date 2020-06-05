@@ -62,7 +62,7 @@ Page({
             local_2: false,
             local_3: true,
             local_4: false
-        });true
+        });
         }
         if(column==3){
           this.setData({
@@ -106,7 +106,7 @@ Page({
             local_2: false,
             local_3: true,
             local_4: false
-        });true
+        });
         }
         if(column==3){
           this.setData({
@@ -144,7 +144,7 @@ Page({
           local2: false,
           local3: true,
           local4: false
-      });true
+      });
       }
       if(column==3){
         this.setData({
@@ -155,7 +155,8 @@ Page({
           local4: true
       });
       }
-      if (score==100){        
+      if (score==100){       
+
         this.setData({
           showResult3: true
         });
@@ -221,12 +222,13 @@ Page({
   },
   timeInterval: function(){
     var that = this;
-    var timer = setInterval(function(){
+    that.data.timer = setInterval(function(){
         // 判断是否小于0
+
         var nowTime = that.data.time;
         
         if(that.data.shouldStop){
-          clearInterval(timer);
+          clearInterval(that.data.timer);
         }
 
         if(nowTime > 1){
@@ -258,9 +260,7 @@ if(app.data.musicon==true){
         musicbtn:false
       });
     }
-      wx.setNavigationBarTitle({
-        title: that.data.typeName
-      });
+
       this.timeInterval();
   },
   changeYL: function () {
@@ -304,6 +304,17 @@ if(app.data.musicon==true){
       musicbtn: true,
       musicbtn2:false
     });
+  },
+  onHide: function () {
+    var that =this;
+    clearInterval(that.data.timer);
+  },
+  onUnload:function(){
+    var that =this;
+    clearInterval(that.data.timer);
   }
 
+
 })
+
+

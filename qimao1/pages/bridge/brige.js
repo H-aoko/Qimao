@@ -550,6 +550,7 @@ Page({
       // })},
       
   onHide: function () {
+    wx.offAccelerometerChange();
     this.setData({
       person:"../../images/bridge/person.gif",
       falling_left:"../../images/bridge/falling_left.png",
@@ -591,6 +592,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+    wx.offAccelerometerChange();
       this.setData({
         person:"../../images/bridge/person.gif",
         falling_left:"../../images/bridge/falling_left.png",

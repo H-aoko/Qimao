@@ -9,37 +9,37 @@ page,.container,.ending{
   top:88%;
   position: absolute;
 }
-.items{
+.items-left{
   position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.home{ 
-  position:absolute;
-  left:0%;
-}
-.again,.next{
-  position:absolute;
-  right:0%;
-}
-.item button{
- margin-right:100rpx;
-}
-.items image{
-  width: 80rpx;
-  height: 80rpx;
-}
-.items image.service-icon2{
+  left:35rpx;  
   width: 100rpx;
   height: 100rpx;
 }
-.items image.service-icon{
+.items-right{
+  position: absolute;
+  right:45rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.home{ 
+  position:absolute; 
+  left:-30%;
+}
+.again,.next{
+  position:absolute;
+  right:-30%;
+}
+
+.items-left image,.items-right image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.items-left image.service-icon,.items-right image.service-icon{
   width: 100rpx;
   height: 100rpx;
 }
 button[plain]
 { 
   border:0;
-  width: 100px;
 }
 
