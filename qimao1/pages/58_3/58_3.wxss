@@ -1,0 +1,69 @@
+/* pages/58_3/58_3.wxss */
+page{
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+}
+.home-wrap{
+  background: #f2f2f2;
+  height: 40rpx;
+}
+.workbench{
+  font-size: 10rpx;
+  background: #fff;
+  padding-bottom: 0rpx;
+  margin-bottom:0rpx;
+  color: #333;
+}
+.workbench .list{
+  display: flex;
+  flex-direction: row;
+  flex:1;
+}
+.workbench .items{
+  width: 50rpx;
+  flex:1;
+  text-align: center;
+}
+.workbench .items image{
+  width: 60rpx;
+  height: 30rpx;
+}
+.workbench .items image.service-icon{
+  width: 80rpx;
+  height: 80rpx;
+}
+.workbench .items image.service-icon1{
+  width: 230rpx;
+  height: 100rpx;
+}
+.workbench .items image.service-icon2{
+  width: 100rpx;
+  height: 100rpx;
+}
+.workbench .items image.service-icon3{
+  width: 200rpx;
+  height: 100rpx;
+}
+button[plain]
+{ border:0;
+  width: 120px;
+}
+.scroll-box{
+  white-space: nowrap;
+  height: 90vh;
+}
+.card-box{
+  display: inline-block;
+}
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 83vh;
+  width: 100vw;
+  margin: 0vh 0vw;
+  font-size: 40px;
+  background: rgb(255, 255, 255);
+  border-radius: 0px;
+}

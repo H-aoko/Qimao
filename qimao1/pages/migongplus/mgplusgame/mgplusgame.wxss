@@ -1,0 +1,130 @@
+/* miniprogram/pages/migongplus/mgplusgame/mgplusgame.wxss */
+.gameview {
+  display: flex; 
+  flex-direction: column;
+  background-color: white;
+}
+.topview {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0rpx;
+  height:100rpx;
+  width:100%;
+}
+.menu {
+  position:absolute;
+  margin-left: 40rpx;
+}
+.menuimage {
+  height:100rpx;
+  width: 100rpx;
+}
+.clock {
+  position:absolute;
+  right:40rpx;
+  top:20rpx
+}
+.clockimage {
+  height:100rpx;
+  width:110rpx;
+}
+.seconds {
+  position: absolute;
+  font-size: 20rpx;
+  top:42rpx;
+  right:42rpx;
+}
+.menucontent {
+  position: absolute;
+  left:5%;
+  top:9%;
+  height:200rpx;
+  width: 200rpx;
+  opacity: 0.85;
+}
+.blank {
+  height:250rpx;
+  width: 250rpx;
+}
+.home {
+  height:140rpx;
+  position:absolute;
+  left:-20rpx;
+  top:10rpx;
+}
+.again {
+  height:140rpx;
+  position:absolute;
+  left:90rpx;
+  top: 10rpx;
+}
+.hint {
+  height:140rpx;
+  position:absolute;
+  left:-20rpx;
+  top: 120rpx;
+}
+.music {
+  height:140rpx;
+  position:absolute;
+  left:90rpx;
+  top:120rpx;
+}
+.menubtnimage {
+  height:90rpx;
+  width: 90rpx;
+  margin:10rpx;
+}
+.hintcontent {
+  height:400rpx;
+  width:600rpx;
+  position: absolute;
+  left: 130rpx;
+  top:450rpx;
+}
+.hintcontentimage {
+  height: 300rpx;
+  width: 500rpx;
+}
+.mgimage {
+  width: 100%;
+  position:absolute;
+  margin-left: 15rpx;
+  margin-top: 40rpx; 
+}
+.qmimage {
+  position:absolute;
+  /*左右一格65,初始160，上下一格65，初始675*/
+  margin-left: 160rpx;   
+  margin-top: 675rpx;
+  height:60rpx;
+  width:60rpx;
+}
+.btnview {
+  margin-left: 5rpx;
+  margin-top: 770rpx;
+}
+.up_btn {
+  height:160rpx;
+  border-radius: 0;
+}
+.down_btn{
+  height:160rpx;
+  
+}
+.left_btn{
+  height:160rpx;
+
+}
+.right_btn{
+  height:160rpx;
+  
+}
+.btnimage {
+  height:150rpx;
+  width:120rpx; 
+}
+.btnview1 {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,33 @@
+/* pages/fail/fail.wxss */
+.yinru{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  background-color: white;
+}
+.image1{
+  position: absolute;
+  top: -10%;
+  left: 0rem;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+.zhuye{
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  width: 18%;
+  height: 10%;
+}
+.again{
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  width: 18%;
+  height: 10%;
+}

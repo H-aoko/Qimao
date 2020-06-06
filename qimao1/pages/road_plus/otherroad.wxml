@@ -1,0 +1,60 @@
+<view class="container" bindtap="hideHint">
+ <view class="home-wrap" bindtap="hideHint">
+  <view class="workbench">
+    <view class="list">
+      <view class="items">
+        <button plain="true" class="show-btn" bindtap="changeYL"><image src="../../images/menuicon2.png" class="service-icon2"></image> </button>
+      </view>
+    </view>
+  </view>
+ </view>
+ <view class="hint" catchtap="hintShow">
+   <image src="../../images/road/plus/hint.png" hidden="{{hint}}"></image>
+  </view>
+  <view class="hint fail" >
+   <image src="../../images/road/plus/fail.png" hidden="{{failTime}}"></image>
+  </view>
+  <view class="light">
+  <image class="light" src="../../images/road/plus/light.png"></image>
+  <image class="color red" src="../../images/road/plus/red.png" hidden="{{redHide}}"></image>
+  <image class="color gray" src="../../images/road/plus/gray.png" bindtap="turn" hidden="{{grayHide}}"></image>
+  <image class="color green" src="../../images/road/plus/green.png" hidden="{{greenHide}}"></image>
+  </view>
+  <view class="cross">
+   <image class="person" id="the-per" src="../../images/road/head.png" mode="aspectFit" animation="{{crossAnimation}}"></image>
+  </view>
+  <view class="direction">
+  <button bindtouchstart="startLeft" 
+  bindtouchend="endLeft"><image class="arrow left" src="../../images/road/arrowleft.png"  ></image></button>
+  <button bindtouchstart="startTop"
+  bindtouchend="endTop"><image class="arrow top" src="../../images/road/arrowtop.png" ></image></button>
+  <button bindtouchstart="startRight"
+  bindtouchend="endRight"><image class="arrow right" src="../../images/road/arrowright.png" ></image></button>
+  </view>
+ <view class="modal-mask"  bindtap="hideModal" wx:if="{{showModal}}">
+  <image class='view-image' src="../../images/blank.png"></image>
+ </view>
+ <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="iconbench">
+    <view class="list" >
+      <view class="items">
+      <button plain="true" bindtap="toMenu"><image class='view-image2' src="../../images/mainpageicon.png"></image></button>
+      </view>
+      <view class="items">
+      <button plain="true" bindtap="again"><image class='view-image2 right' src="../../images/again.png"></image></button>
+      </view>
+      </view>
+    </view>
+    <view class="iconbench">
+       <view class="list">
+      <view class="items">
+      <button plain="true" catchtap="hintShow"><image  class='view-image2' src="../../images/hinticon.png" ></image></button>
+         </view>
+          <view class="items">
+     <button plain="true" bindtap="audioPause" wx:if="{{musicbtn}}"><image class='view-image2 right' src="../images/mute.png"></image></button>
+     <button plain="true"  bindtap="audioPlay" wx:if="{{musicbtn2}}"><image class='view-image2 right' src="../images/volume.png"></image></button>
+         </view>
+      </view>
+    </view>
+  </view>
+</view>

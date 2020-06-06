@@ -1,0 +1,43 @@
+page,.container,.ending{
+  width: 100%;
+  height: 100%;
+}
+.list{
+  height: 90rpx;
+  width: 100%;
+  top:88%;
+  position: absolute;
+
+}
+.items-left{
+  position: absolute;
+  left:35rpx;  
+  width: 100rpx;
+  height: 100rpx;
+}
+.items-right{
+  position: absolute;
+  right:45rpx;
+  width: 100rpx;
+  height: 100rpx;
+}
+.home{ 
+  position:absolute;
+  left:-30%;
+}
+.again,.next{
+  position:absolute;
+  right:-30%;
+}
+.items-left image,.items-right image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.items-left image.service-icon,.items-right image.service-icon{
+  width: 100rpx;
+  height: 100rpx;
+}
+button[plain]
+{ 
+  border:0;
+}

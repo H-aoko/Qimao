@@ -1,0 +1,14 @@
+<!--miniprogram/pages/migongplus/mgplussuccess/mgplussuccess.wxml-->
+<view class="outcomeview">
+  <view class="imageview">
+    <image class="successimage" mode="widthFix" src="../../migong/images/成功.png"></image>
+  </view>
+  <view class="bottomview">
+    <button plain="true" class="home" style="width:200rpx" bindtap="home" hover-class="none">
+      <image class="btnimage" src="../../migong/images/mainpageicon.png"></image>
+    </button>
+    <button plain="true" class="next" style="width:200rpx" bindtap="next" hover-class="none">
+      <image  class="btnimage" src="../../migong/images/next.png"></image>
+    </button>
+  </view>
+</view>

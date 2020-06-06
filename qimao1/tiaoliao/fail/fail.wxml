@@ -1,0 +1,6 @@
+<!--pages/fail/fail.wxml-->
+<view class="yinru" >
+<image src='/tiaoliao/images/fail.jpg' class="image1"></image>
+</view>
+<image src='/tiaoliao/images/mainpageicon.png' class="zhuye"bindtap="zhuye"></image>
+<image src='/tiaoliao/images/again.png' class="again" bindtap="again"></image>

@@ -1,0 +1,73 @@
+/* pages/1/1.wxss */
+page{
+  overflow: hidden;
+  background: rgb(255, 255, 255);
+}
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.6;
+}
+.modal-dialog {
+  overflow: visible;
+  position: fixed;
+  width: 88%;
+  height: 90%;
+  top: 5%;
+  left: 6%;
+  margin: 0rpx 5rpx;
+  border-radius: 3%;
+  background: rgb(184, 182, 182);
+  opacity: 0.7;
+}
+.modal-dialog2 {
+  overflow: visible;
+  position: fixed;
+  width: 80%;
+  height: 90%;
+  top: 30%;
+  left: 15%;
+  margin: 0rpx 5rpx;
+  border-radius: 3%;
+  opacity: 0.85;
+}
+.modal-dialog .iconbench{
+  padding-bottom: 10rpx;
+  margin-bottom: 10rpx;
+  top: 35%;
+  left: 0%;
+  color: #333;
+}
+.modal-dialog .iconbench .list{
+  display: flex;
+  flex-direction: row;
+  flex:1;
+}
+.modal-dialog .iconbench .items{
+  width: 90rpx;
+  height: 160rpx;
+  flex:1;
+  margin: 0rpx 0rpx;
+}
+button[plain]
+{ border:0;
+  width: 80px;
+}
+
+.view-image2{
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0rpx 6rpx;
+}
+.toother-hint{
+  width: 520rpx;
+  height: 300rpx;
+  top:60%;
+  left:20%;
+  margin: 0rpx 6rpx;
+}
+.view-image{
+  width: 800rpx;
+  height: 1100rpx;
+}

@@ -1,0 +1,34 @@
+/* pages/success/success.wxss */
+.yinru{
+  display: flex;
+  top: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  z-index: -2;
+}
+.image1{
+  position: absolute;
+  top: -10%;
+  left: 0rem;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+.zhuye{
+  position: absolute;
+  bottom: 3%;
+  left: 2%;
+  width: 18%;
+  height: 10%;
+}
+.next{
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  width: 18%;
+  height: 10%;
+}

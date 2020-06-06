@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  position:absolute;
+  margin-left: 0rpx;
+  margin-top:0rpx;
+  display: flex;
+  flex-direction: row;
+  height:110rpx;
+  width:100%;
+  background-color: white;
+}
+.menu {
+  height:150rpx;
+  position:absolute;
+  margin-left: 40rpx;
+}
+.menuimage {
+  height:100rpx;
+  width: 100rpx;
+}
+.skip {
+  height:150rpx;
+  position: relative;
+  left:250rpx;
+}
+.skipimage {
+  height:100rpx;
+  width:200rpx;
+}
+.menucontent {
+  /*position: relative;
+  right: 230rpx;
+  top:110rpx;
+  height:200rpx;
+  width: 200rpx;
+  opacity: 0.85;*/
+  position: absolute;
+  left:5%;
+  top:9%;
+  opacity: 0.85;
+}
+.blank {
+  height:250rpx;
+  width: 250rpx;
+}
+.home {
+  height:140rpx;
+  position:absolute;
+  left:-20rpx;
+  top:10rpx;
+}
+.again {
+  height:140rpx;
+  position:absolute;
+  left:90rpx;
+  top: 10rpx;
+}
+.hint {
+  height:140rpx;
+  position:absolute;
+  left:-20rpx;
+  top: 120rpx;
+}
+.music {
+  height:140rpx;
+  position:absolute;
+  left:90rpx;
+  top:120rpx;
+}
+.btnimage {
+  height:90rpx;
+  width: 90rpx;
+  margin:10rpx;
+}
+.swiperview {
+  position:absolute;
+  margin-left: 0rpx;
+  margin-top:110rpx;
+  width:100%;
+}
+.swiper {
+  height: 1100rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+.hintcontent {
+  height:400rpx;
+  width:600rpx;
+  position: absolute;
+  left: 130rpx;
+  top:450rpx;
+}
+.hintcontentimage {
+  height: 300rpx;
+  width: 500rpx;
+}
