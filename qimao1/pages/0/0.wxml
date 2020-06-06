@@ -1,5 +1,5 @@
 <view class="modal-mask">
-<image class='view-image' src="../images/qimaomain.jpg"></image>
+<image class='view-image' src="../images/mainpage.png"></image>
 </view>
   <view class="modal-dialog" >
   <view class="iconbench">
